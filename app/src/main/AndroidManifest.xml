@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiJournal">
         <activity
+            android:name=".NavigationDrawer"
+            android:exported="true"
+            android:label="@string/title_activity_navigation_drawer"
+            android:theme="@style/Theme.DigiJournal.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
