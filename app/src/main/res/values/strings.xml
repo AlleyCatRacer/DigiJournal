@@ -3,13 +3,14 @@
     <string name="title_activity_navigation_drawer">NavigationDrawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_title">DigiJournal</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_quick_add">Quick add</string>
+    <string name="menu_tasks">Tasks</string>
+    <string name="menu_add_list">New list</string>
     <string name="task_add_title_hint">Title…</string>
     <string name="task_add_heading">New Task</string>
     <string name="task_add_desc">Details</string>

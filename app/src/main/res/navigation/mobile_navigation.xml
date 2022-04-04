@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.s22.digijournal.ui.gallery.GalleryFragment"
-        android:label="@string/menu_add_task"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_tasks"
+        android:name="com.s22.digijournal.ui.gallery.TasksFragment"
+        android:label="@string/menu_tasks"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_add_list"
         android:name="com.s22.digijournal.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="@string/menu_add_list"
+        tools:layout="@layout/fragment_home" />
 </navigation>
