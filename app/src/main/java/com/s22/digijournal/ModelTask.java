@@ -60,6 +60,7 @@ public class ModelTask
     public void setDescription(String description)
     {
         this.description = description;
+        dateEdited = Date.from(Instant.now());
     }
 
     public Date getDateAdded()
@@ -72,9 +73,9 @@ public class ModelTask
         return dateEdited;
     }
 
-    public void setDateEdited(Date dateEdited)
+    public void setDateEdited()
     {
-        this.dateEdited = dateEdited;
+        this.dateEdited = Date.from(Instant.now());;
     }
 
     public Date getDeadline()
@@ -85,6 +86,7 @@ public class ModelTask
     public void setDeadline(Date deadline)
     {
         this.deadline = deadline;
+        setDateEdited();
     }
 
     public ArrayList<ModelTag> getTags()
@@ -101,6 +103,7 @@ public class ModelTask
                 this.tags.add(t);
             }
         }
+        setDateEdited();
     }
 
     public void removeTag(ModelTag tag)
@@ -110,11 +113,13 @@ public class ModelTask
             return;
         }
         tags.remove(tag);
+        setDateEdited();
     }
 
     public void clearTags()
     {
         tags.clear();
+        setDateEdited();
     }
 
     public ModelTaskPriority getPriority()
@@ -125,5 +130,6 @@ public class ModelTask
     public void setPriority(ModelTaskPriority priority)
     {
         this.priority = priority;
+        setDateEdited();
     }
 }

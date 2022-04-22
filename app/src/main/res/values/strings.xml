@@ -18,6 +18,8 @@
     <string name="task_add_desc_hint">Description…</string>
     <string name="task_add_deadline">Deadline</string>
     <string name="task_add_date_format_hint">dd/mm/yyyy</string>
+    <string name="task_edit_heading">Editing Task</string>
+    <string name="save_button">Save</string>
     <string name="create_button">Create</string>
     <string name="cancel_button">Cancel</string>
 </resources>
