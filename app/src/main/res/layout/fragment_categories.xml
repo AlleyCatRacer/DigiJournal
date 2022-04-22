@@ -31,8 +31,13 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/category_recycler"
+            android:name="com.s22.digijournal.fragment_categories"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:layoutManager="LinearLayoutManager"
+            tools:context=".ui.category.CategoryFragment"
+            tools:layout_editor_absoluteX="16dp"
+            tools:listitem="@layout/fragment_category_item"
             android:layout_margin="10dp"
             app:layout_constraintBottom_toTopOf="@id/create_category_textView"
             app:layout_constraintEnd_toEndOf="parent"

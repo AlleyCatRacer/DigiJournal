@@ -29,7 +29,7 @@
         android:id="@+id/nav_lists"
         android:name="com.s22.digijournal.ui.list.ListFragment"
         android:label="@string/menu_lists"
-        tools:layout="@layout/fragment_category_lists" >
+        tools:layout="@layout/fragment_category_details" >
         <action
             android:id="@+id/action_nav_lists_to_nav_tasks"
             app:destination="@id/nav_tasks" />

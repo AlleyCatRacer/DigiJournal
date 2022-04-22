@@ -34,7 +34,7 @@
             app:layoutManager="LinearLayoutManager"
             tools:context=".ui.task.TaskFragment"
             tools:layout_editor_absoluteX="16dp"
-            tools:listitem="@layout/fragment_task"
+            tools:listitem="@layout/fragment_task_item"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
