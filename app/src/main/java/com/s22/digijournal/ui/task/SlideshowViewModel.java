@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.slideshow;
+package com.s22.digijournal.ui.task;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

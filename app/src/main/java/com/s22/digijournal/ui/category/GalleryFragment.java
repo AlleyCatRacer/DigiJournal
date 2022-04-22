@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.gallery;
+package com.s22.digijournal.ui.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

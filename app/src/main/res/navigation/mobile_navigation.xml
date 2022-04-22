@@ -9,17 +9,36 @@
         android:id="@+id/nav_home"
         android:name="com.s22.digijournal.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_categories"
+            app:destination="@id/nav_categories" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.s22.digijournal.ui.overview.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_nav_categories_to_nav_lists"
+            app:destination="@id/nav_lists" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_lists"
+        android:name="com.s22.digijournal.ui.list.ListFragment"
+        android:label="@string/menu_lists"
+        tools:layout="@layout/fragment_category_lists" >
+        <action
+            android:id="@+id/action_nav_lists_to_nav_tasks"
+            app:destination="@id/nav_tasks" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_tasks"
-        android:name="com.s22.digijournal.ui.gallery.TasksFragment"
+        android:name="com.s22.digijournal.ui.task.TaskFragment"
         android:label="@string/menu_tasks"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_tasks" />
 
-    <fragment
-        android:id="@+id/nav_add_list"
-        android:name="com.s22.digijournal.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_add_list"
-        tools:layout="@layout/fragment_home" />
 </navigation>
