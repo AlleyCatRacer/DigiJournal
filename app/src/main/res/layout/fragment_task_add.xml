@@ -63,13 +63,38 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
+                android:hint="@string/task_add_desc_hint"
                 android:minHeight="48dp"
                 android:textSize="16sp"
-                android:hint="@string/task_add_desc_hint"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/submit_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/detail_label"
-                app:layout_constraintBottom_toTopOf="@id/submit_button"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_label" />
+
+            <TextView
+                android:id="@+id/deadline_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/task_add_deadline"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+                app:layout_constraintEnd_toStartOf="@+id/editTextDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editTextDate" />
+
+            <EditText
+                android:id="@+id/editTextDate"
+                android:layout_width="wrap_content"
+                android:layout_height="60sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:ems="12"
+                android:inputType="date"
+                app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/deadline_textView"
+                app:layout_constraintTop_toBottomOf="@+id/detail_text" />
 
             <Button
                 android:id="@+id/submit_button"
