@@ -21,6 +21,7 @@
     <string name="task_add_desc">Details</string>
     <string name="task_add_desc_hint">Description…</string>
     <string name="task_add_deadline">Deadline:</string>
+    <string name="task_add_toList">Add to list:</string>
     <string name="task_add_date_format_hint">dd/mm/yyyy</string>
     <string name="task_edit_heading">Editing Task</string>
     <string name="edit_button">Edit</string>

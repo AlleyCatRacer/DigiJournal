@@ -16,7 +16,6 @@
             android:id="@+id/header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="@string/task_add_heading"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -81,7 +80,7 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/deadline_EditText"
-            app:layout_constraintBottom_toTopOf="@+id/back_button"
+            app:layout_constraintBottom_toTopOf="@+id/list_spinner"
             app:layout_constraintEnd_toStartOf="@+id/deadline_EditText"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -96,10 +95,22 @@
             android:ems="12"
             android:hint="@string/task_add_date_format_hint"
             android:inputType="date"
-            app:layout_constraintBottom_toTopOf="@+id/back_button"
+            app:layout_constraintBottom_toTopOf="@+id/list_spinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/deadline_textView"
             app:layout_constraintTop_toBottomOf="@+id/detail_text" />
+
+
+        <Spinner
+            android:id="@+id/list_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toTopOf="@id/edit_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deadline_EditText"
+            tools:listitem="@layout/fragment_list_item" />
 
         <Button
             android:id="@+id/edit_button"
