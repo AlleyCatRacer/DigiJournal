@@ -12,6 +12,8 @@ public class MainActivity extends AppCompatActivity
     TaskAdapter taskAdapter;
     RecyclerView lists;
     RecyclerView categories;
+    
+    //TODO sort out context for different containers in XMLs
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
