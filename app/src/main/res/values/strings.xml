@@ -12,9 +12,10 @@
     <string name="menu_tasks">Tasks</string>
     <string name="menu_lists">Lists</string>
     <string name="menu_categories">Categories</string>
+    <string name="menu_add_category">New category</string>
     <string name="menu_add_list">New list</string>
+    <string name="menu_add_task">Add a task</string>
     <string name="home_category">Categories</string>
-    <string name="home_add_category">Add a category</string>
     <string name="home_welcome">Welcome to DigiJournal!</string>
     <string name="home_hint">Swipe left to explore</string>
     <string name="category_add_list">Add a list to this category</string>

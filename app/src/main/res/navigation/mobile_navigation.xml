@@ -27,9 +27,9 @@
 
     <fragment
         android:id="@+id/nav_lists"
-        android:name="com.s22.digijournal.ui.list.ListFragment"
+        android:name="com.s22.digijournal.ui.overview.ListsFragment"
         android:label="@string/menu_lists"
-        tools:layout="@layout/fragment_category_details" >
+        tools:layout="@layout/fragment_lists" >
         <action
             android:id="@+id/action_nav_lists_to_nav_tasks"
             app:destination="@id/nav_tasks" />
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/nav_tasks"
-        android:name="com.s22.digijournal.ui.task.TaskFragment"
+        android:name="com.s22.digijournal.ui.overview.TasksFragment"
         android:label="@string/menu_tasks"
         tools:layout="@layout/fragment_tasks" />
 

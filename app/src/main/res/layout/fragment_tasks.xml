@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.overview.TasksFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,13 +27,13 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/task_recycler"
+                app:layout_constraintBottom_toTopOf="@+id/list_recycler"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/task_recycler"
+                android:id="@+id/list_recycler"
                 android:name="com.s22.digijournal.fragment_tasks"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title"
-                tools:context=".ui.task.TasksFragment"
+                tools:context=".ui.overview.TasksFragment"
                 tools:layout_editor_absoluteX="16dp"
                 tools:listitem="@layout/fragment_task_item" />
 

@@ -13,6 +13,7 @@ public class ModelTask
     private Date deadline;
     private ArrayList<ModelTag> tags;
     private ModelTaskPriority priority;
+    private boolean isDone = false;
 
     public ModelTask(String description)
     {
@@ -50,6 +51,16 @@ public class ModelTask
     public int getTaskID()
     {
         return taskID;
+    }
+
+    public boolean isDone()
+    {
+        return isDone;
+    }
+
+    public void toggleDone()
+    {
+        isDone = !isDone;
     }
 
     public String getDescription()

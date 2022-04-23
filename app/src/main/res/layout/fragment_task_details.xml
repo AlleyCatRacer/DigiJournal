@@ -2,8 +2,10 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ui.task.TaskDetailsFragment"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +55,7 @@
             android:textSize="16sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:layout_constraintBottom_toTopOf="@id/deadline_EditText"
+            app:layout_constraintBottom_toTopOf="@id/deadline_textView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detail_label" />
@@ -68,12 +70,12 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/edit_button"
-            app:layout_constraintEnd_toStartOf="@+id/deadline_EditText"
+            app:layout_constraintEnd_toStartOf="@+id/deadline_textView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@+id/deadline_EditText" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/deadline_textView" />
 
         <TextView
-            android:id="@+id/deadline_EditText"
+            android:id="@+id/deadline_textView"
             android:layout_width="0dp"
             android:layout_height="60sp"
             android:layout_marginLeft="10dp"
@@ -96,7 +98,7 @@
             android:text="@string/edit_button"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@id/deadline_EditText"
+            app:layout_constraintTop_toBottomOf="@id/deadline_textView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

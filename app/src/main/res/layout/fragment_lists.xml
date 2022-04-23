@@ -21,10 +21,10 @@
             tools:context=".ui.home.HomeFragment">
 
             <TextView
-                android:id="@+id/category_title"
+                android:id="@+id/list_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/home_category"
+                android:text="@string/menu_lists"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
@@ -35,7 +35,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_recycler"
-                android:name="com.s22.digijournal.fragment_categories"
+                android:name="com.s22.digijournal.fragment_lists"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -43,10 +43,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/category_title"
-                tools:context=".ui.category.CategoryFragment"
+                app:layout_constraintTop_toBottomOf="@+id/list_title"
+                tools:context=".ui.list.ListItemFragment"
                 tools:layout_editor_absoluteX="16dp"
-                tools:listitem="@layout/fragment_category_item" />
+                tools:listitem="@layout/fragment_list_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -58,6 +58,6 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/add_icon" 
-        android:tooltipText="@string/menu_add_category"/>
+        app:srcCompat="@drawable/add_icon"
+        android:tooltipText="@string/menu_add_list"/>
 </FrameLayout>
