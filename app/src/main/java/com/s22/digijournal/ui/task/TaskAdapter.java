@@ -1,4 +1,4 @@
-package com.s22.digijournal;
+package com.s22.digijournal.ui.task;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.s22.digijournal.ModelTask;
+import com.s22.digijournal.R;
 import com.s22.digijournal.placeholder.PlaceholderContent.PlaceholderItem;
 
 import java.util.ArrayList;
@@ -69,7 +71,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
             itemView.setOnClickListener(v ->
             {
                 listener.onClick(tasks.get(getBindingAdapterPosition()));
-                //getBindingAdapterPosition gets the position of the item clicked
+                //getBindingAdapterPosition gets the position of the item clicked, identifying it
             });
         }
     }

@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.s22.digijournal.TaskAdapter;
 import com.s22.digijournal.R;
 
 /**

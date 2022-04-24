@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.s22.digijournal.ui.task.TaskAdapter;
+
 public class MainActivity extends AppCompatActivity
 {
     RecyclerView tasks;
