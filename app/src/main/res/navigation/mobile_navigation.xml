@@ -19,7 +19,7 @@
         android:id="@+id/nav_categories"
         android:name="com.s22.digijournal.ui.overview.CategoriesFragment"
         android:label="@string/menu_categories"
-        tools:layout="@layout/fragment_categories" >
+        tools:layout="@layout/activity_categories" >
         <action
             android:id="@+id/action_nav_categories_to_nav_lists"
             app:destination="@id/nav_lists" />
@@ -29,7 +29,7 @@
         android:id="@+id/nav_lists"
         android:name="com.s22.digijournal.ui.overview.ListsFragment"
         android:label="@string/menu_lists"
-        tools:layout="@layout/fragment_lists" >
+        tools:layout="@layout/activity_list" >
         <action
             android:id="@+id/action_nav_lists_to_nav_tasks"
             app:destination="@id/nav_tasks" />
@@ -39,6 +39,6 @@
         android:id="@+id/nav_tasks"
         android:name="com.s22.digijournal.ui.overview.TasksFragment"
         android:label="@string/menu_tasks"
-        tools:layout="@layout/fragment_tasks" />
+        tools:layout="@layout/activity_tasks" />
 
 </navigation>

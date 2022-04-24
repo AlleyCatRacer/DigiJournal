@@ -9,16 +9,12 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.s22.digijournal.ModelCategory;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
-import com.s22.digijournal.placeholder.PlaceholderContent.PlaceholderItem;
-
 import java.util.ArrayList;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
     private final ArrayList<ModelTask> tasks;
@@ -32,9 +28,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position)
     {
-        holder.mItem = mTasks.get(position);
+        //TODO
+        /*holder.mItem = mTasks.get(position);
         holder.mIdView.setText(mTasks.get(position).id);
-        holder.mContentView.setText(mTasks.get(position).content);
+        holder.mContentView.setText(mTasks.get(position).content);*/
     }
 
     @Override
@@ -56,7 +53,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         this.listener = listener;
     }
 
-    private class ViewHolder extends RecyclerView.ViewHolder
+    protected class ViewHolder extends RecyclerView.ViewHolder
     {
         private final CheckBox done;
         private final TextView name;
@@ -76,7 +73,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         }
     }
 
-    public interface OnClickListener
+    private interface OnClickListener
     {
         void onClick(ModelTask task);
     }

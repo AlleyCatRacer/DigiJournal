@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="LinearLayoutManager"
-            tools:context=".ui.task.TaskItemFragment"
+            tools:context=".ui.task.TaskActivity"
             tools:layout_editor_absoluteX="16dp"
             tools:listitem="@layout/fragment_task_item"
             app:layout_constraintStart_toStartOf="parent"

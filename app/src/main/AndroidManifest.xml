@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiJournal">
         <activity
+            android:name=".ui.list.ListActivity"
+            android:exported="false" />
+        <activity
             android:name=".NavigationDrawer"
             android:exported="true"
             android:label="@string/title_activity_navigation_drawer"

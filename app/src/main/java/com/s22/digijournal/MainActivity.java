@@ -12,8 +12,6 @@ public class MainActivity extends AppCompatActivity
 {
     RecyclerView tasks;
     TaskAdapter taskAdapter;
-    RecyclerView lists;
-    RecyclerView categories;
     
     //TODO sort out context for different containers in XMLs
 
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_home);
 
-        tasks = findViewById(R.id.list_recycler);
+        tasks = findViewById(R.id.task_recycler);
         tasks.hasFixedSize();
         tasks.setLayoutManager(new LinearLayoutManager(this));
         //TODO figure out how to get and pass created tasks from storage

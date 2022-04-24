@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.overview.CategoriesFragment"
-    >
+    tools:context=".ui.overview.TasksFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,32 +20,33 @@
             tools:context=".ui.home.HomeFragment">
 
             <TextView
-                android:id="@+id/list_title"
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/menu_lists"
+                android:text="@string/menu_tasks"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/list_recycler"
+                app:layout_constraintBottom_toTopOf="@+id/task_recycler"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_recycler"
-                android:name="com.s22.digijournal.fragment_lists"
+                android:id="@+id/task_recycler"
+                android:name="com.s22.digijournal.fragment_tasks"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 app:layoutManager="LinearLayoutManager"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/list_title"
-                tools:context=".ui.list.ListItemFragment"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:context=".ui.overview.TasksFragment"
                 tools:layout_editor_absoluteX="16dp"
-                tools:listitem="@layout/fragment_list_item" />
+                tools:listitem="@layout/fragment_task_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -58,6 +58,5 @@
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/add_icon"
-        android:tooltipText="@string/menu_add_list"/>
+        app:srcCompat="@drawable/add_icon" />
 </FrameLayout>
