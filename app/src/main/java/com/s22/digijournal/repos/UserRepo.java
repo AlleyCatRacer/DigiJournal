@@ -4,8 +4,8 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
+import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.ui.auth.AuthorizationUI;
 
 public class UserRepo
 {

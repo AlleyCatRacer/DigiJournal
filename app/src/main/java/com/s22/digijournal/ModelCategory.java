@@ -6,6 +6,7 @@ public class ModelCategory
 {
     private String categoryName;
     private ArrayList<ModelTaskList> lists;
+    private int nrOfLists;
 
     public ModelCategory(String name)
     {

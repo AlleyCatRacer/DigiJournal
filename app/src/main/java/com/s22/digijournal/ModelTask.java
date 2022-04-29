@@ -7,6 +7,7 @@ import java.util.Date;
 public class ModelTask
 {
     private int taskID;
+    private String taskName;
     private String description;
     private final Date dateAdded;
     private Date dateEdited;
@@ -15,9 +16,10 @@ public class ModelTask
     private ModelTaskPriority priority;
     private boolean isDone = false;
 
-    public ModelTask(String description)
+    public ModelTask(String name, String description)
     {
         taskID = taskID++;
+        setTaskName(name);
         this.description = description;
         dateAdded = Date.from(Instant.now());
         dateEdited = null;
@@ -26,9 +28,10 @@ public class ModelTask
         priority = ModelTaskPriority.Default;
     }
 
-    public ModelTask(String description, Date deadline)
+    public ModelTask(String name, String description, Date deadline)
     {
         taskID = taskID++;
+        setTaskName(name);
         this.description = description;
         dateAdded = Date.from(Instant.now());
         dateEdited = null;
@@ -37,9 +40,10 @@ public class ModelTask
         priority = ModelTaskPriority.Default;
     }
 
-    public ModelTask(String description, Date deadline, ModelTaskPriority priority)
+    public ModelTask(String name, String description, Date deadline, ModelTaskPriority priority)
     {
         taskID = taskID++;
+        setTaskName(name);
         this.description = description;
         dateAdded = Date.from(Instant.now());
         dateEdited = null;
@@ -51,6 +55,11 @@ public class ModelTask
     public int getTaskID()
     {
         return taskID;
+    }
+    
+    public String getTaskName()
+    {
+        return taskName;
     }
 
     public boolean isDone()
@@ -82,6 +91,15 @@ public class ModelTask
     public Date getDateEdited()
     {
         return dateEdited;
+    }
+    
+    public void setTaskName(String name)
+    {
+        if (name.isEmpty())
+        {
+            return;
+        }
+        taskName = name;
     }
 
     public void setDateEdited()
