@@ -1,4 +1,4 @@
-package com.s22.digijournal;
+package com.s22.digijournal.ui.category;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.s22.digijournal.R;
 
 /**
  * A simple {@link Fragment} subclass.

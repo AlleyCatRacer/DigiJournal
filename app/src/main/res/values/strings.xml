@@ -18,6 +18,7 @@
     <string name="home_category">Categories</string>
     <string name="home_welcome">Welcome to DigiJournal!</string>
     <string name="home_hint">Swipe left to explore</string>
+    <string name="home_subheader">Your online bullet journal</string>
     <string name="category_add_list">Add a list to this category</string>
     <string name="task_add_title_hint">Title…</string>
     <string name="task_add_heading">New Task</string>
