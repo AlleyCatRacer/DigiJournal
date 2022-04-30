@@ -2,15 +2,22 @@ package com.s22.digijournal;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentContainerView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 import com.s22.digijournal.ui.login.LoginActivity;
 import com.s22.digijournal.viewModels.MainActivityViewModel;
 
@@ -18,9 +25,12 @@ public class MainActivity extends AppCompatActivity
 {
     private MainActivityViewModel viewModel;
     private TextView header;
-    private FloatingActionButton actionButton;
     private NavController navController;
-    private FragmentContainerView fragContainer;
+    private AppBarConfiguration appBarConfiguration;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationDrawer;
+    private Toolbar toolbar;
+    private FloatingActionButton actionButton;
     
     //TODO sort out context for different containers in XMLs
 
@@ -30,14 +40,61 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         isSignedIn();
+        initViews();
+        setupNav();
         
+        //TODO display fragment in container
+        // https://github.com/KasperKnop/NavigationExample/blob/master/app/src/main/java/io/github/kasperknop/pokedb/MainActivity.java
+        //TODO navigate to add task fragment
+        // https://github.com/KasperKnop/NavigationExample/blob/master/app/src/main/java/io/github/kasperknop/pokedb/AbilitiesFragment.java
+    }
+    
+    private void initViews()
+    {
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationDrawer = findViewById(R.id.app_bar_navigation_drawer);
+        toolbar = findViewById(R.id.toolbar);
         header = findViewById(R.id.home_header);
-        fragContainer = findViewById(R.id.main_fragment_container);
-        fragContainer.addView(findViewById(R.id.frag_tasks));
-        navController = Navigation.findNavController(this, R.id.main_fragment_container);
         actionButton = findViewById(R.id.fab);
-        actionButton.setOnClickListener(a -> fragContainer.startViewTransition(findViewById(R.id.frag_add_task)));
+    }
+    
+    private void setupNav()
+    {
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        setSupportActionBar(toolbar);
+        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_tasks).
+                setOpenableLayout(drawerLayout).build();
         
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navigationDrawer, navController);
+    }
+    
+    @Override public boolean onSupportNavigateUp()
+    {
+        return NavigationUI.navigateUp(navController, appBarConfiguration);
+    }
+    
+    @Override public void onBackPressed()
+    {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START))
+        {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+    }
+    
+    @Override public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
+        return true;
+    }
+    
+    @Override public boolean onOptionsItemSelected(MenuItem item)
+    {
+        return NavigationUI.onNavDestinationSelected(item, navController);
     }
     
     private void isSignedIn()

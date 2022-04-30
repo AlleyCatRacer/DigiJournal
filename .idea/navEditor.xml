@@ -19,11 +19,6 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_nav_home_to_nav_categories">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_nav_home_to_nav_tasks">
                               <value>
                                 <LayoutPositions />
@@ -50,11 +45,6 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_nav_tasks_to_taskAddFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_nav_tasks_to_taskDetailsFragment">
                               <value>
                                 <LayoutPositions />
@@ -74,6 +64,15 @@
                             <option name="y" value="-225" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_taskAddFragment_to_nav_home">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -85,6 +84,36 @@
                             <option name="x" value="117" />
                             <option name="y" value="324" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_taskDetailsFragment_to_taskEditFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="taskEditFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="420" />
+                            <option name="y" value="325" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_taskEditFragment_to_taskDetailsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

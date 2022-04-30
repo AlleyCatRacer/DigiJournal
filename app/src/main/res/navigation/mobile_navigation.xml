@@ -10,21 +10,17 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_taskAddFragment"
-            app:destination="@id/taskAddFragment" />
-        <action
             android:id="@+id/action_nav_home_to_nav_tasks"
             app:destination="@id/nav_tasks" />
+        <action
+            android:id="@+id/action_nav_home_to_taskAddFragment"
+            app:destination="@id/taskAddFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/nav_tasks"
         android:name="com.s22.digijournal.ui.overview.TasksFragment"
         android:label="@string/menu_tasks"
         tools:layout="@layout/fragment_tasks" >
-        <action
-            android:id="@+id/action_nav_tasks_to_taskAddFragment"
-            app:destination="@id/taskAddFragment" />
         <action
             android:id="@+id/action_nav_tasks_to_taskDetailsFragment"
             app:destination="@id/taskDetailsFragment" />
@@ -32,10 +28,29 @@
     <fragment
         android:id="@+id/taskAddFragment"
         android:name="com.s22.digijournal.ui.task.TaskAddFragment"
-        android:label="TaskAddFragment" />
+        android:label="TaskAddFragment"
+        tools:layout="@layout/fragment_task_add">
+        <action
+            android:id="@+id/action_taskAddFragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/taskDetailsFragment"
         android:name="com.s22.digijournal.ui.task.TaskDetailsFragment"
-        android:label="TaskDetailsFragment" />
+        android:label="TaskDetailsFragment"
+        tools:layout="@layout/fragment_task_details">
+        <action
+            android:id="@+id/action_taskDetailsFragment_to_taskEditFragment"
+            app:destination="@id/taskEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskEditFragment"
+        android:name="com.s22.digijournal.ui.task.TaskEditFragment"
+        android:label="fragment_task_edit"
+        tools:layout="@layout/fragment_task_edit" >
+        <action
+            android:id="@+id/action_taskEditFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
 
 </navigation>

@@ -9,20 +9,10 @@
         android:roundIcon="@drawable/launcher_diary"
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiJournal">
+
         <activity
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".NavigationDrawer"
-            android:exported="true"
-            android:label="@string/home_welcome"
-            android:theme="@style/Theme.DigiJournal.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

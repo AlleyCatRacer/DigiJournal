@@ -25,7 +25,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/menu_tasks"
                 android:textAlignment="center"
-                android:textColor="@color/black"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toTopOf="@+id/task_recycler"
                 app:layout_constraintEnd_toEndOf="parent"

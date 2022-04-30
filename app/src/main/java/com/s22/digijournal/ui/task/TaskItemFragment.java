@@ -1,24 +1,22 @@
 package com.s22.digijournal.ui.task;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.s22.digijournal.R;
 
-/**
- * A fragment representing a list of Items.
- */
 public class TaskItemFragment extends Fragment
 {
-    private static final String TASK_COUNT = "column-count";
+    @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        return inflater.inflate(R.layout.fragment_task_item, container, false);
+    }
+}
+/*private static final String TASK_COUNT = "column-count";
     private static String IS_DONE;
     private static String TASK_ID;
     private static String TASK_NAME;
@@ -30,14 +28,10 @@ public class TaskItemFragment extends Fragment
     private String taskName;
     private String taskDeadline;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
-    public TaskItemFragment()
-    {
-    }
-
+public TaskItemFragment()
+{
+}
+    
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
     public static TaskItemFragment newInstance(int taskCount, boolean isDone, int taskID, String name)
@@ -51,12 +45,12 @@ public class TaskItemFragment extends Fragment
         fragment.setArguments(args);
         return fragment;
     }
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
+        
         if (getArguments() != null)
         {
             taskCount = getArguments().getInt(TASK_COUNT);
@@ -71,8 +65,7 @@ public class TaskItemFragment extends Fragment
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_task_item, container, false);
 
@@ -92,4 +85,4 @@ public class TaskItemFragment extends Fragment
         }
         return view;
     }
-}
+    */

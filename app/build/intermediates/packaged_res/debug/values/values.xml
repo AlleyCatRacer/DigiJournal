@@ -62,7 +62,7 @@
     <string name="task_edit_heading">Editing Task</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="welcome">"Welcome !"</string>
-    <style name="Theme.DigiJournal" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DigiJournal" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -74,6 +74,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/pattern</item>
+        <item name="android:toolbarStyle">@drawable/vertical_rainbow_gradient</item>
     </style>
     <style name="Theme.DigiJournal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.DigiJournal.NoActionBar">

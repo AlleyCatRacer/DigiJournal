@@ -2754,9 +2754,10 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_nav_home_to_nav_tasks
 id action_nav_home_to_taskAddFragment
-id action_nav_tasks_to_taskAddFragment
 id action_nav_tasks_to_taskDetailsFragment
-id action_settings
+id action_taskAddFragment_to_nav_home
+id action_taskDetailsFragment_to_taskEditFragment
+id action_taskEditFragment_to_taskDetailsFragment
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2990,7 +2991,6 @@ id locale
 id login
 id logo
 id ltr
-id main_fragment_container
 id main_tos_and_pp
 id masked
 id match_constraint
@@ -3055,8 +3055,10 @@ id name
 id name_layout
 id nav_controller_view_tag
 id nav_home
+id nav_host_fragment
 id nav_host_fragment_container
 id nav_host_fragment_content_navigation_drawer
+id nav_settings
 id nav_tasks
 id nav_view
 id navigation_bar_item_active_indicator_view
@@ -3065,6 +3067,7 @@ id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
+id navigation_drawer
 id navigation_header_container
 id never
 id neverCompleteToEnd
@@ -3204,6 +3207,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id taskAddFragment
 id taskDetailsFragment
+id taskEditFragment
 id taskName_label
 id task_deadline
 id task_done_checkBox
@@ -3372,7 +3376,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
-layout activity_navigation_drawer
 layout app_bar_navigation_drawer
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3471,6 +3474,8 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout navigation_drawer
+layout navigation_drawer_header
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -3505,7 +3510,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu activity_main_drawer
+menu appbar
 menu example_menu
 menu example_menu2
 menu navigation_drawer
