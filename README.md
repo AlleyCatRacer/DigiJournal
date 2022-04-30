@@ -26,27 +26,26 @@ Written and segregated in order of priority. Please note that I will be using Ag
 ### Critical
 1. As a user, I want to be able to add a task so that I can plan my time
 2. As a user, I want to be able to edit a task so that I can keep it up to date
-3. As a user, I want to be able to cancel a task so that I know what tasks are not valid anymore
-4. As a user, I want to be able to delete a task so that I can remove tasks that are not relevant
-5. As a user, I want to have a daily overview of my calendar so that I can see what my schedule will be on a specific day
-6. As a user, I want to have a monthly overview of my calendar so that I can see what my schedule will be on a specific month
+3. As a user, I want to be able to delete a task so that I can remove tasks that are not relevant
+4. As a user, I want to have a daily overview of my calendar so that I can see what my schedule will be on a specific day
+5. As a user, I want to have a monthly overview of my calendar so that I can see what my schedule will be on a specific month
 
 ### High
-7. As a user, I want to have a weekly overview of my calendar so that I can see what my schedule will be on a specific week
-8. As a user, I want to be able to enable dark mode so that I can more comfortably use the app in low lighting
-9. As a user, I want to be able to color code my tasks so that I can categorize and easily tell them apart
-10. As a user, I want to have a list that is not dependant upon a time schedule so that I can add tasks that I don’t know when I will do
-11. As a user, I want to be able to add deadlines to tasks so that I can keep track of when they need to be finished
-12. As a user, I want to be able to create tags for my tasks so that I can easily search through them
+6. As a user, I want to have a weekly overview of my calendar so that I can see what my schedule will be on a specific week
+7. As a user, I want to be able to enable dark mode so that I can more comfortably use the app in low lighting
+8. As a user, I want to be able to color code my tasks so that I can categorize and easily tell them apart
+9. As a user, I want to have a list that is not dependant upon a time schedule so that I can add tasks that I don’t know when I will do
+10. As a user, I want to be able to add deadlines to tasks so that I can keep track of when they need to be finished
+11. As a user, I want to be able to create tags for my tasks so that I can easily search through them
 
 ### Low
-13. As a user, I want to be able to create custom task sections so that I can tailor the application to fit my needs
-14. As a user, I want to be able to add my personal daily habits so that I can track when I do certain things
-15. As a user, I want to be acknowledged for maintaining good habits so that I can stay motivated to keep doing them
-16. As a user, I want to be able to set reminders so that I will be reminded to perform a task 
-17. As a user, I want to be able to create a custom value tracker so that I can monitor various metrics about myself
-18. As a user, I want to be able to choose a theme so that I can make the application more appealing to myself
-19. As a user, I want to be able to create invitations for tasks so that I can invite others to join me
-20. As a user, I want to be able to see who has responded to my invites so that I can plan accordingly
+12. As a user, I want to be able to create custom task sections so that I can tailor the application to fit my needs
+13. As a user, I want to be able to add my personal daily habits so that I can track when I do certain things
+14. As a user, I want to be acknowledged for maintaining good habits so that I can stay motivated to keep doing them
+15. As a user, I want to be able to set reminders so that I will be reminded to perform a task 
+16. As a user, I want to be able to create a custom value tracker so that I can monitor various metrics about myself
+17. As a user, I want to be able to choose a theme so that I can make the application more appealing to myself
+18. As a user, I want to be able to create invitations for tasks so that I can invite others to join me
+19. As a user, I want to be able to see who has responded to my invites so that I can plan accordingly
 
 [^1]:  Aldís Eir Hansen, 304124
