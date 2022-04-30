@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
     
     private void setupNav()
     {
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         setSupportActionBar(toolbar);
         appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_home, R.id.nav_tasks).
                 setOpenableLayout(drawerLayout).build();
