@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.s22.digijournal.R;
-import com.s22.digijournal.viewModels.TaskViewModel;
 
 public class TaskActivity extends AppCompatActivity
 {

@@ -91,7 +91,7 @@
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/deadline_textInput"
-                    app:layout_constraintBottom_toTopOf="@+id/list_spinner"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/deadline_textInput"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -106,23 +106,10 @@
                     android:ems="12"
                     android:hint="@string/task_add_date_format_hint"
                     android:inputType="date"
-                    app:layout_constraintBottom_toTopOf="@+id/list_spinner"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/deadline_label"
                     app:layout_constraintTop_toBottomOf="@+id/detail_text" />
-
-
-                <Spinner
-                    android:id="@+id/list_spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="20dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/deadline_label"
-                    tools:listitem="@layout/fragment_list_item" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
