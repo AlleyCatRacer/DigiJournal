@@ -5,20 +5,22 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.s22.digijournal.ui.login.LoginActivity;
-import com.s22.digijournal.ui.task.TaskActivity;
 import com.s22.digijournal.viewModels.MainActivityViewModel;
 
 public class MainActivity extends AppCompatActivity
 {
     private MainActivityViewModel viewModel;
     private TextView header;
-    private TextView subheader;
     private FloatingActionButton actionButton;
-    //private NavController navController;
+    private NavController navController;
+    private FragmentContainerView fragContainer;
     
     //TODO sort out context for different containers in XMLs
 
@@ -29,14 +31,13 @@ public class MainActivity extends AppCompatActivity
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         isSignedIn();
         
-        //navController = Navigation.findNavController(this, R.id.main_fragment_container);
-        actionButton = findViewById(R.id.fab);
-        //actionButton.setOnClickListener(a -> navController.navigate(R.id.action_nav_home_to_taskAddFragment));
-        actionButton.setOnClickListener(a -> startTaskActivity());
-        
         header = findViewById(R.id.home_header);
-        subheader = findViewById(R.id.home_subheader);
-        subheader.setText(R.string.home_subheader);
+        fragContainer = findViewById(R.id.main_fragment_container);
+        fragContainer.addView(findViewById(R.id.frag_tasks));
+        navController = Navigation.findNavController(this, R.id.main_fragment_container);
+        actionButton = findViewById(R.id.fab);
+        actionButton.setOnClickListener(a -> fragContainer.startViewTransition(findViewById(R.id.frag_add_task)));
+        
     }
     
     private void isSignedIn()
@@ -59,10 +60,5 @@ public class MainActivity extends AppCompatActivity
     {
         startActivity(new Intent(this, LoginActivity.class));
         finish();
-    }
-    
-    private void startTaskActivity()
-    {
-        startActivity(new Intent(this, TaskActivity.class));
     }
 }

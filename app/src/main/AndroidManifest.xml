@@ -13,9 +13,6 @@
             android:name=".ui.login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.list.ListActivity"
-            android:exported="false" />
-        <activity
             android:name=".NavigationDrawer"
             android:exported="true"
             android:label="@string/home_welcome"

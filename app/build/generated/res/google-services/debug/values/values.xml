@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">536020179416-crai4kdca965fto7rvoktc8lirv7ag1v.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">536020179416</string>
+    <string name="google_api_key" translatable="false">AIzaSyB2fqIyBQTQNb3Xk3XX1wr3sdGDCav7NZ4</string>
+    <string name="google_app_id" translatable="false">1:536020179416:android:33239dec776d8814443aad</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB2fqIyBQTQNb3Xk3XX1wr3sdGDCav7NZ4</string>
+    <string name="google_storage_bucket" translatable="false">digijournal-a6f7b.appspot.com</string>
+    <string name="project_id" translatable="false">digijournal-a6f7b</string>
+</resources>
