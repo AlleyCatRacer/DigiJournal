@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_categories"
             app:destination="@id/nav_categories" />
+        <action
+            android:id="@+id/action_nav_home_to_taskAddFragment"
+            app:destination="@id/taskAddFragment" />
     </fragment>
 
     <fragment
@@ -23,6 +26,9 @@
         <action
             android:id="@+id/action_nav_categories_to_nav_lists"
             app:destination="@id/nav_lists" />
+        <action
+            android:id="@+id/action_nav_categories_to_categoryAddFragment"
+            app:destination="@id/categoryAddFragment" />
     </fragment>
 
     <fragment
@@ -33,12 +39,38 @@
         <action
             android:id="@+id/action_nav_lists_to_nav_tasks"
             app:destination="@id/nav_tasks" />
+        <action
+            android:id="@+id/action_nav_lists_to_listAddFragment"
+            app:destination="@id/listAddFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/nav_tasks"
         android:name="com.s22.digijournal.ui.overview.TasksFragment"
         android:label="@string/menu_tasks"
-        tools:layout="@layout/activity_tasks" />
+        tools:layout="@layout/activity_tasks" >
+        <action
+            android:id="@+id/action_nav_tasks_to_taskAddFragment"
+            app:destination="@id/taskAddFragment" />
+        <action
+            android:id="@+id/action_nav_tasks_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskAddFragment"
+        android:name="com.s22.digijournal.ui.task.TaskAddFragment"
+        android:label="TaskAddFragment" />
+    <fragment
+        android:id="@+id/categoryAddFragment"
+        android:name="com.s22.digijournal.ui.category.CategoryAddFragment"
+        android:label="CategoryAddFragment" />
+    <fragment
+        android:id="@+id/listAddFragment"
+        android:name="com.s22.digijournal.ui.list.ListAddFragment"
+        android:label="ListAddFragment" />
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        android:name="com.s22.digijournal.ui.task.TaskDetailsFragment"
+        android:label="TaskDetailsFragment" />
 
 </navigation>

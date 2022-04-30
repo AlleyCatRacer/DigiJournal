@@ -34,14 +34,19 @@ public class ModelTaskList
         return listName;
     }
 
-    public void setListName(String listName)
-    {
-        this.listName = listName;
-    }
-
     public ArrayList<ModelTask> getTasks()
     {
         return tasks;
+    }
+    
+    public int getNrOfTasks()
+    {
+        return tasks.size();
+    }
+
+    public void setListName(String listName)
+    {
+        this.listName = listName;
     }
 
     public void setTasks(ArrayList<ModelTask> tasks)

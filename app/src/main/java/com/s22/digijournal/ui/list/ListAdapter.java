@@ -23,21 +23,24 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
         this.lists = lists;
     }
     
-    @Override public void onBindViewHolder(final ViewHolder holder, int position)
-    {
-        //TODO
-    }
-    
-    @Override public int getItemCount()
-    {
-        return lists.size();
-    }
-    
     @Override public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.fragment_list_item, parent, false);
         return new ViewHolder(view);
+    }
+    
+    @Override public void onBindViewHolder(final ViewHolder holder, int position)
+    {
+        ModelTaskList temp = lists.get(position);
+        
+        holder.name.setText(temp.getListName());
+        holder.taskCount.setText(temp.getNrOfTasks());
+    }
+    
+    @Override public int getItemCount()
+    {
+        return lists.size();
     }
     
     public void setOnClickListener(OnClickListener listener)
@@ -56,14 +59,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
             name = itemView.findViewById(R.id.list_name_textView);
             taskCount = itemView.findViewById(R.id.task_count_textView);
             
-            itemView.setOnClickListener(v ->
-            {
-                listener.onClick(lists.get(getBindingAdapterPosition()));
-            });
+            itemView.setOnClickListener(v -> listener.onClick(lists.get(getBindingAdapterPosition())));
         }
     }
     
-    private interface OnClickListener
+    public interface OnClickListener
     {
         void onClick(ModelTaskList list);
     }

@@ -1,16 +1,17 @@
 package com.s22.digijournal.ui.task;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
+
 import java.util.ArrayList;
 
 
@@ -25,26 +26,29 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
     }
 
     @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    {
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
+        return new ViewHolder(view);
+    }
+    
+    @Override
     public void onBindViewHolder(final ViewHolder holder, int position)
     {
-        //TODO
-        /*holder.mItem = mTasks.get(position);
-        holder.mIdView.setText(mTasks.get(position).id);
-        holder.mContentView.setText(mTasks.get(position).content);*/
+        ModelTask temp = tasks.get(position);
+        holder.name.setText(temp.getTaskName());
+        holder.done.setChecked(temp.isDone());
+        if (temp.getDeadline() != null)
+        {
+            holder.deadline.setText(temp.getDeadlineString());
+        }
     }
 
     @Override
     public int getItemCount()
     {
         return tasks.size();
-    }
-
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
-        return new ViewHolder(view);
     }
 
     public void setOnClickListener(OnClickListener listener)
@@ -72,7 +76,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         }
     }
 
-    private interface OnClickListener
+    public interface OnClickListener
     {
         void onClick(ModelTask task);
     }

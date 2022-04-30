@@ -62,6 +62,41 @@ public class ModelTask
         return taskName;
     }
 
+    public String getDescription()
+    {
+        return description;
+    }
+    
+    public Date getDateAdded()
+    {
+        return dateAdded;
+    }
+
+    public Date getDateEdited()
+    {
+        return dateEdited;
+    }
+
+    public Date getDeadline()
+    {
+        return deadline;
+    }
+    
+    public String getDeadlineString()
+    {
+        return deadline.toString();
+    }
+
+    public ArrayList<ModelTag> getTags()
+    {
+        return tags;
+    }
+
+    public ModelTaskPriority getPriority()
+    {
+        return priority;
+    }
+    
     public boolean isDone()
     {
         return isDone;
@@ -72,27 +107,11 @@ public class ModelTask
         isDone = !isDone;
     }
 
-    public String getDescription()
-    {
-        return description;
-    }
-
     public void setDescription(String description)
     {
         this.description = description;
         dateEdited = Date.from(Instant.now());
     }
-
-    public Date getDateAdded()
-    {
-        return dateAdded;
-    }
-
-    public Date getDateEdited()
-    {
-        return dateEdited;
-    }
-    
     public void setTaskName(String name)
     {
         if (name.isEmpty())
@@ -107,20 +126,10 @@ public class ModelTask
         this.dateEdited = Date.from(Instant.now());;
     }
 
-    public Date getDeadline()
-    {
-        return deadline;
-    }
-
     public void setDeadline(Date deadline)
     {
         this.deadline = deadline;
         setDateEdited();
-    }
-
-    public ArrayList<ModelTag> getTags()
-    {
-        return tags;
     }
 
     public void addTags(ArrayList<ModelTag> tags)
@@ -149,11 +158,6 @@ public class ModelTask
     {
         tags.clear();
         setDateEdited();
-    }
-
-    public ModelTaskPriority getPriority()
-    {
-        return priority;
     }
 
     public void setPriority(ModelTaskPriority priority)
