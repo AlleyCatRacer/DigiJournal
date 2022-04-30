@@ -33,18 +33,18 @@ public class MainActivity extends AppCompatActivity
     private FloatingActionButton actionButton;
     
     //TODO sort out context for different containers in XMLs
-
+ 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
         isSignedIn();
         initViews();
         setupNav();
         
-        //TODO display fragment in container
-        // https://github.com/KasperKnop/NavigationExample/blob/master/app/src/main/java/io/github/kasperknop/pokedb/MainActivity.java
+        //https://github.com/KasperKnop/NavigationExample/blob/master/app/src/main/java/io/github/kasperknop/pokedb/MainActivity.java
         //TODO navigate to add task fragment
         // https://github.com/KasperKnop/NavigationExample/blob/master/app/src/main/java/io/github/kasperknop/pokedb/AbilitiesFragment.java
     }

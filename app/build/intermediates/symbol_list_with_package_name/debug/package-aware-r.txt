@@ -2929,7 +2929,6 @@ id flip
 id floating
 id forever
 id frag_add_task
-id frag_tasks
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
@@ -3055,8 +3054,8 @@ id name
 id name_layout
 id nav_controller_view_tag
 id nav_home
-id nav_host_fragment
 id nav_host_fragment_container
+id nav_host_fragment_content_main
 id nav_host_fragment_content_navigation_drawer
 id nav_settings
 id nav_tasks

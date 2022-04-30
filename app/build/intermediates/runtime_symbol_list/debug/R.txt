@@ -2928,7 +2928,6 @@ int id flip 0x7f0800eb
 int id floating 0x7f0800ec
 int id forever 0x7f0800ed
 int id frag_add_task 0x7f0800ee
-int id frag_tasks 0x7f0800ef
 int id fragment_container_view_tag 0x7f0800f0
 int id fragment_phone 0x7f0800f1
 int id fragment_register_email 0x7f0800f2
@@ -3054,8 +3053,8 @@ int id name 0x7f08016a
 int id name_layout 0x7f08016b
 int id nav_controller_view_tag 0x7f08016c
 int id nav_home 0x7f08016d
-int id nav_host_fragment 0x7f08025c
 int id nav_host_fragment_container 0x7f08016e
+int id nav_host_fragment_content_main 0x7f080254
 int id nav_host_fragment_content_navigation_drawer 0x7f08016f
 int id nav_settings 0x7f080170
 int id nav_tasks 0x7f080171

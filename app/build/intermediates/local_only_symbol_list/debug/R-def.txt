@@ -51,13 +51,12 @@ id drawer_layout
 id edit_button
 id fab
 id frag_add_task
-id frag_tasks
 id home_header
 id loading
 id login
 id mobile_navigation
 id nav_home
-id nav_host_fragment
+id nav_host_fragment_content_main
 id nav_host_fragment_content_navigation_drawer
 id nav_settings
 id nav_tasks
