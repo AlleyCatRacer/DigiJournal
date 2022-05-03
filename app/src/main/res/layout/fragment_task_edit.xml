@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.task.TaskEditFragment">
+    tools:context=".Fragments.Task.TaskEditFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,7 +23,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/task_edit_heading"
-                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toTopOf="@+id/title"
@@ -37,7 +36,6 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/task_add_title_hint"
                 android:text="[taskName]"
-                android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textAlignment="center"
                 android:layout_marginEnd="10dp"
@@ -54,7 +52,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/black"
                 android:text="@string/task_add_desc"
                 android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@id/title"
@@ -69,7 +66,6 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/task_add_desc_hint"
                 android:text="[Description text]"
-                android:textColor="@color/black"
                 android:minHeight="48dp"
                 android:textSize="16sp"
                 android:layout_marginLeft="10dp"
@@ -86,7 +82,6 @@
                 android:layout_marginTop="30dp"
                 android:layout_margin="10dp"
                 android:text="@string/task_add_deadline"
-                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/back_button"
                 app:layout_constraintEnd_toStartOf="@+id/deadline_textView"

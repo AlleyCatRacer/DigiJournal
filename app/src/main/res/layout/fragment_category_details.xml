@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    tools:context=".ui.category.CategoryDetailsFragment">
+    tools:context=".Fragments.Category.CategoryDetailsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="LinearLayoutManager"
-            tools:context=".ui.overview.ListsFragment"
+            tools:context=".Fragments.Overview.ListsFragment"
             tools:layout_editor_absoluteX="16dp"
             tools:listitem="@layout/fragment_list_item"
             android:layout_margin="10dp"
