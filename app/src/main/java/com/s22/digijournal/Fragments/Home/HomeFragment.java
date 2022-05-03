@@ -15,16 +15,17 @@ import com.s22.digijournal.databinding.FragmentHomeBinding;
 public class HomeFragment extends Fragment
 {
 	private FragmentHomeBinding binding;
+	private HomeViewModel viewModel;
 	
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+		viewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
 		
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
 		View root = binding.getRoot();
 		
-		final TextView textView = binding.textHome;
-		homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+		final TextView textView = binding.headerTextView;
+		viewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 		return root;
 	}
 	
