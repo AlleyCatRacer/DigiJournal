@@ -1,32 +1,25 @@
 package com.s22.digijournal.Model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.room.Relation;
+
 import java.util.ArrayList;
 
-public class TaskList
+@Entity public class TaskList
 {
-    private String listName;
-    private ArrayList<Task> tasks;
-    boolean isDefault;
-
-    public TaskList(String name)
-    {
-        listName = name;
-        tasks = new ArrayList<>();
-        isDefault = false;
-    }
-
-    public TaskList(String name, boolean isDefault)
-    {
-        listName = name;
-        tasks = new ArrayList<>();
-        this.isDefault = isDefault;
-    }
-
+    @PrimaryKey private String listName;
+    
+    @Relation(parentColumn = "taskName", entityColumn = "taskName")
+    @ColumnInfo(name = "tasks")
+    @Embedded private ArrayList<Task> tasks;
+    
     public TaskList(String name, ArrayList<Task> tasks)
     {
-        listName = name;
-        this.tasks = tasks;
-        isDefault = false;
+        setListName(name);
+        setTasks(tasks);
     }
 
     public String getListName()
@@ -34,19 +27,29 @@ public class TaskList
         return listName;
     }
 
-    public void setListName(String listName)
-    {
-        this.listName = listName;
-    }
-
     public ArrayList<Task> getTasks()
     {
         return tasks;
     }
 
+    public void setListName(String listName)
+    {
+        if (listName != null && !listName.isEmpty())
+        {
+            this.listName = listName;
+        }
+    }
+
     public void setTasks(ArrayList<Task> tasks)
     {
-        this.tasks = tasks;
+        if (tasks == null)
+        {
+            this.tasks = new ArrayList<>();
+        }
+        else
+        {
+            this.tasks = tasks;
+        }
     }
 
     public void addTask(Task task)
@@ -67,18 +70,8 @@ public class TaskList
         tasks.remove(task);
     }
 
-    public void clearTasks()
+    public void clearList()
     {
         tasks.clear();
-    }
-
-    public boolean isDefaultList()
-    {
-        return isDefault;
-    }
-
-    public void setDefault(boolean aDefault)
-    {
-        isDefault = aDefault;
     }
 }

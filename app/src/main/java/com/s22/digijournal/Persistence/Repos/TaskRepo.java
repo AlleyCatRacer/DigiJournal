@@ -42,8 +42,9 @@ public class TaskRepo
 		return tasks;
 	}
 	
-	public void insertTask(Task task)
+	public void addTask(Task task)
 	{
+		if (hasTask(task)) return;
 		executorService.execute(() -> taskDAO.addTask(task));
 	}
 	
@@ -55,5 +56,10 @@ public class TaskRepo
 	public void removeAll()
 	{
 		executorService.execute(taskDAO::removeAll);
+	}
+	
+	private boolean hasTask(Task task)
+	{
+		return tasks.getValue().contains(task);
 	}
 }

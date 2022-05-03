@@ -8,8 +8,7 @@ import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-@Entity
-public class Task
+@Entity public class Task
 {
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "taskID") private int taskID;
     private @ColumnInfo(name = "status") boolean isDone;
@@ -108,11 +107,13 @@ public class Task
 
     public void setDateEdited(long dateEdited)
     {
+        //TODO check if before date added
         this.dateEdited = dateEdited;
     }
 
     public void setDeadline(long deadline)
     {
+        //TODO check if before date added
         this.deadline = deadline;
     }
 }
