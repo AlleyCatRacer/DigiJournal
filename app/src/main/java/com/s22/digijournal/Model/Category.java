@@ -31,6 +31,11 @@ import java.util.ArrayList;
         return lists;
     }
     
+    public int getListCount()
+    {
+        return lists.size();
+    }
+    
     public void setCategoryName(String name)
     {
         if (name != null && !name.isEmpty())

@@ -11,21 +11,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.Model.TaskList;
 import com.s22.digijournal.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
 {
-    private final ArrayList<TaskList> lists;
-    private OnClickListener listener;
+    private final List<TaskList> lists;
+    private ListOnClickListener listener;
     
-    public ListAdapter(ArrayList<TaskList> lists)
+    public ListAdapter(List<TaskList> lists, ListOnClickListener listener)
     {
         this.lists = lists;
+        this.listener = listener;
     }
     
     @Override public void onBindViewHolder(final ViewHolder holder, int position)
     {
-        //TODO
+        if (holder != null)
+        {
+            TaskList temp = lists.get(position);
+            holder.name.setText(temp.getListName());
+            holder.taskCount.setText(temp.getTaskCount());
+        }
     }
     
     @Override public int getItemCount()
@@ -40,7 +46,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
         return new ViewHolder(view);
     }
     
-    public void setOnClickListener(OnClickListener listener)
+    public void setOnClickListener(ListOnClickListener listener)
     {
         this.listener = listener;
     }
@@ -63,7 +69,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
         }
     }
     
-    private interface OnClickListener
+    public interface ListOnClickListener
     {
         void onClick(TaskList list);
     }

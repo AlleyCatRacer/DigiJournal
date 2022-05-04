@@ -16,6 +16,7 @@ public abstract class TaskDAO
 	@Insert abstract void insertTask(Task task);
 	@Update abstract void editTask(Task task);
 	@Query("SELECT * FROM task ORDER BY taskId") public abstract LiveData<List<Task>> getAllTasks();
+	@Query("DELETE FROM task WHERE taskID = :taskId") public abstract void removeTask(int taskId);
 	@Query("DELETE FROM task") public abstract void removeAll();
 	
 	@Insert public void addTask(Task task)
@@ -29,4 +30,5 @@ public abstract class TaskDAO
 		task.setDateEdited(System.currentTimeMillis());
 		editTask(task);
 	}
+	
 }

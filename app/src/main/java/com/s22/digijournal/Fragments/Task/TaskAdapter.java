@@ -25,8 +25,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         taskListener = listener;
     }
 
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position)
+    @Override public void onBindViewHolder(final ViewHolder holder, int position)
     {
         if (holder != null)
         {
@@ -36,14 +35,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         }
     }
 
-    @Override
-    public int getItemCount()
+    @Override public int getItemCount()
     {
         return tasks.size();
     }
-
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    
+    @NonNull @Override public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
@@ -63,7 +60,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
             
             itemView.setOnClickListener(v -> taskListener.onClick(tasks.get(getBindingAdapterPosition())));
                 //getBindingAdapterPosition gets the position of the item clicked, identifying it
-            
         }
     }
 

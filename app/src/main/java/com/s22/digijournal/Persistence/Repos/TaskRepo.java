@@ -53,6 +53,14 @@ public class TaskRepo
 		executorService.execute(() -> taskDAO.updateTask(task));
 	}
 	
+	public void removeTask(Task task)
+	{
+		if (hasTask(task))
+		{
+			executorService.execute(() -> taskDAO.removeTask(task.getTaskID()));
+		}
+	}
+	
 	public void removeAll()
 	{
 		executorService.execute(taskDAO::removeAll);

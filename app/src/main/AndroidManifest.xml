@@ -13,9 +13,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Fragments.List.ListActivity"
-            android:exported="false" />
-        <activity
             android:name=".NavigationDrawer"
             android:exported="true"
             android:label="@string/title_activity_navigation_drawer"

@@ -11,21 +11,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.Model.Category;
 import com.s22.digijournal.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder>
 {
-    private final ArrayList<Category> categories;
-    private OnClickListener listener;
+    private final List<Category> categories;
+    private CategoryOnClickListener categoryListener;
     
-    public CategoryAdapter(ArrayList<Category> categories)
+    public CategoryAdapter(List<Category> categories, CategoryOnClickListener listener)
     {
         this.categories = categories;
+        categoryListener = listener;
     }
     
-    @Override public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+    @Override public void onBindViewHolder(ViewHolder holder, int position)
     {
-        //TODO
+        if (holder != null)
+        {
+            Category temp = categories.get(position);
+            holder.name.setText(temp.getCategoryName());
+            holder.listCount.setText(temp.getListCount());
+        }
     }
     
     @Override public int getItemCount()
@@ -41,7 +47,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     }
     
     
-    protected class ViewHolder extends RecyclerView.ViewHolder
+    public class ViewHolder extends RecyclerView.ViewHolder
     {
         private final TextView name;
         private final TextView listCount;
@@ -51,14 +57,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             super(itemView);
             name = itemView.findViewById(R.id.category_title);
             listCount = itemView.findViewById(R.id.task_count_textView);
-            itemView.setOnClickListener(v ->
-            {
-                listener.onClick(categories.get((getBindingAdapterPosition())));
-            });
+            itemView.setOnClickListener(v -> categoryListener.onClick(categories.get((getBindingAdapterPosition()))));
         }
     }
     
-    private interface OnClickListener
+    public interface CategoryOnClickListener
     {
         void onClick(Category category);
     }

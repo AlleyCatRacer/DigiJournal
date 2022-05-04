@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.198" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/drawable/ic_launcher_background.xml" value="0.198" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout-v28/nav_header_navigation_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_categories.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_list.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
@@ -42,6 +43,7 @@
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_tasks_list.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/home_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/layout.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/navigation_drawer.xml" value="0.25416666666666665" />

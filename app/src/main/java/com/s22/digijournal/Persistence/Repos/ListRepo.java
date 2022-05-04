@@ -64,6 +64,13 @@ public class ListRepo
 		executorService.execute(() -> listDAO.updateList(list));
 	}
 	
+	public void removeTaskFromList(TaskList list, Task task)
+	{
+		taskDAO.removeTask(task.getTaskID());
+		removeList(list);
+		executorService.execute(() -> listDAO.removeList(list.getListName()));
+	}
+	
 	public void removeAllLists()
 	{
 		executorService.execute(listDAO::removeAll);

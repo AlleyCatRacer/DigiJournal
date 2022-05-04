@@ -65,6 +65,20 @@ public class CategoryRepo
 		executorService.execute(() -> categoryDAO.updateCategory(category));
 	}
 	
+	public void editCategory(Category category)
+	{
+		executorService.execute(() -> categoryDAO.updateCategory(category));
+	}
+	
+	public void removeListFromCategory(Category category, TaskList list)
+	{
+		if (category.getLists().contains(list))
+		{
+			category.removeList(list);
+			executorService.execute(() -> removeListFromCategory(category, list));
+		}
+	}
+	
 	public void removeAllCategories()
 	{
 		executorService.execute(categoryDAO::removeAll);

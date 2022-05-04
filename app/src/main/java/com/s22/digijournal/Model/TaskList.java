@@ -31,6 +31,11 @@ import java.util.ArrayList;
     {
         return tasks;
     }
+    
+    public int getTaskCount()
+    {
+        return tasks.size();
+    }
 
     public void setListName(String listName)
     {
