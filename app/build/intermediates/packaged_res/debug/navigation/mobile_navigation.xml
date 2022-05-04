@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.s22.digijournal.Fragments.Home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_categories"
+            app:destination="@id/categories" />
+        <action
+            android:id="@+id/action_home_to_task_add"
+            app:destination="@id/task_add" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categories"
+        android:name="com.s22.digijournal.Fragments.Overview.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/activity_categories" >
+        <action
+            android:id="@+id/action_categories_to_lists"
+            app:destination="@id/lists" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lists"
+        android:name="com.s22.digijournal.Fragments.Overview.ListsFragment"
+        android:label="@string/menu_lists"
+        tools:layout="@layout/activity_list" >
+        <action
+            android:id="@+id/action_lists_to_tasks"
+            app:destination="@id/tasks" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tasks"
+        android:name="com.s22.digijournal.Fragments.Overview.TasksFragment"
+        android:label="@string/menu_tasks"
+        tools:layout="@layout/activity_tasks" >
+        <action
+            android:id="@+id/action_tasks_to_task_details"
+            app:destination="@id/task_details" />
+        <action
+            android:id="@+id/action_tasks_to_task_add"
+            app:destination="@id/task_add" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_edit"
+        android:name="com.s22.digijournal.Fragments.Task.TaskEditFragment"
+        android:label="task_edit"
+        tools:layout="@layout/fragment_task_edit" >
+        <action
+            android:id="@+id/action_task_edit_to_task_details"
+            app:destination="@id/task_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_details"
+        android:name="com.s22.digijournal.Fragments.Task.TaskDetailsFragment"
+        android:label="task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <action
+            android:id="@+id/action_task_details_to_task_edit"
+            app:destination="@id/task_edit" />
+        <action
+            android:id="@+id/action_task_details_to_task_add"
+            app:destination="@id/task_add" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_add"
+        android:name="com.s22.digijournal.Fragments.Task.TaskAddFragment"
+        android:label="fragment_task_add"
+        tools:layout="@layout/fragment_task_add" >
+        <action
+            android:id="@+id/action_task_add_to_task_details"
+            app:destination="@id/task_details" />
+        <action
+            android:id="@+id/action_task_add_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+</navigation>

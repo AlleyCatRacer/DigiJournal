@@ -1,7 +1,5 @@
 package com.s22.digijournal.Model;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
@@ -12,8 +10,7 @@ import java.util.ArrayList;
 {
     @PrimaryKey private String categoryName;
     @Relation(parentColumn = "listName", entityColumn = "listName")
-    @ColumnInfo(name = "lists")
-    @Embedded private ArrayList<TaskList> lists;
+    private ArrayList<TaskList> lists;
     
     public Category(String name, ArrayList<TaskList> lists)
     {

@@ -1,0 +1,34 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "a578cbf40d83359b3d83d87fa239e70c",
+    "entities": [
+      {
+        "tableName": "TaskList",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`listName` TEXT, PRIMARY KEY(`listName`))",
+        "fields": [
+          {
+            "fieldPath": "listName",
+            "columnName": "listName",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "listName"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a578cbf40d83359b3d83d87fa239e70c')"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.Task.TaskAddFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_add_heading_label"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@+id/task_add_taskName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/task_add_taskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:hint="@string/task_add_title_hint"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@id/detail_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/detail_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/task_add_desc"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/task_add_desc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/task_add_taskName" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/task_add_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/task_add_desc_hint"
+                android:minHeight="50dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/task_add_deadline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detail_label" />
+
+            <TextView
+                android:id="@+id/task_add_deadline_label"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/task_add_deadline"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/task_add_deadline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/task_add_deadline"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/task_add_deadline"
+                android:layout_width="0dp"
+                android:layout_height="60sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:ems="12"
+                android:hint="@string/task_add_date_format_hint"
+                android:inputType="date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/task_add_deadline_label"
+                app:layout_constraintTop_toBottomOf="@+id/task_add_desc" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/task_add_create_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/create_button" />
+
+    <Button
+        android:id="@+id/task_add_cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/cancel_button" />
+
+</FrameLayout>
