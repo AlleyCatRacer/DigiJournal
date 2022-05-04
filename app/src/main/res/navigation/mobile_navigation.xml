@@ -3,42 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/home"
         android:name="com.s22.digijournal.Fragments.Home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_categories"
-            app:destination="@id/nav_categories" />
+            android:id="@+id/action_home_to_categories"
+            app:destination="@id/categories" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_categories"
+        android:id="@+id/categories"
         android:name="com.s22.digijournal.Fragments.Overview.CategoriesFragment"
         android:label="@string/menu_categories"
         tools:layout="@layout/activity_categories" >
         <action
-            android:id="@+id/action_nav_categories_to_nav_lists"
-            app:destination="@id/nav_lists" />
+            android:id="@+id/action_categories_to_lists"
+            app:destination="@id/lists" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_lists"
+        android:id="@+id/lists"
         android:name="com.s22.digijournal.Fragments.Overview.ListsFragment"
         android:label="@string/menu_lists"
         tools:layout="@layout/activity_list" >
         <action
-            android:id="@+id/action_nav_lists_to_nav_tasks"
-            app:destination="@id/nav_tasks" />
+            android:id="@+id/action_lists_to_tasks"
+            app:destination="@id/tasks" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_tasks"
+        android:id="@+id/tasks"
         android:name="com.s22.digijournal.Fragments.Overview.TasksFragment"
         android:label="@string/menu_tasks"
-        tools:layout="@layout/activity_tasks" />
+        tools:layout="@layout/activity_tasks" >
+        <action
+            android:id="@+id/action_tasks_to_task_details"
+            app:destination="@id/task_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_edit"
+        android:name="com.s22.digijournal.Fragments.Task.TaskEditFragment"
+        android:label="task_edit"
+        tools:layout="@layout/fragment_task_edit" >
+        <action
+            android:id="@+id/action_task_edit_to_task_details"
+            app:destination="@id/task_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_details"
+        android:name="com.s22.digijournal.Fragments.Task.TaskDetailsFragment"
+        android:label="task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <action
+            android:id="@+id/action_task_details_to_task_edit"
+            app:destination="@id/task_edit" />
+    </fragment>
 
 </navigation>

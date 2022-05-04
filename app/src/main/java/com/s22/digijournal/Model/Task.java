@@ -127,6 +127,7 @@ import java.text.SimpleDateFormat;
     
     public void setDeadlineString(String deadline)
     {
-        //TODO parse deadline
+        //TODO check if before date added
+        this.deadline = Date.parse(deadline);
     }
 }

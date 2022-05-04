@@ -10,9 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.s22.digijournal.Model.Task;
+import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTaskEditBinding;
 
 public class TaskEditFragment extends Fragment
@@ -63,11 +65,14 @@ public class TaskEditFragment extends Fragment
 	{
 		super.onViewCreated(view, savedInstanceState);
 		
-		binding.taskEditBackButton.setOnClickListener(v ->
+		binding.taskEditSaveButton.setOnClickListener(v ->
 		{
 			temp.setTaskName(taskName.getText().toString());
 			temp.setDescription(description.getText().toString());
-			temp.setDeadlineString(deadline.getText().toString());//TODO implement
+			temp.setDeadlineString(deadline.getText().toString());
+			NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.action_task_edit_to_task_details);
 		});
+		
+		binding.taskEditBackButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.action_task_edit_to_task_details));
 	}
 }
