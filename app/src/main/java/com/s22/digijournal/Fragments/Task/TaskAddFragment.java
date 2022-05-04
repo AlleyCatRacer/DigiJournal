@@ -4,47 +4,59 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.s22.digijournal.Model.Task;
 import com.s22.digijournal.R;
+import com.s22.digijournal.databinding.FragmentTaskAddBinding;
+
+import java.util.Objects;
 
 public class TaskAddFragment extends Fragment
 {
-	private static final String ARG_PARAM1 = "param1";
-	private static final String ARG_PARAM2 = "param2";
-
-	private String mParam1;
-	private String mParam2;
-	
-	public TaskAddFragment()
-	{
-		// Required empty public constructor
-	}
-	
-	public static TaskAddFragment newInstance(String param1, String param2)
-	{
-		TaskAddFragment fragment = new TaskAddFragment();
-		Bundle args = new Bundle();
-		args.putString(ARG_PARAM1, param1);
-		args.putString(ARG_PARAM2, param2);
-		fragment.setArguments(args);
-		return fragment;
-	}
-	
-	@Override public void onCreate(Bundle savedInstanceState)
-	{
-		super.onCreate(savedInstanceState);
-		if (getArguments() != null)
-		{
-			mParam1 = getArguments().getString(ARG_PARAM1);
-			mParam2 = getArguments().getString(ARG_PARAM2);
-		}
-	}
+	private FragmentTaskAddBinding binding;
+	private TaskViewModel viewModel;
+	private TextInputEditText taskName;
+	private TextInputEditText description;
+	private EditText deadline;
 	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_task_add, container, false);
+		viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+		binding = FragmentTaskAddBinding.inflate(inflater, container, false);
+		
+		taskName = binding.taskAddTaskName;
+		description = binding.taskAddDesc;
+		deadline = binding.taskAddDeadline;
+		
+		return binding.getRoot();
+	}
+	
+	@Nullable @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+	{
+		super.onViewCreated(view, savedInstanceState);
+		binding.taskAddCreateButton.setOnClickListener(v ->
+		{
+			Task temp = new Task();
+			temp.setTaskName(Objects.requireNonNull(taskName.getText()).toString());
+			temp.setDescription(description.getText().toString());
+			viewModel.addTask(temp);
+			NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_task_add_to_task_details);
+		});
+		
+		binding.taskAddCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_task_add_to_home));
+	}
+	
+	@Override public void onDestroyView()
+	{
+		super.onDestroyView();
+		binding = null;
 	}
 }

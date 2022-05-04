@@ -61,4 +61,10 @@ public class TaskItemFragment extends Fragment
         
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+    
+    @Override public void onDestroyView()
+    {
+        super.onDestroyView();
+        binding = null;
+    }
 }

@@ -12,26 +12,28 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.Model.Task;
 import com.s22.digijournal.R;
 
-import java.util.ArrayList;
-
+import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
-    private final ArrayList<Task> tasks;
-    private OnClickListener listener;
+    private final List<Task> tasks;
+    private TaskOnClickListener taskListener;
 
-    public TaskAdapter(ArrayList<Task> tasks)
+    public TaskAdapter(List<Task> tasks, TaskOnClickListener listener)
     {
         this.tasks = tasks;
+        taskListener = listener;
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position)
     {
-        //TODO
-        /*holder.mItem = mTasks.get(position);
-        holder.mIdView.setText(mTasks.get(position).id);
-        holder.mContentView.setText(mTasks.get(position).content);*/
+        if (holder != null)
+        {
+            Task temp = tasks.get(position);
+            holder.done.setChecked(temp.isDone());
+            holder.name.setText(temp.getTaskName());
+        }
     }
 
     @Override
@@ -48,32 +50,24 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         return new ViewHolder(view);
     }
 
-    public void setOnClickListener(OnClickListener listener)
-    {
-        this.listener = listener;
-    }
-
-    protected class ViewHolder extends RecyclerView.ViewHolder
+    public class ViewHolder extends RecyclerView.ViewHolder
     {
         private final CheckBox done;
         private final TextView name;
-        private final TextView deadline;
 
         ViewHolder(View itemView)
         {
             super(itemView);
             done = itemView.findViewById(R.id.task_checkBox);
             name = itemView.findViewById(R.id.task_item_taskName);
-            deadline = itemView.findViewById(R.id.task_deadline);
-            itemView.setOnClickListener(v ->
-            {
-                listener.onClick(tasks.get(getBindingAdapterPosition()));
+            
+            itemView.setOnClickListener(v -> taskListener.onClick(tasks.get(getBindingAdapterPosition())));
                 //getBindingAdapterPosition gets the position of the item clicked, identifying it
-            });
+            
         }
     }
 
-    private interface OnClickListener
+    public interface TaskOnClickListener
     {
         void onClick(Task task);
     }

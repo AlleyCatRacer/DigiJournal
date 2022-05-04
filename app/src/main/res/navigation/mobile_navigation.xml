@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_home_to_categories"
             app:destination="@id/categories" />
+        <action
+            android:id="@+id/action_home_to_task_add"
+            app:destination="@id/task_add" />
     </fragment>
 
     <fragment
@@ -43,6 +46,9 @@
         <action
             android:id="@+id/action_tasks_to_task_details"
             app:destination="@id/task_details" />
+        <action
+            android:id="@+id/action_tasks_to_task_add"
+            app:destination="@id/task_add" />
     </fragment>
     <fragment
         android:id="@+id/task_edit"
@@ -61,6 +67,21 @@
         <action
             android:id="@+id/action_task_details_to_task_edit"
             app:destination="@id/task_edit" />
+        <action
+            android:id="@+id/action_task_details_to_task_add"
+            app:destination="@id/task_add" />
+    </fragment>
+    <fragment
+        android:id="@+id/task_add"
+        android:name="com.s22.digijournal.Fragments.Task.TaskAddFragment"
+        android:label="fragment_task_add"
+        tools:layout="@layout/fragment_task_add" >
+        <action
+            android:id="@+id/action_task_add_to_task_details"
+            app:destination="@id/task_details" />
+        <action
+            android:id="@+id/action_task_add_to_home"
+            app:destination="@id/home" />
     </fragment>
 
 </navigation>

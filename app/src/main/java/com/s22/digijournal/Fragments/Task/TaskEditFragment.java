@@ -49,7 +49,7 @@ public class TaskEditFragment extends Fragment
 		deadline.setText(temp.getDeadlineFormatted());
 	}
 	
-	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
 		binding = FragmentTaskEditBinding.inflate(inflater, container, false);
 		
@@ -74,5 +74,11 @@ public class TaskEditFragment extends Fragment
 		});
 		
 		binding.taskEditBackButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.action_task_edit_to_task_details));
+	}
+	
+	@Override public void onDestroyView()
+	{
+		super.onDestroyView();
+		binding = null;
 	}
 }

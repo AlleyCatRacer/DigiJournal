@@ -4,48 +4,69 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.s22.digijournal.Model.Task;
 import com.s22.digijournal.R;
+import com.s22.digijournal.databinding.FragmentTaskDetailsBinding;
 
-public class TaskDetailsFragment extends Fragment
+public class TaskDetailsFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
-	private static final String ARG_PARAM1 = "param1";
-	private static final String ARG_PARAM2 = "param2";
-
-	private String mParam1;
-	private String mParam2;
+	private TaskViewModel viewModel;
+	private Task temp;
+	private FragmentTaskDetailsBinding binding;
+	private TextView taskID;
+	private TextView taskName;
+	private TextView description;
 	
-	public TaskDetailsFragment()
-	{
-		// Required empty public constructor
-	}
-	
-	public static TaskDetailsFragment newInstance(String param1, String param2)
-	{
-		TaskDetailsFragment fragment = new TaskDetailsFragment();
-		Bundle args = new Bundle();
-		args.putString(ARG_PARAM1, param1);
-		args.putString(ARG_PARAM2, param2);
-		fragment.setArguments(args);
-		return fragment;
-	}
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState)
+	@Override public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		if (getArguments() != null)
+		
+		viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+		
+		temp = viewModel.getCurrentTask();
+		
+		if (temp.getTaskID() != 0)
 		{
-			mParam1 = getArguments().getString(ARG_PARAM1);
-			mParam2 = getArguments().getString(ARG_PARAM2);
+			taskID.setText(temp.getTaskID());
+			taskName.setText(temp.getTaskName());
+			description.setText(temp.getDescription());
 		}
 	}
 	
-	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	@Nullable @Override public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
-		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.fragment_task_details, container, false);
+		binding = FragmentTaskDetailsBinding.inflate(inflater, container, false);
+		
+		taskID = binding.taskDetailsIDLabel;
+		taskName = binding.taskDetailsTaskName;
+		description = binding.taskDetailsDesc;
+		
+		return binding.getRoot();
+	}
+	
+	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+	{
+		super.onViewCreated(view, savedInstanceState);
+		
+		binding.taskDetailsEditButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_task_details_to_task_edit));
+	}
+	
+	@Override public void onDestroyView()
+	{
+		super.onDestroyView();
+		binding = null;
+	}
+	
+	@Override public void onClick(Task task)
+	{
+		viewModel.setCurrentTask(task);
 	}
 }
