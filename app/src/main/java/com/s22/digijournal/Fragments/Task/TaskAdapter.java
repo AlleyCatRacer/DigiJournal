@@ -63,7 +63,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         {
             super(itemView);
             done = itemView.findViewById(R.id.task_checkBox);
-            name = itemView.findViewById(R.id.task_item_header);
+            name = itemView.findViewById(R.id.task_item_taskName);
             deadline = itemView.findViewById(R.id.task_deadline);
             itemView.setOnClickListener(v ->
             {

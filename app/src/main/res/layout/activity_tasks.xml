@@ -20,7 +20,7 @@
             tools:context=".Fragments.Home.HomeFragment">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/task_edit_taskName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/menu_tasks"
@@ -43,7 +43,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/task_edit_taskName"
                 tools:context=".Fragments.Overview.TasksFragment"
                 tools:layout_editor_absoluteX="16dp"
                 tools:listitem="@layout/fragment_task_item" />

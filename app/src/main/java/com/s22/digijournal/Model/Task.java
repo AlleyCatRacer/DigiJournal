@@ -95,6 +95,14 @@ import java.text.SimpleDateFormat;
         isDone = done;
     }
     
+    public void setTaskName(String name)
+    {
+        if (name != null && !name.isEmpty())
+        {
+            taskName = name;
+        }
+    }
+    
     public void setDescription(String description)
     {
         this.description = description;
@@ -115,5 +123,10 @@ import java.text.SimpleDateFormat;
     {
         //TODO check if before date added
         this.deadline = deadline;
+    }
+    
+    public void setDeadlineString(String deadline)
+    {
+        //TODO parse deadline
     }
 }

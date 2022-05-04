@@ -15,20 +15,25 @@
     <string name="menu_add_category">New Category</string>
     <string name="menu_add_list">New List</string>
     <string name="menu_add_task">Add a task</string>
+
     <string name="home_category">Categories</string>
     <string name="home_welcome">Welcome to DigiJournal!</string>
     <string name="home_hint">Swipe left to explore</string>
     <string name="home_subheader">Your online bullet journal</string>
+
     <string name="category_add_list">Add a list to this category</string>
+
     <string name="task_add_title_hint">Title…</string>
-    <string name="task_add_heading">New Task</string>
+    <string name="task_ID_label">Task ID:</string>
+    <string name="task_add_heading_label">New Task</string>
     <string name="task_add_desc">Details</string>
     <string name="task_add_desc_hint">Description…</string>
     <string name="task_add_deadline">Deadline:</string>
     <string name="task_add_toList">Add to list:</string>
     <string name="task_add_date_format_hint">dd/mm/yyyy</string>
     <string name="task_edit_heading">Editing Task</string>
-    <string name="add_name_hint">Name…</string>
+    <string name="task_add_taskName_hint">Name…</string>
+
     <string name="edit_button">Edit</string>
     <string name="save_button">Save</string>
     <string name="create_button">Create</string>

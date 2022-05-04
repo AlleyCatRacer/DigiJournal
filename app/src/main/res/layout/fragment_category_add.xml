@@ -26,18 +26,18 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="40sp"
-                app:layout_constraintBottom_toTopOf="@+id/title"
+                app:layout_constraintBottom_toTopOf="@+id/task_edit_taskName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/title"
+                android:id="@+id/task_edit_taskName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:hint="@string/add_name_hint"
+                android:hint="@string/task_add_taskName_hint"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
