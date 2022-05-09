@@ -2636,14 +2636,11 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_categories_to_lists
 id action_container
 id action_context_bar
 id action_divider
-id action_home_to_categories
 id action_home_to_task_add
 id action_image
-id action_lists_to_tasks
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2697,9 +2694,6 @@ id callMeasure
 id cancel_action
 id cancel_button
 id carryVelocity
-id categories
-id category_spinner
-id category_title
 id center
 id center_horizontal
 id center_vertical
@@ -2732,7 +2726,6 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
-id create_button
 id currentState
 id custom
 id customPanel
@@ -2773,7 +2766,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edit_button
 id edit_query
 id elastic
 id end
@@ -2812,6 +2804,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id home_task_recycler
 id honorRequest
 id horizontal_only
 id icon
@@ -2843,8 +2836,6 @@ id line3
 id linear
 id listMode
 id list_item
-id list_name_textView
-id lists
 id locale
 id ltr
 id masked
@@ -3028,7 +3019,6 @@ id staticPostLayout
 id status_bar_latest_event_content
 id stop
 id stretch
-id sub_header
 id submenuarrow
 id submit_area
 id supportScrollUp
@@ -3046,7 +3036,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id taskList_recycler
 id task_add
 id task_add_cancel_button
 id task_add_create_button
@@ -3055,7 +3044,6 @@ id task_add_deadline_label
 id task_add_desc
 id task_add_taskName
 id task_checkBox
-id task_count_textView
 id task_deadline_label
 id task_details
 id task_details_ID_label
@@ -3074,7 +3062,6 @@ id task_edit_taskName
 id task_item_deadline
 id task_item_taskName
 id tasks
-id tasks_recycler
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -3242,13 +3229,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_category_add
-layout fragment_category_details
-layout fragment_category_item
 layout fragment_home
-layout fragment_list_add
-layout fragment_list_details
-layout fragment_list_item
 layout fragment_task_add
 layout fragment_task_details
 layout fragment_task_edit

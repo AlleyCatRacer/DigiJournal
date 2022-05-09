@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.s22.digijournal.databinding.FragmentHomeBinding;
 
@@ -16,6 +17,7 @@ public class HomeFragment extends Fragment
 {
 	private FragmentHomeBinding binding;
 	private HomeViewModel viewModel;
+	private RecyclerView taskRecycler;
 	
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
@@ -26,6 +28,7 @@ public class HomeFragment extends Fragment
 		
 		final TextView textView = binding.headerTextView;
 		viewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+		
 		return root;
 	}
 	

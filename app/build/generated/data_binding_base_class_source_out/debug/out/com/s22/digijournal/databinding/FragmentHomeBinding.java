@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,14 +28,14 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView headerTextView;
 
   @NonNull
-  public final TextView subHeader;
+  public final RecyclerView homeTaskRecycler;
 
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull TextView headerTextView, @NonNull TextView subHeader) {
+      @NonNull TextView headerTextView, @NonNull RecyclerView homeTaskRecycler) {
     this.rootView = rootView;
     this.fab = fab;
     this.headerTextView = headerTextView;
-    this.subHeader = subHeader;
+    this.homeTaskRecycler = homeTaskRecycler;
   }
 
   @Override
@@ -76,13 +77,13 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.sub_header;
-      TextView subHeader = ViewBindings.findChildViewById(rootView, id);
-      if (subHeader == null) {
+      id = R.id.home_task_recycler;
+      RecyclerView homeTaskRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (homeTaskRecycler == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, fab, headerTextView, subHeader);
+      return new FragmentHomeBinding((FrameLayout) rootView, fab, headerTextView, homeTaskRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -10,32 +10,10 @@
         android:name="com.s22.digijournal.Fragments.Home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_home_to_categories"
-            app:destination="@id/categories" />
+
         <action
             android:id="@+id/action_home_to_task_add"
             app:destination="@id/task_add" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/categories"
-        android:name="com.s22.digijournal.Fragments.Overview.CategoriesFragment"
-        android:label="@string/menu_categories"
-        tools:layout="@layout/activity_categories" >
-        <action
-            android:id="@+id/action_categories_to_lists"
-            app:destination="@id/lists" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/lists"
-        android:name="com.s22.digijournal.Fragments.Overview.ListsFragment"
-        android:label="@string/menu_lists"
-        tools:layout="@layout/activity_list" >
-        <action
-            android:id="@+id/action_lists_to_tasks"
-            app:destination="@id/tasks" />
     </fragment>
 
     <fragment
