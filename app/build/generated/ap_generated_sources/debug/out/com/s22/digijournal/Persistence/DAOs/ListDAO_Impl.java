@@ -37,7 +37,7 @@ public final class ListDAO_Impl implements ListDAO {
     this.__insertionAdapterOfTaskList = new EntityInsertionAdapter<TaskList>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `TaskList` (`listName`) VALUES (?)";
+        return "INSERT OR ABORT INTO `TaskList` (`listName`,`categoryName`) VALUES (?,?)";
       }
 
       @Override
@@ -46,13 +46,18 @@ public final class ListDAO_Impl implements ListDAO {
           stmt.bindNull(1);
         } else {
           stmt.bindString(1, value.getListName());
+        }
+        if (value.getCategoryName() == null) {
+          stmt.bindNull(2);
+        } else {
+          stmt.bindString(2, value.getCategoryName());
         }
       }
     };
     this.__updateAdapterOfTaskList = new EntityDeletionOrUpdateAdapter<TaskList>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `TaskList` SET `listName` = ? WHERE `listName` = ?";
+        return "UPDATE OR ABORT `TaskList` SET `listName` = ?,`categoryName` = ? WHERE `listName` = ?";
       }
 
       @Override
@@ -62,10 +67,15 @@ public final class ListDAO_Impl implements ListDAO {
         } else {
           stmt.bindString(1, value.getListName());
         }
-        if (value.getListName() == null) {
+        if (value.getCategoryName() == null) {
           stmt.bindNull(2);
         } else {
-          stmt.bindString(2, value.getListName());
+          stmt.bindString(2, value.getCategoryName());
+        }
+        if (value.getListName() == null) {
+          stmt.bindNull(3);
+        } else {
+          stmt.bindString(3, value.getListName());
         }
       }
     };
@@ -145,7 +155,7 @@ public final class ListDAO_Impl implements ListDAO {
 
   @Override
   public LiveData<List<TaskList>> getAllLists() {
-    final String _sql = "SELECT `taskList`.`listName` AS `listName` FROM taskList";
+    final String _sql = "SELECT `taskList`.`listName` AS `listName`, `taskList`.`categoryName` AS `categoryName` FROM taskList";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"taskList"}, true, new Callable<List<TaskList>>() {
       @Override
@@ -155,6 +165,7 @@ public final class ListDAO_Impl implements ListDAO {
           final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
           try {
             final int _cursorIndexOfListName = 0;
+            final int _cursorIndexOfCategoryName = 1;
             final List<TaskList> _result = new ArrayList<TaskList>(_cursor.getCount());
             while(_cursor.moveToNext()) {
               final TaskList _item;
@@ -166,6 +177,13 @@ public final class ListDAO_Impl implements ListDAO {
                 _tmpListName = _cursor.getString(_cursorIndexOfListName);
               }
               _item.setListName(_tmpListName);
+              final String _tmpCategoryName;
+              if (_cursor.isNull(_cursorIndexOfCategoryName)) {
+                _tmpCategoryName = null;
+              } else {
+                _tmpCategoryName = _cursor.getString(_cursorIndexOfCategoryName);
+              }
+              _item.setCategoryName(_tmpCategoryName);
               _result.add(_item);
             }
             __db.setTransactionSuccessful();

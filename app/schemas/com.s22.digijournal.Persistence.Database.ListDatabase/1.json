@@ -2,15 +2,21 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a578cbf40d83359b3d83d87fa239e70c",
+    "identityHash": "5ce31d5ac9c22929043bca7eb108bd43",
     "entities": [
       {
         "tableName": "TaskList",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`listName` TEXT, PRIMARY KEY(`listName`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`listName` TEXT NOT NULL, `categoryName` TEXT, PRIMARY KEY(`listName`))",
         "fields": [
           {
             "fieldPath": "listName",
             "columnName": "listName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -28,7 +34,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a578cbf40d83359b3d83d87fa239e70c')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5ce31d5ac9c22929043bca7eb108bd43')"
     ]
   }
 }

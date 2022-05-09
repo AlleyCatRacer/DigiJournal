@@ -39,9 +39,9 @@ public final class ListDatabase_Impl extends ListDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `TaskList` (`listName` TEXT, PRIMARY KEY(`listName`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `TaskList` (`listName` TEXT NOT NULL, `categoryName` TEXT, PRIMARY KEY(`listName`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a578cbf40d83359b3d83d87fa239e70c')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5ce31d5ac9c22929043bca7eb108bd43')");
       }
 
       @Override
@@ -85,8 +85,9 @@ public final class ListDatabase_Impl extends ListDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsTaskList = new HashMap<String, TableInfo.Column>(1);
-        _columnsTaskList.put("listName", new TableInfo.Column("listName", "TEXT", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashMap<String, TableInfo.Column> _columnsTaskList = new HashMap<String, TableInfo.Column>(2);
+        _columnsTaskList.put("listName", new TableInfo.Column("listName", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTaskList.put("categoryName", new TableInfo.Column("categoryName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysTaskList = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesTaskList = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoTaskList = new TableInfo("TaskList", _columnsTaskList, _foreignKeysTaskList, _indicesTaskList);
@@ -98,7 +99,7 @@ public final class ListDatabase_Impl extends ListDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "a578cbf40d83359b3d83d87fa239e70c", "b5e0a0bb4139caa5e2b13d842bb82577");
+    }, "5ce31d5ac9c22929043bca7eb108bd43", "5adf93003364b624a034d1413bf733fe");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

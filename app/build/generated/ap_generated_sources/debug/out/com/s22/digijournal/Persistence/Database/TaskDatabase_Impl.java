@@ -39,9 +39,9 @@ public final class TaskDatabase_Impl extends TaskDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Task` (`taskID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `status` INTEGER NOT NULL, `taskName` TEXT, `description` TEXT, `dateAdded` INTEGER NOT NULL, `dateEdited` INTEGER NOT NULL, `deadline` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Task` (`taskID` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `status` INTEGER NOT NULL, `taskName` TEXT, `description` TEXT, `dateAdded` INTEGER NOT NULL, `dateEdited` INTEGER NOT NULL, `deadline` INTEGER NOT NULL, `listName` TEXT)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7f773c7826962e4c200501f1014e9f1c')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9aba777776f656eefc80a204ec0f808b')");
       }
 
       @Override
@@ -85,7 +85,7 @@ public final class TaskDatabase_Impl extends TaskDatabase {
 
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsTask = new HashMap<String, TableInfo.Column>(7);
+        final HashMap<String, TableInfo.Column> _columnsTask = new HashMap<String, TableInfo.Column>(8);
         _columnsTask.put("taskID", new TableInfo.Column("taskID", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("status", new TableInfo.Column("status", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("taskName", new TableInfo.Column("taskName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -93,6 +93,7 @@ public final class TaskDatabase_Impl extends TaskDatabase {
         _columnsTask.put("dateAdded", new TableInfo.Column("dateAdded", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("dateEdited", new TableInfo.Column("dateEdited", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsTask.put("deadline", new TableInfo.Column("deadline", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsTask.put("listName", new TableInfo.Column("listName", "TEXT", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysTask = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesTask = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoTask = new TableInfo("Task", _columnsTask, _foreignKeysTask, _indicesTask);
@@ -104,7 +105,7 @@ public final class TaskDatabase_Impl extends TaskDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7f773c7826962e4c200501f1014e9f1c", "c9b2794d2a60a3e84e97bce0e7926d04");
+    }, "9aba777776f656eefc80a204ec0f808b", "857f735c03fa80157c87960d1467ad3d");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

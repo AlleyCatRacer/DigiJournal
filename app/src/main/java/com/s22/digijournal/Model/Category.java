@@ -1,16 +1,23 @@
 package com.s22.digijournal.Model;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity public class Category
 {
-    @PrimaryKey private String categoryName;
-    @Relation(parentColumn = "listName", entityColumn = "listName")
-    private ArrayList<TaskList> lists;
+    @PrimaryKey @NonNull private String categoryName;
+    @Relation(parentColumn = "categoryName", entityColumn = "listName")
+    private List<TaskList> lists;
+    
+    public Category()
+    {
+    
+    }
     
     public Category(String name, ArrayList<TaskList> lists)
     {
@@ -23,7 +30,7 @@ import java.util.ArrayList;
         return categoryName;
     }
     
-    public ArrayList<TaskList> getLists()
+    public List<TaskList> getLists()
     {
         return lists;
     }

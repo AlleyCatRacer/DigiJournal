@@ -1,22 +1,29 @@
 package com.s22.digijournal.Model;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.Relation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity public class TaskList
 {
-    @PrimaryKey private String listName;
+    @PrimaryKey @NonNull private String listName;
     
-    @Relation(parentColumn = "taskName", entityColumn = "taskName")
-    @ColumnInfo(name = "tasks")
-    @Embedded private ArrayList<Task> tasks;
+    @ColumnInfo(name = "categoryName") private String categoryName;
     
-    public TaskList(String name, ArrayList<Task> tasks)
+    @Relation(parentColumn = "listName", entityColumn = "listName")
+    private List<Task> tasks;
+    
+    public TaskList()
+    {
+    
+    }
+    
+    public TaskList(String name, List<Task> tasks)
     {
         setListName(name);
         setTasks(tasks);
@@ -27,9 +34,14 @@ import java.util.ArrayList;
         return listName;
     }
 
-    public ArrayList<Task> getTasks()
+    public List<Task> getTasks()
     {
         return tasks;
+    }
+    
+    public String getCategoryName()
+    {
+        return categoryName;
     }
     
     public int getTaskCount()
@@ -45,7 +57,7 @@ import java.util.ArrayList;
         }
     }
 
-    public void setTasks(ArrayList<Task> tasks)
+    public void setTasks(List<Task> tasks)
     {
         if (tasks == null)
         {
@@ -56,7 +68,12 @@ import java.util.ArrayList;
             this.tasks = tasks;
         }
     }
-
+    
+    public void setCategoryName(String categoryName)
+    {
+        this.categoryName = categoryName;
+    }
+    
     public void addTask(Task task)
     {
         if (tasks.contains(task))

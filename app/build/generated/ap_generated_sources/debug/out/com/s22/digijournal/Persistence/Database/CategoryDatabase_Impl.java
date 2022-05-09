@@ -39,9 +39,9 @@ public final class CategoryDatabase_Impl extends CategoryDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `Category` (`categoryName` TEXT, PRIMARY KEY(`categoryName`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `Category` (`categoryName` TEXT NOT NULL, PRIMARY KEY(`categoryName`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ebe1388acb5be86932eba40184fbfb5a')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '61f52826d106ea04f8489456dc77e81e')");
       }
 
       @Override
@@ -86,7 +86,7 @@ public final class CategoryDatabase_Impl extends CategoryDatabase {
       @Override
       protected RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
         final HashMap<String, TableInfo.Column> _columnsCategory = new HashMap<String, TableInfo.Column>(1);
-        _columnsCategory.put("categoryName", new TableInfo.Column("categoryName", "TEXT", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsCategory.put("categoryName", new TableInfo.Column("categoryName", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysCategory = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesCategory = new HashSet<TableInfo.Index>(0);
         final TableInfo _infoCategory = new TableInfo("Category", _columnsCategory, _foreignKeysCategory, _indicesCategory);
@@ -98,7 +98,7 @@ public final class CategoryDatabase_Impl extends CategoryDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "ebe1388acb5be86932eba40184fbfb5a", "589f287849fb5b8b3bed248a5c327395");
+    }, "61f52826d106ea04f8489456dc77e81e", "d707d18522d5ee29e9acfc061514ad71");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

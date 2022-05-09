@@ -37,7 +37,7 @@ public final class TaskDAO_Impl extends TaskDAO {
     this.__insertionAdapterOfTask = new EntityInsertionAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `Task` (`taskID`,`status`,`taskName`,`description`,`dateAdded`,`dateEdited`,`deadline`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `Task` (`taskID`,`status`,`taskName`,`description`,`dateAdded`,`dateEdited`,`deadline`,`listName`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -58,12 +58,17 @@ public final class TaskDAO_Impl extends TaskDAO {
         stmt.bindLong(5, value.getDateAdded());
         stmt.bindLong(6, value.getDateEdited());
         stmt.bindLong(7, value.getDeadline());
+        if (value.getListName() == null) {
+          stmt.bindNull(8);
+        } else {
+          stmt.bindString(8, value.getListName());
+        }
       }
     };
     this.__updateAdapterOfTask = new EntityDeletionOrUpdateAdapter<Task>(__db) {
       @Override
       public String createQuery() {
-        return "UPDATE OR ABORT `Task` SET `taskID` = ?,`status` = ?,`taskName` = ?,`description` = ?,`dateAdded` = ?,`dateEdited` = ?,`deadline` = ? WHERE `taskID` = ?";
+        return "UPDATE OR ABORT `Task` SET `taskID` = ?,`status` = ?,`taskName` = ?,`description` = ?,`dateAdded` = ?,`dateEdited` = ?,`deadline` = ?,`listName` = ? WHERE `taskID` = ?";
       }
 
       @Override
@@ -84,7 +89,12 @@ public final class TaskDAO_Impl extends TaskDAO {
         stmt.bindLong(5, value.getDateAdded());
         stmt.bindLong(6, value.getDateEdited());
         stmt.bindLong(7, value.getDeadline());
-        stmt.bindLong(8, value.getTaskID());
+        if (value.getListName() == null) {
+          stmt.bindNull(8);
+        } else {
+          stmt.bindString(8, value.getListName());
+        }
+        stmt.bindLong(9, value.getTaskID());
       }
     };
     this.__preparedStmtOfRemoveTask = new SharedSQLiteStatement(__db) {
@@ -159,7 +169,7 @@ public final class TaskDAO_Impl extends TaskDAO {
 
   @Override
   public LiveData<List<Task>> getAllTasks() {
-    final String _sql = "SELECT `task`.`taskID` AS `taskID`, `task`.`status` AS `status`, `task`.`taskName` AS `taskName`, `task`.`description` AS `description`, `task`.`dateAdded` AS `dateAdded`, `task`.`dateEdited` AS `dateEdited`, `task`.`deadline` AS `deadline` FROM task ORDER BY taskId";
+    final String _sql = "SELECT `task`.`taskID` AS `taskID`, `task`.`status` AS `status`, `task`.`taskName` AS `taskName`, `task`.`description` AS `description`, `task`.`dateAdded` AS `dateAdded`, `task`.`dateEdited` AS `dateEdited`, `task`.`deadline` AS `deadline`, `task`.`listName` AS `listName` FROM task ORDER BY taskId";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"task"}, false, new Callable<List<Task>>() {
       @Override
@@ -173,11 +183,14 @@ public final class TaskDAO_Impl extends TaskDAO {
           final int _cursorIndexOfDateAdded = 4;
           final int _cursorIndexOfDateEdited = 5;
           final int _cursorIndexOfDeadline = 6;
+          final int _cursorIndexOfListName = 7;
           final List<Task> _result = new ArrayList<Task>(_cursor.getCount());
           while(_cursor.moveToNext()) {
             final Task _item;
             _item = new Task();
-            _item.taskID = _cursor.getInt(_cursorIndexOfTaskID);
+            final int _tmpTaskID;
+            _tmpTaskID = _cursor.getInt(_cursorIndexOfTaskID);
+            _item.setTaskID(_tmpTaskID);
             final boolean _tmpIsDone;
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfIsDone);
@@ -206,6 +219,13 @@ public final class TaskDAO_Impl extends TaskDAO {
             final long _tmpDeadline;
             _tmpDeadline = _cursor.getLong(_cursorIndexOfDeadline);
             _item.setDeadline(_tmpDeadline);
+            final String _tmpListName;
+            if (_cursor.isNull(_cursorIndexOfListName)) {
+              _tmpListName = null;
+            } else {
+              _tmpListName = _cursor.getString(_cursorIndexOfListName);
+            }
+            _item.setListName(_tmpListName);
             _result.add(_item);
           }
           return _result;

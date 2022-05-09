@@ -17,6 +17,7 @@ import java.text.SimpleDateFormat;
     @ColumnInfo(name = "dateAdded") private long dateAdded;
     @ColumnInfo(name = "dateEdited") private long dateEdited;
     @ColumnInfo(name = "deadline") private long deadline;
+    @ColumnInfo(name = "listName") private String listName;
 
     public Task()
     {
@@ -78,6 +79,11 @@ import java.text.SimpleDateFormat;
         return deadline;
     }
     
+    public String getListName()
+    {
+        return listName;
+    }
+    
     public String getDeadlineFormatted()
     {
         if (deadline != 0)
@@ -89,7 +95,12 @@ import java.text.SimpleDateFormat;
         }
         return "N/A";
     }
-
+    
+    public void setTaskID(int taskID)
+    {
+        this.taskID = taskID;
+    }
+    
     public void setIsDone(boolean done)
     {
         isDone = done;
@@ -129,5 +140,10 @@ import java.text.SimpleDateFormat;
     {
         //TODO check if before date added
         this.deadline = Date.parse(deadline);
+    }
+    
+    public void setListName(String listName)
+    {
+        this.listName = listName;
     }
 }
