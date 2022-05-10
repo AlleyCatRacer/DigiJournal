@@ -21,14 +21,19 @@ public final class FragmentTasksOverviewBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
+  public final ScrollView tasksOverviewFragment;
+
+  @NonNull
   public final TextView tasksOverviewHeader;
 
   @NonNull
   public final RecyclerView tasksOverviewRecycler;
 
   private FragmentTasksOverviewBinding(@NonNull ScrollView rootView,
-      @NonNull TextView tasksOverviewHeader, @NonNull RecyclerView tasksOverviewRecycler) {
+      @NonNull ScrollView tasksOverviewFragment, @NonNull TextView tasksOverviewHeader,
+      @NonNull RecyclerView tasksOverviewRecycler) {
     this.rootView = rootView;
+    this.tasksOverviewFragment = tasksOverviewFragment;
     this.tasksOverviewHeader = tasksOverviewHeader;
     this.tasksOverviewRecycler = tasksOverviewRecycler;
   }
@@ -60,6 +65,8 @@ public final class FragmentTasksOverviewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      ScrollView tasksOverviewFragment = (ScrollView) rootView;
+
       id = R.id.tasks_overview_header;
       TextView tasksOverviewHeader = ViewBindings.findChildViewById(rootView, id);
       if (tasksOverviewHeader == null) {
@@ -72,8 +79,8 @@ public final class FragmentTasksOverviewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentTasksOverviewBinding((ScrollView) rootView, tasksOverviewHeader,
-          tasksOverviewRecycler);
+      return new FragmentTasksOverviewBinding((ScrollView) rootView, tasksOverviewFragment,
+          tasksOverviewHeader, tasksOverviewRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

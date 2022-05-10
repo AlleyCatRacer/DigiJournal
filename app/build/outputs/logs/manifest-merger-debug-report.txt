@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
 MERGED from [androidx.databinding:viewbinding:7.1.1] C:\Users\Bruger\.gradle\caches\transforms-3\19b1e80809b0c583144dddf6cd68cae7\transformed\viewbinding-7.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.navigation:navigation-ui:2.4.1] C:\Users\Bruger\.gradle\caches\transforms-3\c70eb59e1ae567166bc562b15d792b8c\transformed\navigation-ui-2.4.1\AndroidManifest.xml:17:1-24:12
@@ -66,25 +66,25 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\17156df85410c057d296e1b383c94b8c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\ea4c74a463f932c7b3d59f048c7fce9c\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Bruger\.gradle\caches\transforms-3\4d28d0cf899581876e3788095fa1efd9\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
-INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
 		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-28:12
+		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:5:5-26:19
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:5:5-21:19
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:24:5-29:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\Bruger\.gradle\caches\transforms-3\96a8459cc55356d65de57437416e5b5d\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
@@ -118,31 +118,21 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Bruger\.gradle\cac
 	android:theme
 		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:11:9-49
 activity#com.s22.digijournal.MainActivity
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:12:9-14:40
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:12:9-20:20
 	android:exported
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:14:13-37
+		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:14:13-36
 	android:name
 		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:13:13-41
-activity#com.s22.digijournal.NavigationDrawer
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:15:9-25:20
-	android:label
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:18:13-69
-	android:exported
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:17:13-36
-	android:theme
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:19:13-65
-	android:name
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:16:13-45
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:16:17-68
 	android:name
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:18:17-76
 	android:name
-		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:18:27-74
 uses-sdk
 INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml

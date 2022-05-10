@@ -25,6 +25,9 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final FloatingActionButton fab;
 
   @NonNull
+  public final FrameLayout homeFragment;
+
+  @NonNull
   public final TextView homeHeader;
 
   @NonNull
@@ -34,9 +37,11 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final Button logoutButton;
 
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull TextView homeHeader, @NonNull TextView homeHint, @NonNull Button logoutButton) {
+      @NonNull FrameLayout homeFragment, @NonNull TextView homeHeader, @NonNull TextView homeHint,
+      @NonNull Button logoutButton) {
     this.rootView = rootView;
     this.fab = fab;
+    this.homeFragment = homeFragment;
     this.homeHeader = homeHeader;
     this.homeHint = homeHint;
     this.logoutButton = logoutButton;
@@ -75,6 +80,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      FrameLayout homeFragment = (FrameLayout) rootView;
+
       id = R.id.home_header;
       TextView homeHeader = ViewBindings.findChildViewById(rootView, id);
       if (homeHeader == null) {
@@ -93,8 +100,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, fab, homeHeader, homeHint,
-          logoutButton);
+      return new FragmentHomeBinding((FrameLayout) rootView, fab, homeFragment, homeHeader,
+          homeHint, logoutButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,53 +4,54 @@ import android.os.Bundle;
 import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import androidx.fragment.app.Fragment;
 
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.s22.digijournal.Fragments.Home.HomeFragment;
+import com.s22.digijournal.Fragments.Overview.TasksOverviewFragment;
+import com.s22.digijournal.Fragments.Task.TaskAddFragment;
 import com.s22.digijournal.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity
 {
-	private AppBarConfiguration appBarConfiguration;
-	private ActivityMainBinding binding;
 	
 	@Override protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		
-		binding = ActivityMainBinding.inflate(getLayoutInflater());
-		setContentView(binding.getRoot());
+		setContentView(R.layout.activity_main);
+		ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
 		
-		setSupportActionBar(binding.appBarMain.toolbar);
-		DrawerLayout drawer = binding.drawerLayout;
-		NavigationView navigationView = binding.navView;
-		// Passing each menu ID as a set of Ids because each
-		// menu should be considered as top level destinations.
-		appBarConfiguration = new AppBarConfiguration.Builder(
-				R.id.nav_home, R.id.nav_tasks)
-				.setOpenableLayout(drawer)
-				.build();
-		NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-		NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-		NavigationUI.setupWithNavController(navigationView, navController);
+		BottomNavigationView bottomNav = binding.bottomNavView;
+		replaceFragment(new HomeFragment());
 		
+		bottomNav.setOnItemSelectedListener(item ->
+		{
+			switch (item.getItemId())
+			{
+				case R.id.home_fragment:
+					replaceFragment(new HomeFragment());
+					break;
+				case R.id.add_task_fragment:
+					replaceFragment(new TaskAddFragment());
+					break;
+				case R.id.tasks_overview_fragment:
+					replaceFragment(new TasksOverviewFragment());
+					break;
+				default: return false;
+			}
+			return true;
+		});
+	}
+	
+	private void replaceFragment(Fragment fragment)
+	{
+		getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
 	{
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.navigation_drawer, menu);
+		getMenuInflater().inflate(R.menu.bottom_nav, menu);
 		return true;
-	}
-	
-	@Override public boolean onSupportNavigateUp()
-	{
-		NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-		return NavigationUI.navigateUp(navController, appBarConfiguration)
-				|| super.onSupportNavigateUp();
 	}
 }

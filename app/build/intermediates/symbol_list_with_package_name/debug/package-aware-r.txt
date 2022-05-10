@@ -2647,7 +2647,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_task_add_to_home
 id action_task_add_to_task_details
 id action_task_details_to_task_add
@@ -2659,6 +2658,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_task_fragment
 id alertTitle
 id aligned
 id all
@@ -2669,8 +2669,6 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
-id app_bar_main
-id app_bar_navigation_drawer
 id arc
 id asConfigured
 id async
@@ -2685,6 +2683,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottom_nav_view
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2761,7 +2760,6 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
-id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -2788,6 +2786,7 @@ id fixed
 id flip
 id floating
 id forever
+id fragment_container
 id fragment_container_view_tag
 id frost
 id ghost_view
@@ -2804,6 +2803,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id home_fragment
 id home_header
 id home_hint
 id honorRequest
@@ -2900,15 +2900,9 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_add_task
 id nav_controller_view_tag
-id nav_header_main_headline
-id nav_header_main_image
-id nav_header_main_user_label
 id nav_home
 id nav_host_fragment_container
-id nav_host_fragment_content_main
-id nav_host_fragment_content_navigation_drawer
 id nav_tasks
-id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3064,6 +3058,7 @@ id task_edit_taskName
 id task_item_deadline
 id task_item_taskName
 id tasks_overview
+id tasks_overview_fragment
 id tasks_overview_header
 id tasks_overview_recycler
 id test_checkbox_android_button_tint
@@ -3091,7 +3086,6 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolbar
 id top
 id topPanel
 id touch_outside
@@ -3212,11 +3206,6 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
-layout activity_navigation_drawer
-layout app_bar_main
-layout app_bar_navigation_drawer
-layout content_main
-layout content_navigation_drawer
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3285,7 +3274,6 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
-layout nav_header_main
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -3320,13 +3308,12 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu activity_main_drawer
+menu bottom_nav
 menu example_menu
 menu example_menu2
-menu navigation_drawer
 mipmap ic_launcher
 mipmap ic_launcher_round
-navigation mobile_navigation
+navigation nav_graph
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description

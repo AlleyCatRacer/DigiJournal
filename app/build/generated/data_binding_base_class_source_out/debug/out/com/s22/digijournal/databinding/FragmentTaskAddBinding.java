@@ -23,6 +23,9 @@ public final class FragmentTaskAddBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final FrameLayout addTaskFragment;
+
+  @NonNull
   public final TextView detailLabel;
 
   @NonNull
@@ -46,12 +49,13 @@ public final class FragmentTaskAddBinding implements ViewBinding {
   @NonNull
   public final TextInputEditText taskAddTaskName;
 
-  private FragmentTaskAddBinding(@NonNull FrameLayout rootView, @NonNull TextView detailLabel,
-      @NonNull TextView header, @NonNull Button taskAddCancelButton,
-      @NonNull Button taskAddCreateButton, @NonNull EditText taskAddDeadline,
-      @NonNull TextView taskAddDeadlineLabel, @NonNull TextInputEditText taskAddDesc,
-      @NonNull TextInputEditText taskAddTaskName) {
+  private FragmentTaskAddBinding(@NonNull FrameLayout rootView,
+      @NonNull FrameLayout addTaskFragment, @NonNull TextView detailLabel, @NonNull TextView header,
+      @NonNull Button taskAddCancelButton, @NonNull Button taskAddCreateButton,
+      @NonNull EditText taskAddDeadline, @NonNull TextView taskAddDeadlineLabel,
+      @NonNull TextInputEditText taskAddDesc, @NonNull TextInputEditText taskAddTaskName) {
     this.rootView = rootView;
+    this.addTaskFragment = addTaskFragment;
     this.detailLabel = detailLabel;
     this.header = header;
     this.taskAddCancelButton = taskAddCancelButton;
@@ -89,6 +93,8 @@ public final class FragmentTaskAddBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      FrameLayout addTaskFragment = (FrameLayout) rootView;
+
       id = R.id.detail_label;
       TextView detailLabel = ViewBindings.findChildViewById(rootView, id);
       if (detailLabel == null) {
@@ -137,8 +143,8 @@ public final class FragmentTaskAddBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentTaskAddBinding((FrameLayout) rootView, detailLabel, header,
-          taskAddCancelButton, taskAddCreateButton, taskAddDeadline, taskAddDeadlineLabel,
+      return new FragmentTaskAddBinding((FrameLayout) rootView, addTaskFragment, detailLabel,
+          header, taskAddCancelButton, taskAddCreateButton, taskAddDeadline, taskAddDeadlineLabel,
           taskAddDesc, taskAddTaskName);
     }
     String missingId = rootView.getResources().getResourceName(id);
