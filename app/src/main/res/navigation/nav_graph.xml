@@ -3,68 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@+id/nav_graph_home">
+    app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_graph_home"
+        android:id="@+id/nav_home"
         android:name="com.s22.digijournal.Fragments.Home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home_to_task_add"
-            app:destination="@id/nav_graph_task_add" />
+            app:destination="@id/nav_task_add" />
         <action
             android:id="@+id/action_home_to_tasks"
-            app:destination="@id/nav_graph_tasks_overview" />
+            app:destination="@id/nav_tasks_overview" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_graph_tasks_overview"
+        android:id="@+id/nav_tasks_overview"
         android:name="com.s22.digijournal.Fragments.Overview.TasksOverviewFragment"
         android:label="@string/menu_tasks"
         tools:layout="@layout/fragment_tasks_overview" >
         <action
             android:id="@+id/action_tasks_to_task_details"
-            app:destination="@id/nav_graph_task_details" />
+            app:destination="@id/nav_task_details" />
         <action
             android:id="@+id/action_tasks_to_task_add"
-            app:destination="@id/nav_graph_task_add" />
+            app:destination="@id/nav_task_add" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_graph_task_edit"
+        android:id="@+id/nav_task_edit"
         android:name="com.s22.digijournal.Fragments.Task.TaskEditFragment"
         android:label="task_edit"
         tools:layout="@layout/fragment_task_edit" >
         <action
             android:id="@+id/action_task_edit_to_task_details"
-            app:destination="@id/nav_graph_task_details" />
+            app:destination="@id/nav_task_details" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_graph_task_details"
+        android:id="@+id/nav_task_details"
         android:name="com.s22.digijournal.Fragments.Task.TaskDetailsFragment"
         android:label="task_details"
         tools:layout="@layout/fragment_task_details" >
         <action
             android:id="@+id/action_task_details_to_task_edit"
-            app:destination="@id/nav_graph_task_edit" />
+            app:destination="@id/nav_task_edit" />
         <action
             android:id="@+id/action_task_details_to_task_add"
-            app:destination="@id/nav_graph_task_add" />
+            app:destination="@id/nav_task_add" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_graph_task_add"
+        android:id="@+id/nav_task_add"
         android:name="com.s22.digijournal.Fragments.Task.TaskAddFragment"
         android:label="fragment_task_add"
         tools:layout="@layout/fragment_task_add" >
         <action
             android:id="@+id/action_task_add_to_task_details"
-            app:destination="@id/nav_graph_task_details" />
+            app:destination="@id/nav_task_details" />
         <action
             android:id="@+id/action_task_add_to_home"
-            app:destination="@id/nav_graph_home" />
+            app:destination="@id/nav_home" />
     </fragment>
 
 </navigation>

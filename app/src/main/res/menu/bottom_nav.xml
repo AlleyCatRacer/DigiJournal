@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:id="@+id/nav_home"
-        android:actionLayout="@layout/fragment_home"
-        android:icon="@drawable/home_icon"
-        android:title="@string/menu_home"
-        android:onClick=""/>
-    <item
-        android:id="@+id/nav_tasks"
-        android:actionLayout="@layout/fragment_tasks_overview"
-        android:icon="@drawable/tasks"
-        android:title="@string/menu_tasks" />
-    <item
-        android:id="@+id/nav_add_task"
-        android:actionLayout="@layout/fragment_task_add"
-        android:icon="@drawable/add_task"
-        android:title="@string/menu_add_task" />
-
+        <item
+            android:id="@+id/nav_home"
+            android:actionLayout="@layout/fragment_home"
+            android:icon="@drawable/home_icon"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_tasks"
+            android:actionLayout="@layout/fragment_tasks_overview"
+            android:icon="@drawable/tasks"
+            android:title="@string/menu_tasks" />
+        <item
+            android:id="@+id/nav_add_task"
+            android:actionLayout="@layout/fragment_task_add"
+            android:icon="@drawable/add_task"
+            android:title="@string/menu_add_task" />
 </menu>

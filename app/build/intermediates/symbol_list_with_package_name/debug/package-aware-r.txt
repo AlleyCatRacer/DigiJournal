@@ -2658,7 +2658,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id add_task_fragment
 id alertTitle
 id aligned
 id all
@@ -2721,6 +2720,7 @@ id constraint
 id container
 id content
 id contentPanel
+id content_main_container
 id contiguous
 id continuousVelocity
 id coordinator
@@ -2775,7 +2775,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fade
 id fill
 id fill_horizontal
@@ -2803,9 +2802,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
-id home_fragment
 id home_header
-id home_hint
 id honorRequest
 id horizontal_only
 id icon
@@ -2900,14 +2897,13 @@ id multiply
 id nav_add_task
 id nav_controller_view_tag
 id nav_graph
-id nav_graph_home
-id nav_graph_task_add
-id nav_graph_task_details
-id nav_graph_task_edit
-id nav_graph_tasks_overview
 id nav_home
 id nav_host_fragment_container
+id nav_task_add
+id nav_task_details
+id nav_task_edit
 id nav_tasks
+id nav_tasks_overview
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3059,7 +3055,6 @@ id task_edit_save_button
 id task_edit_taskName
 id task_item_deadline
 id task_item_taskName
-id tasks_overview_fragment
 id tasks_overview_header
 id tasks_overview_recycler
 id test_checkbox_android_button_tint

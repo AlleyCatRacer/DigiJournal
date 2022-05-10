@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.s22.digijournal.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,28 +21,15 @@ public final class FragmentHomeBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final FloatingActionButton fab;
-
-  @NonNull
-  public final FrameLayout homeFragment;
-
-  @NonNull
   public final TextView homeHeader;
-
-  @NonNull
-  public final TextView homeHint;
 
   @NonNull
   public final Button logoutButton;
 
-  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull FrameLayout homeFragment, @NonNull TextView homeHeader, @NonNull TextView homeHint,
+  private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull TextView homeHeader,
       @NonNull Button logoutButton) {
     this.rootView = rootView;
-    this.fab = fab;
-    this.homeFragment = homeFragment;
     this.homeHeader = homeHeader;
-    this.homeHint = homeHint;
     this.logoutButton = logoutButton;
   }
 
@@ -74,23 +60,9 @@ public final class FragmentHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.fab;
-      FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
-      if (fab == null) {
-        break missingId;
-      }
-
-      FrameLayout homeFragment = (FrameLayout) rootView;
-
       id = R.id.home_header;
       TextView homeHeader = ViewBindings.findChildViewById(rootView, id);
       if (homeHeader == null) {
-        break missingId;
-      }
-
-      id = R.id.home_hint;
-      TextView homeHint = ViewBindings.findChildViewById(rootView, id);
-      if (homeHint == null) {
         break missingId;
       }
 
@@ -100,8 +72,7 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, fab, homeFragment, homeHeader,
-          homeHint, logoutButton);
+      return new FragmentHomeBinding((FrameLayout) rootView, homeHeader, logoutButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

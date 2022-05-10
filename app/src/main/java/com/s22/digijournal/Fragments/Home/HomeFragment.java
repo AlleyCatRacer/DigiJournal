@@ -16,11 +16,10 @@ import com.s22.digijournal.databinding.FragmentHomeBinding;
 public class HomeFragment extends Fragment
 {
 	private FragmentHomeBinding binding;
-	private HomeViewModel viewModel;
 	
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		viewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
+		HomeViewModel viewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
 		
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
 		View root = binding.getRoot();
