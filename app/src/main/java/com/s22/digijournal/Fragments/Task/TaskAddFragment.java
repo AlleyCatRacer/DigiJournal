@@ -27,6 +27,11 @@ public class TaskAddFragment extends Fragment
 	private TextInputEditText description;
 	private EditText deadline;
 	
+	public TaskAddFragment()
+	{
+	
+	}
+	
 	@Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);

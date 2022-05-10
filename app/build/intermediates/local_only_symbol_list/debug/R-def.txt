@@ -30,6 +30,7 @@ drawable side_nav_bar
 drawable tasks
 drawable vertical_rainbow_gradient
 id action_home_to_task_add
+id action_home_to_tasks
 id action_settings
 id action_task_add_to_home
 id action_task_add_to_task_details
@@ -47,7 +48,7 @@ id fab
 id header
 id header_textView
 id home
-id home_task_recycler
+id logout_button
 id mobile_navigation
 id nav_add_task
 id nav_header_main_headline
@@ -83,7 +84,9 @@ id task_edit_save_button
 id task_edit_taskName
 id task_item_deadline
 id task_item_taskName
-id tasks
+id tasks_overview
+id tasks_overview_header
+id tasks_overview_recycler
 id toolbar
 layout activity_main
 layout activity_navigation_drawer
@@ -96,6 +99,7 @@ layout fragment_task_add
 layout fragment_task_details
 layout fragment_task_edit
 layout fragment_task_item
+layout fragment_tasks_overview
 layout nav_header_main
 menu activity_main_drawer
 menu navigation_drawer
@@ -105,20 +109,15 @@ navigation mobile_navigation
 string action_settings
 string app_name
 string cancel_button
-string category_add_list
 string create_button
 string edit_button
-string hello_blank_fragment
 string home_category
 string home_hint
 string home_subheader
 string home_welcome
-string menu_add_category
-string menu_add_list
+string logout_button
 string menu_add_task
-string menu_categories
 string menu_home
-string menu_lists
 string menu_tasks
 string nav_header_desc
 string nav_header_subtitle

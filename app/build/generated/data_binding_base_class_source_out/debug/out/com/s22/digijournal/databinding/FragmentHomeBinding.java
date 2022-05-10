@@ -4,11 +4,11 @@ package com.s22.digijournal.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -28,14 +28,14 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView headerTextView;
 
   @NonNull
-  public final RecyclerView homeTaskRecycler;
+  public final Button logoutButton;
 
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull TextView headerTextView, @NonNull RecyclerView homeTaskRecycler) {
+      @NonNull TextView headerTextView, @NonNull Button logoutButton) {
     this.rootView = rootView;
     this.fab = fab;
     this.headerTextView = headerTextView;
-    this.homeTaskRecycler = homeTaskRecycler;
+    this.logoutButton = logoutButton;
   }
 
   @Override
@@ -77,13 +77,13 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.home_task_recycler;
-      RecyclerView homeTaskRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (homeTaskRecycler == null) {
+      id = R.id.logout_button;
+      Button logoutButton = ViewBindings.findChildViewById(rootView, id);
+      if (logoutButton == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, fab, headerTextView, homeTaskRecycler);
+      return new FragmentHomeBinding((FrameLayout) rootView, fab, headerTextView, logoutButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

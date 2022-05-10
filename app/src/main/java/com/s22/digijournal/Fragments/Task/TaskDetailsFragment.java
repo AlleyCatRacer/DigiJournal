@@ -25,6 +25,11 @@ public class TaskDetailsFragment extends Fragment implements TaskAdapter.TaskOnC
 	private TextView taskName;
 	private TextView description;
 	
+	public TaskDetailsFragment()
+	{
+	
+	}
+	
 	@Override public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);

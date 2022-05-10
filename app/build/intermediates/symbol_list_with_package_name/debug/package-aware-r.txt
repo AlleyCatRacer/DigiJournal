@@ -2640,6 +2640,7 @@ id action_container
 id action_context_bar
 id action_divider
 id action_home_to_task_add
+id action_home_to_tasks
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2804,7 +2805,6 @@ id header_title
 id hideable
 id home
 id homeAsUp
-id home_task_recycler
 id honorRequest
 id horizontal_only
 id icon
@@ -2837,6 +2837,7 @@ id linear
 id listMode
 id list_item
 id locale
+id logout_button
 id ltr
 id masked
 id match_constraint
@@ -3061,7 +3062,9 @@ id task_edit_save_button
 id task_edit_taskName
 id task_item_deadline
 id task_item_taskName
-id tasks
+id tasks_overview
+id tasks_overview_header
+id tasks_overview_recycler
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -3234,6 +3237,7 @@ layout fragment_task_add
 layout fragment_task_details
 layout fragment_task_edit
 layout fragment_task_item
+layout fragment_tasks_overview
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3357,7 +3361,6 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string cancel_button
-string category_add_list
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -3369,7 +3372,6 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string home_category
 string home_hint
@@ -3377,6 +3379,7 @@ string home_subheader
 string home_welcome
 string icon_content_description
 string item_view_role_description
+string logout_button
 string m3_ref_typeface_brand_display_regular
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -3422,12 +3425,8 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
-string menu_add_category
-string menu_add_list
 string menu_add_task
-string menu_categories
 string menu_home
-string menu_lists
 string menu_tasks
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
