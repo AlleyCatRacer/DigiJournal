@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/nav_home"
         android:actionLayout="@layout/fragment_home"
         android:icon="@drawable/home_icon"
-        android:title="@string/menu_home" />
+        android:title="@string/menu_home"
+        android:onClick=""/>
     <item
         android:id="@+id/nav_tasks"
         android:actionLayout="@layout/fragment_tasks_overview"
