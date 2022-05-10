@@ -7,16 +7,19 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home_icon"
-            android:title="@string/menu_home" />
+            android:title="@string/menu_home"
+            android:actionLayout="@layout/fragment_home"/>
         <item
             android:id="@+id/nav_tasks"
             android:icon="@drawable/tasks"
             android:title="@string/menu_tasks"
+            android:actionLayout="@layout/fragment_tasks_overview"
             />
         <item
             android:id="@+id/nav_add_task"
             android:icon="@drawable/add_task"
             android:title="@string/menu_add_task"
+            android:actionLayout="@layout/fragment_task_add"
             />
     </group>
 </menu>

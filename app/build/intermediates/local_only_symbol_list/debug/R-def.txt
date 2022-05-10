@@ -46,8 +46,9 @@ id detail_label
 id drawer_layout
 id fab
 id header
-id header_textView
 id home
+id home_header
+id home_hint
 id logout_button
 id mobile_navigation
 id nav_add_task

@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
 		View root = binding.getRoot();
 		
-		final TextView textView = binding.headerTextView;
+		final TextView textView = binding.homeHeader;
 		viewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 		Button logoutButton = binding.logoutButton;
 		logoutButton.setOnClickListener(v ->
