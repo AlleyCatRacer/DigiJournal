@@ -17,7 +17,7 @@ public class TaskActivity extends AppCompatActivity
     @Override protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tasks);
+        setContentView(R.layout.fragment_tasks);
         
         tasks = findViewById(R.id.list_details_tasks_recycler);
         tasks.hasFixedSize();

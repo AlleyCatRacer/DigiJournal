@@ -1,66 +1,82 @@
 package com.s22.digijournal.ui.overview;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
+import com.s22.digijournal.databinding.FragmentTaskAddBinding;
+import com.s22.digijournal.databinding.FragmentTasksBinding;
+import com.s22.digijournal.ui.task.TaskAdapter;
+import com.s22.digijournal.ui.task.TaskAddFragment;
+import com.s22.digijournal.ui.task.TaskViewModel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TasksFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class TasksFragment extends Fragment {
+import java.util.Objects;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public TasksFragment() {
-        // Required empty public constructor
+public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
+{
+    private FragmentTasksBinding binding;
+    private TaskViewModel viewModel;
+    private TextInputEditText taskName;
+    private TextInputEditText description;
+    private EditText deadline;
+    
+    public TasksFragment()
+    {
+    
     }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment TasksFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static TasksFragment newInstance(String param1, String param2) {
-        TasksFragment fragment = new TasksFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    
+    @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+        binding = FragmentTasksBinding.inflate(inflater, container, false);
+        
+        taskName = binding.taskAddTitle;
+        description = binding.taskAddDetailText;
+        deadline = binding.taskAddDeadlineTextInput;
+        
+        return binding.getRoot();
     }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+    
+    @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+    {
+        super.onViewCreated(view, savedInstanceState);
+        binding.taskAddCreateButton.setOnClickListener(v ->
+        {
+            ModelTask temp = new ModelTask();
+            temp.setName(Objects.requireNonNull(taskName.getText()).toString());
+            temp.setDescription(description.getText().toString());
+            if (!deadline.getText().equals(null))
+            {
+                temp.setDeadline(temp.formatDeadline(deadline.getText().toString()));
+            }
+            viewModel.addTask(temp);
+            viewModel.setCurrentTask(temp);
+            
+            NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
+        });
+        
+        binding.taskAddCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_home));
     }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_tasks, container, false);
+    
+    @Override public void onDestroyView()
+    {
+        super.onDestroyView();
+        binding = null;
+    }
+    
+    @Override public void onClick(ModelTask task)
+    {
+        viewModel.setCurrentTask(task);
     }
 }

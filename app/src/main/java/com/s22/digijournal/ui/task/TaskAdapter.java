@@ -14,67 +14,68 @@ import com.s22.digijournal.R;
 
 import java.util.ArrayList;
 
-
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
-    private final ArrayList<ModelTask> tasks;
-    private OnClickListener listener;
-
-    public TaskAdapter(ArrayList<ModelTask> tasks)
-    {
-        this.tasks = tasks;
-    }
-
-    @Override
-    public void onBindViewHolder(final ViewHolder holder, int position)
-    {
-        //TODO
-        /*holder.mItem = mTasks.get(position);
-        holder.mIdView.setText(mTasks.get(position).id);
-        holder.mContentView.setText(mTasks.get(position).content);*/
-    }
-
-    @Override
-    public int getItemCount()
-    {
-        return tasks.size();
-    }
-
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
-    {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
-        return new ViewHolder(view);
-    }
-
-    public void setOnClickListener(OnClickListener listener)
-    {
-        this.listener = listener;
-    }
-
-    protected class ViewHolder extends RecyclerView.ViewHolder
-    {
-        private final CheckBox done;
-        private final TextView name;
-        private final TextView deadline;
-
-        ViewHolder(View itemView)
-        {
-            super(itemView);
-            done = itemView.findViewById(R.id.task_item_checkBox);
-            name = itemView.findViewById(R.id.task_item_header);
-            deadline = itemView.findViewById(R.id.task_item_deadline);
-            itemView.setOnClickListener(v ->
-            {
-                listener.onClick(tasks.get(getBindingAdapterPosition()));
-                //getBindingAdapterPosition gets the position of the item clicked, identifying it
-            });
-        }
-    }
-
-    private interface OnClickListener
-    {
-        void onClick(ModelTask task);
-    }
+	private final ArrayList<ModelTask> tasks;
+	private TaskOnClickListener listener;
+	
+	public TaskAdapter(ArrayList<ModelTask> tasks, TaskOnClickListener listener)
+	{
+		this.tasks = tasks;
+		this.listener = listener;
+	}
+	
+	@Override
+	public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+	{
+		ModelTask temp = tasks.get(position);
+		holder.name.setText(temp.getName());
+		holder.done.setText(temp.getID());
+		holder.done.setChecked(temp.isCompleted());
+		holder.deadline.setText(temp.getDeadlineFormatted());
+	}
+	
+	@Override
+	public int getItemCount()
+	{
+		return tasks.size();
+	}
+	
+	@NonNull
+	@Override
+	public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+	{
+		LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+		View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
+		return new ViewHolder(view);
+	}
+	
+	public class ViewHolder extends RecyclerView.ViewHolder
+	{
+		CheckBox done;
+		TextView name;
+		TextView deadline;
+		
+		ViewHolder(View itemView)
+		{
+			super(itemView);
+			itemView.setOnClickListener(new View.OnClickListener()
+			{
+				@Override public void onClick(View view)
+				{
+					listener.onClick(tasks.get(getBindingAdapterPosition()));
+					//getBindingAdapterPosition gets the position of the item clicked, identifying it
+				}
+			});
+			
+			done = itemView.findViewById(R.id.task_item_checkBox);
+			name = itemView.findViewById(R.id.task_item_header);
+			deadline = itemView.findViewById(R.id.task_item_deadline);
+		}
+	}
+	
+	public interface TaskOnClickListener
+	{
+		void onClick(ModelTask task);
+	}
 }

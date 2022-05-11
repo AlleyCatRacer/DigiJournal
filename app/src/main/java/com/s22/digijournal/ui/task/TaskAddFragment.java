@@ -19,8 +19,8 @@ import com.s22.digijournal.databinding.FragmentTaskAddBinding;
 
 import java.util.Objects;
 
-public class TaskAddFragment extends Fragment {
-    
+public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClickListener
+{
     private FragmentTaskAddBinding binding;
     private TaskViewModel viewModel;
     private TextInputEditText taskName;
@@ -44,7 +44,7 @@ public class TaskAddFragment extends Fragment {
         return binding.getRoot();
     }
     
-    @Nullable @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+    @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
         binding.taskAddCreateButton.setOnClickListener(v ->
@@ -52,7 +52,13 @@ public class TaskAddFragment extends Fragment {
             ModelTask temp = new ModelTask();
             temp.setName(Objects.requireNonNull(taskName.getText()).toString());
             temp.setDescription(description.getText().toString());
+            if (!deadline.getText().equals(null))
+            {
+                temp.setDeadline(temp.formatDeadline(deadline.getText().toString()));
+            }
             viewModel.addTask(temp);
+            viewModel.setCurrentTask(temp);
+            
             NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
         });
         
@@ -63,5 +69,10 @@ public class TaskAddFragment extends Fragment {
     {
         super.onDestroyView();
         binding = null;
+    }
+    
+    @Override public void onClick(ModelTask task)
+    {
+        viewModel.setCurrentTask(task);
     }
 }

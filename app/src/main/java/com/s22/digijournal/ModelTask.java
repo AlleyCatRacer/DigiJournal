@@ -94,4 +94,9 @@ public class ModelTask
         }
         return "N/A";
     }
+    
+    public long formatDeadline(String deadline)
+    {
+        return Long.parseLong(deadline);
+    }
 }
