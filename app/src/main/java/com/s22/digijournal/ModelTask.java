@@ -5,9 +5,10 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Calendar;
 
 @Entity(tableName = "task_table")
 public class ModelTask
@@ -26,10 +27,11 @@ public class ModelTask
     }
 
     @Ignore
-    public ModelTask(String description, Date deadline)
+    public ModelTask(String name, String description, String deadline)
     {
+        this.name = name;
         this.description = description;
-        this.deadline = 0;
+        this.deadline = formatDeadline(deadline);
         completed = false;
     }
 
@@ -80,7 +82,13 @@ public class ModelTask
 
     public void setDeadline(long deadline)
     {
-        this.deadline = deadline;
+        Date date = new Date(deadline);
+        Date now = new Date(Calendar.getInstance().getTime().getTime());
+        
+        if (date.after(now))
+        {
+            this.deadline = deadline;
+        }
     }
     
     public String getDeadlineFormatted()
@@ -97,6 +105,16 @@ public class ModelTask
     
     public long formatDeadline(String deadline)
     {
-        return Long.parseLong(deadline);
+        if (deadline.isEmpty())
+        {
+            return 0;
+        }
+        
+        DateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+        String formatted = format.format(deadline);
+        
+        java.sql.Date date = new Date(Long.parseLong(String.valueOf(formatted)));
+        
+        return date.getTime();
     }
 }
