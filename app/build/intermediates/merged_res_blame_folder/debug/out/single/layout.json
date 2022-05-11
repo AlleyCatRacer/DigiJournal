@@ -4,8 +4,16 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_navigation_drawer.xml"
     },
     {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\content_main.xml",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header_main.xml",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\nav_header_main.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_list_item.xml",
@@ -62,5 +70,9 @@
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_list_details.xml",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\app_bar_main.xml",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     }
 ]

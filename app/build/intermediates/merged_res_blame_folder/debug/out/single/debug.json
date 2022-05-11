@@ -4,40 +4,12 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\content_navigation_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_vertical_rainbow_gradient.jpg.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\vertical_rainbow_gradient.jpg"
-    },
-    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_tasks.png.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\tasks.png"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\menu_navigation_drawer.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\menu\\navigation_drawer.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list_add.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_add.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_details.xml.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_task_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list_details.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_details.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_lists.png.flat",
@@ -48,20 +20,12 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_tasks.xml"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_task.png.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\add_task.png"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_category_add.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_category_add.xml"
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\menu_main.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\menu\\main.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_category_item.xml.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_category_item.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_category.png.flat",
@@ -70,22 +34,6 @@
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_edit.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_task_edit.xml"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -108,14 +56,6 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_add.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_task_add.xml"
-    },
-    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
@@ -128,12 +68,12 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_gallery.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
-    },
-    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_icon.png.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\add_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\content_main.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list_item.xml.flat",
@@ -144,16 +84,16 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\pattern.png"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_camera.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
-    },
-    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_navigation_drawer.xml.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_navigation_drawer.xml"
     },
     {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_app_bar_navigation_drawer.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\app_bar_navigation_drawer.xml"
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_app_bar_main.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_slideshow.xml.flat",
@@ -162,6 +102,82 @@
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_post_its.png.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\post_its.png"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_vertical_rainbow_gradient.jpg.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\vertical_rainbow_gradient.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list_add.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_list_details.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_add_task.png.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\add_task.png"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_category_add.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_category_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_edit.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_task_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_add.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_task_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_app_bar_navigation_drawer.xml.flat",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\app_bar_navigation_drawer.xml"
     },
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_task_item.xml.flat",
@@ -178,9 +194,5 @@
     {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\merged_res\\debug\\drawable_side_nav_bar.xml.flat",
-        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     }
 ]

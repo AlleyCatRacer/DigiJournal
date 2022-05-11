@@ -2646,6 +2646,10 @@ id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
 id action_nav_home_to_nav_categories
+id action_nav_home_to_nav_task_add
+id action_nav_home_to_nav_task_details
+id action_nav_task_add_to_nav_task_details
+id action_nav_task_details_to_nav_home
 id action_settings
 id action_text
 id actions
@@ -2661,6 +2665,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id app_bar_main
 id app_bar_navigation_drawer
 id arc
 id asConfigured
@@ -2813,6 +2818,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
@@ -2907,8 +2913,11 @@ id nav_categories
 id nav_controller_view_tag
 id nav_home
 id nav_host_fragment_container
+id nav_host_fragment_content_main
 id nav_host_fragment_content_navigation_drawer
 id nav_lists
+id nav_task_add
+id nav_task_details
 id nav_tasks
 id nav_view
 id navigation_bar_item_active_indicator_view
@@ -3076,6 +3085,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3213,7 +3223,9 @@ layout abc_tooltip
 layout activity_main
 layout activity_navigation_drawer
 layout activity_tasks
+layout app_bar_main
 layout app_bar_navigation_drawer
+layout content_main
 layout content_navigation_drawer
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3288,6 +3300,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout nav_header_main
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -3325,7 +3338,7 @@ layout text_view_without_line_height
 menu activity_main_drawer
 menu example_menu
 menu example_menu2
-menu navigation_drawer
+menu main
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

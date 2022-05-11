@@ -13,6 +13,29 @@
         <action
             android:id="@+id/action_nav_home_to_nav_categories"
             app:destination="@id/nav_categories" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_task_add"
+            app:destination="@id/nav_task_add" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_task_details"
+            app:destination="@id/nav_task_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_task_add"
+        android:name="com.s22.digijournal.ui.task.TaskAddFragment"
+        android:label="TaskAddFragment" >
+        <action
+            android:id="@+id/action_nav_task_add_to_nav_task_details"
+            app:destination="@id/nav_task_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_task_details"
+        android:name="com.s22.digijournal.ui.task.TaskDetailsFragment"
+        android:label="fragment_task_details"
+        tools:layout="@layout/fragment_task_details" >
+        <action
+            android:id="@+id/action_nav_task_details_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 </navigation>
