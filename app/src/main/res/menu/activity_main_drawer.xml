@@ -9,16 +9,12 @@
             android:icon="@drawable/home_icon"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_categories"
-            android:icon="@drawable/category"
-            android:title="@string/menu_categories" />
-        <item
-            android:id="@+id/nav_lists"
-            android:icon="@drawable/lists"
-            android:title="@string/menu_lists" />
-        <item
             android:id="@+id/nav_tasks"
             android:icon="@drawable/tasks"
             android:title="@string/menu_tasks" />
+        <item
+            android:id="@+id/nav_add_task"
+            android:icon="@drawable/add_task"
+            android:title="@string/menu_add_task"/>
     </group>
 </menu>
