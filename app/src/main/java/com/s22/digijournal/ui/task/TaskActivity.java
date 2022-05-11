@@ -19,7 +19,7 @@ public class TaskActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
         
-        tasks = findViewById(R.id.task_recycler);
+        tasks = findViewById(R.id.list_details_tasks_recycler);
         tasks.hasFixedSize();
         tasks.setLayoutManager(new LinearLayoutManager(this));
         //TODO instantiate adapter (what arg?), tasks.setAdapter, set listener on adapter

@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -25,35 +26,39 @@ public final class FragmentTaskEditBinding implements ViewBinding {
   public final Button backButton;
 
   @NonNull
-  public final TextView deadlineTextView;
-
-  @NonNull
   public final TextView detailLabel;
-
-  @NonNull
-  public final TextInputEditText detailText;
 
   @NonNull
   public final Button editButton;
 
   @NonNull
-  public final TextView header;
+  public final EditText taskEditDeadline;
 
   @NonNull
-  public final TextInputEditText title;
+  public final TextView taskEditDeadlineLabel;
+
+  @NonNull
+  public final TextInputEditText taskEditDetailText;
+
+  @NonNull
+  public final TextView taskEditHeader;
+
+  @NonNull
+  public final TextInputEditText taskEditTitle;
 
   private FragmentTaskEditBinding(@NonNull FrameLayout rootView, @NonNull Button backButton,
-      @NonNull TextView deadlineTextView, @NonNull TextView detailLabel,
-      @NonNull TextInputEditText detailText, @NonNull Button editButton, @NonNull TextView header,
-      @NonNull TextInputEditText title) {
+      @NonNull TextView detailLabel, @NonNull Button editButton, @NonNull EditText taskEditDeadline,
+      @NonNull TextView taskEditDeadlineLabel, @NonNull TextInputEditText taskEditDetailText,
+      @NonNull TextView taskEditHeader, @NonNull TextInputEditText taskEditTitle) {
     this.rootView = rootView;
     this.backButton = backButton;
-    this.deadlineTextView = deadlineTextView;
     this.detailLabel = detailLabel;
-    this.detailText = detailText;
     this.editButton = editButton;
-    this.header = header;
-    this.title = title;
+    this.taskEditDeadline = taskEditDeadline;
+    this.taskEditDeadlineLabel = taskEditDeadlineLabel;
+    this.taskEditDetailText = taskEditDetailText;
+    this.taskEditHeader = taskEditHeader;
+    this.taskEditTitle = taskEditTitle;
   }
 
   @Override
@@ -89,21 +94,9 @@ public final class FragmentTaskEditBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.deadline_textView;
-      TextView deadlineTextView = ViewBindings.findChildViewById(rootView, id);
-      if (deadlineTextView == null) {
-        break missingId;
-      }
-
       id = R.id.detail_label;
       TextView detailLabel = ViewBindings.findChildViewById(rootView, id);
       if (detailLabel == null) {
-        break missingId;
-      }
-
-      id = R.id.detail_text;
-      TextInputEditText detailText = ViewBindings.findChildViewById(rootView, id);
-      if (detailText == null) {
         break missingId;
       }
 
@@ -113,20 +106,39 @@ public final class FragmentTaskEditBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.header;
-      TextView header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
+      id = R.id.task_edit_deadline;
+      EditText taskEditDeadline = ViewBindings.findChildViewById(rootView, id);
+      if (taskEditDeadline == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextInputEditText title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.task_edit_deadline_label;
+      TextView taskEditDeadlineLabel = ViewBindings.findChildViewById(rootView, id);
+      if (taskEditDeadlineLabel == null) {
         break missingId;
       }
 
-      return new FragmentTaskEditBinding((FrameLayout) rootView, backButton, deadlineTextView,
-          detailLabel, detailText, editButton, header, title);
+      id = R.id.task_edit_detail_text;
+      TextInputEditText taskEditDetailText = ViewBindings.findChildViewById(rootView, id);
+      if (taskEditDetailText == null) {
+        break missingId;
+      }
+
+      id = R.id.task_edit_header;
+      TextView taskEditHeader = ViewBindings.findChildViewById(rootView, id);
+      if (taskEditHeader == null) {
+        break missingId;
+      }
+
+      id = R.id.task_edit_title;
+      TextInputEditText taskEditTitle = ViewBindings.findChildViewById(rootView, id);
+      if (taskEditTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentTaskEditBinding((FrameLayout) rootView, backButton, detailLabel,
+          editButton, taskEditDeadline, taskEditDeadlineLabel, taskEditDetailText, taskEditHeader,
+          taskEditTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

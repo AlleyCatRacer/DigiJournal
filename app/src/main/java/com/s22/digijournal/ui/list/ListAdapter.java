@@ -53,8 +53,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
         ViewHolder(View itemView)
         {
             super(itemView);
-            name = itemView.findViewById(R.id.list_name_textView);
-            taskCount = itemView.findViewById(R.id.task_count_textView);
+            name = itemView.findViewById(R.id.list_item_listName);
+            taskCount = itemView.findViewById(R.id.list_item_task_count_textView);
             
             itemView.setOnClickListener(v ->
             {

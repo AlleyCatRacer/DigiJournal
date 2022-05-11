@@ -2,15 +2,14 @@ package com.s22.digijournal.ui.task;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.s22.digijournal.R;
 
@@ -89,7 +88,7 @@ public class TaskItemFragment extends Fragment
             {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, taskCount));
             }
-            recyclerView.setAdapter(new TaskAdapter());
+            //recyclerView.setAdapter(new TaskAdapter());
         }
         return view;
     }

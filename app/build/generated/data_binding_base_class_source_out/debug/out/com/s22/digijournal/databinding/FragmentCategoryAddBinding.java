@@ -25,21 +25,22 @@ public final class FragmentCategoryAddBinding implements ViewBinding {
   public final Button cancelButton;
 
   @NonNull
+  public final TextView categoryAddHeader;
+
+  @NonNull
+  public final TextInputEditText categoryAddTitle;
+
+  @NonNull
   public final Button createButton;
 
-  @NonNull
-  public final TextView header;
-
-  @NonNull
-  public final TextInputEditText title;
-
   private FragmentCategoryAddBinding(@NonNull FrameLayout rootView, @NonNull Button cancelButton,
-      @NonNull Button createButton, @NonNull TextView header, @NonNull TextInputEditText title) {
+      @NonNull TextView categoryAddHeader, @NonNull TextInputEditText categoryAddTitle,
+      @NonNull Button createButton) {
     this.rootView = rootView;
     this.cancelButton = cancelButton;
+    this.categoryAddHeader = categoryAddHeader;
+    this.categoryAddTitle = categoryAddTitle;
     this.createButton = createButton;
-    this.header = header;
-    this.title = title;
   }
 
   @Override
@@ -75,26 +76,26 @@ public final class FragmentCategoryAddBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.category_add_header;
+      TextView categoryAddHeader = ViewBindings.findChildViewById(rootView, id);
+      if (categoryAddHeader == null) {
+        break missingId;
+      }
+
+      id = R.id.category_add_title;
+      TextInputEditText categoryAddTitle = ViewBindings.findChildViewById(rootView, id);
+      if (categoryAddTitle == null) {
+        break missingId;
+      }
+
       id = R.id.create_button;
       Button createButton = ViewBindings.findChildViewById(rootView, id);
       if (createButton == null) {
         break missingId;
       }
 
-      id = R.id.header;
-      TextView header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
-        break missingId;
-      }
-
-      id = R.id.title;
-      TextInputEditText title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
-        break missingId;
-      }
-
-      return new FragmentCategoryAddBinding((FrameLayout) rootView, cancelButton, createButton,
-          header, title);
+      return new FragmentCategoryAddBinding((FrameLayout) rootView, cancelButton, categoryAddHeader,
+          categoryAddTitle, createButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -26,26 +26,26 @@ public final class FragmentListAddBinding implements ViewBinding {
   public final Button cancelButton;
 
   @NonNull
-  public final Spinner categorySpinner;
-
-  @NonNull
   public final Button createButton;
 
   @NonNull
-  public final TextView header;
+  public final Spinner listAddCategorySpinner;
 
   @NonNull
-  public final TextInputEditText title;
+  public final TextView listAddHeader;
+
+  @NonNull
+  public final TextInputEditText listAddTitle;
 
   private FragmentListAddBinding(@NonNull FrameLayout rootView, @NonNull Button cancelButton,
-      @NonNull Spinner categorySpinner, @NonNull Button createButton, @NonNull TextView header,
-      @NonNull TextInputEditText title) {
+      @NonNull Button createButton, @NonNull Spinner listAddCategorySpinner,
+      @NonNull TextView listAddHeader, @NonNull TextInputEditText listAddTitle) {
     this.rootView = rootView;
     this.cancelButton = cancelButton;
-    this.categorySpinner = categorySpinner;
     this.createButton = createButton;
-    this.header = header;
-    this.title = title;
+    this.listAddCategorySpinner = listAddCategorySpinner;
+    this.listAddHeader = listAddHeader;
+    this.listAddTitle = listAddTitle;
   }
 
   @Override
@@ -81,32 +81,32 @@ public final class FragmentListAddBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.category_spinner;
-      Spinner categorySpinner = ViewBindings.findChildViewById(rootView, id);
-      if (categorySpinner == null) {
-        break missingId;
-      }
-
       id = R.id.create_button;
       Button createButton = ViewBindings.findChildViewById(rootView, id);
       if (createButton == null) {
         break missingId;
       }
 
-      id = R.id.header;
-      TextView header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
+      id = R.id.list_add_category_spinner;
+      Spinner listAddCategorySpinner = ViewBindings.findChildViewById(rootView, id);
+      if (listAddCategorySpinner == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextInputEditText title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.list_add_header;
+      TextView listAddHeader = ViewBindings.findChildViewById(rootView, id);
+      if (listAddHeader == null) {
         break missingId;
       }
 
-      return new FragmentListAddBinding((FrameLayout) rootView, cancelButton, categorySpinner,
-          createButton, header, title);
+      id = R.id.list_add_title;
+      TextInputEditText listAddTitle = ViewBindings.findChildViewById(rootView, id);
+      if (listAddTitle == null) {
+        break missingId;
+      }
+
+      return new FragmentListAddBinding((FrameLayout) rootView, cancelButton, createButton,
+          listAddCategorySpinner, listAddHeader, listAddTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

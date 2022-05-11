@@ -21,16 +21,16 @@ public final class FragmentListDetailsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final RecyclerView tasksRecycler;
+  public final RecyclerView listDetailsTasksRecycler;
 
   @NonNull
-  public final TextView title;
+  public final TextView listDetailsTitle;
 
   private FragmentListDetailsBinding(@NonNull ScrollView rootView,
-      @NonNull RecyclerView tasksRecycler, @NonNull TextView title) {
+      @NonNull RecyclerView listDetailsTasksRecycler, @NonNull TextView listDetailsTitle) {
     this.rootView = rootView;
-    this.tasksRecycler = tasksRecycler;
-    this.title = title;
+    this.listDetailsTasksRecycler = listDetailsTasksRecycler;
+    this.listDetailsTitle = listDetailsTitle;
   }
 
   @Override
@@ -60,19 +60,20 @@ public final class FragmentListDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.tasks_recycler;
-      RecyclerView tasksRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (tasksRecycler == null) {
+      id = R.id.list_details_tasks_recycler;
+      RecyclerView listDetailsTasksRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (listDetailsTasksRecycler == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextView title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.list_details_title;
+      TextView listDetailsTitle = ViewBindings.findChildViewById(rootView, id);
+      if (listDetailsTitle == null) {
         break missingId;
       }
 
-      return new FragmentListDetailsBinding((ScrollView) rootView, tasksRecycler, title);
+      return new FragmentListDetailsBinding((ScrollView) rootView, listDetailsTasksRecycler,
+          listDetailsTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

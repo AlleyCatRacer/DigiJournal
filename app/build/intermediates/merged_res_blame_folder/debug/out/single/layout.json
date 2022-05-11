@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_navigation_drawer.xml"
     },
     {
+        "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_list_item.xml",
         "source": "C:\\Users\\Bruger\\OneDrive\\College\\4.SemesterS22\\AND\\CourseProject\\DigiJournal\\app\\src\\main\\res\\layout\\fragment_list_item.xml"
     },

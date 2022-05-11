@@ -15,7 +15,7 @@
         >
 
         <TextView
-            android:id="@+id/list_name_textView"
+            android:id="@+id/list_item_listName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -24,12 +24,12 @@
             android:textAlignment="center"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/task_count_textView"
+            app:layout_constraintRight_toLeftOf="@id/list_item_task_count_textView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/task_count_textView"
+            android:id="@+id/list_item_task_count_textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -38,7 +38,7 @@
             android:textAlignment="center"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/list_name_textView"
+            app:layout_constraintLeft_toRightOf="@id/list_item_listName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

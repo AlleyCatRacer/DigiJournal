@@ -25,17 +25,17 @@ public final class ActivityTasksBinding implements ViewBinding {
   public final FloatingActionButton fab;
 
   @NonNull
-  public final RecyclerView taskRecycler;
+  public final RecyclerView tasksActivityTaskRecycler;
 
   @NonNull
-  public final TextView title;
+  public final TextView tasksActivityTitle;
 
   private ActivityTasksBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull RecyclerView taskRecycler, @NonNull TextView title) {
+      @NonNull RecyclerView tasksActivityTaskRecycler, @NonNull TextView tasksActivityTitle) {
     this.rootView = rootView;
     this.fab = fab;
-    this.taskRecycler = taskRecycler;
-    this.title = title;
+    this.tasksActivityTaskRecycler = tasksActivityTaskRecycler;
+    this.tasksActivityTitle = tasksActivityTitle;
   }
 
   @Override
@@ -71,19 +71,20 @@ public final class ActivityTasksBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.task_recycler;
-      RecyclerView taskRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (taskRecycler == null) {
+      id = R.id.tasks_activity_task_recycler;
+      RecyclerView tasksActivityTaskRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (tasksActivityTaskRecycler == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextView title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.tasks_activity_title;
+      TextView tasksActivityTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tasksActivityTitle == null) {
         break missingId;
       }
 
-      return new ActivityTasksBinding((FrameLayout) rootView, fab, taskRecycler, title);
+      return new ActivityTasksBinding((FrameLayout) rootView, fab, tasksActivityTaskRecycler,
+          tasksActivityTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

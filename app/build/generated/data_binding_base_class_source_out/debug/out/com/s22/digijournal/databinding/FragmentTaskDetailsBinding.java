@@ -21,29 +21,34 @@ public final class FragmentTaskDetailsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final TextView deadlineTextView;
+  public final TextView taskDetailsDeadline;
 
   @NonNull
-  public final TextView detailLabel;
+  public final TextView taskDetailsDeadlineLabel;
 
   @NonNull
-  public final TextView detailText;
+  public final TextView taskDetailsDetailLabel;
 
   @NonNull
-  public final Button editButton;
+  public final TextView taskDetailsDetailText;
 
   @NonNull
-  public final TextView header;
+  public final Button taskDetailsEditButton;
+
+  @NonNull
+  public final TextView taskDetailsHeader;
 
   private FragmentTaskDetailsBinding(@NonNull ScrollView rootView,
-      @NonNull TextView deadlineTextView, @NonNull TextView detailLabel,
-      @NonNull TextView detailText, @NonNull Button editButton, @NonNull TextView header) {
+      @NonNull TextView taskDetailsDeadline, @NonNull TextView taskDetailsDeadlineLabel,
+      @NonNull TextView taskDetailsDetailLabel, @NonNull TextView taskDetailsDetailText,
+      @NonNull Button taskDetailsEditButton, @NonNull TextView taskDetailsHeader) {
     this.rootView = rootView;
-    this.deadlineTextView = deadlineTextView;
-    this.detailLabel = detailLabel;
-    this.detailText = detailText;
-    this.editButton = editButton;
-    this.header = header;
+    this.taskDetailsDeadline = taskDetailsDeadline;
+    this.taskDetailsDeadlineLabel = taskDetailsDeadlineLabel;
+    this.taskDetailsDetailLabel = taskDetailsDetailLabel;
+    this.taskDetailsDetailText = taskDetailsDetailText;
+    this.taskDetailsEditButton = taskDetailsEditButton;
+    this.taskDetailsHeader = taskDetailsHeader;
   }
 
   @Override
@@ -73,38 +78,45 @@ public final class FragmentTaskDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.deadline_textView;
-      TextView deadlineTextView = ViewBindings.findChildViewById(rootView, id);
-      if (deadlineTextView == null) {
+      id = R.id.task_details_deadline;
+      TextView taskDetailsDeadline = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsDeadline == null) {
         break missingId;
       }
 
-      id = R.id.detail_label;
-      TextView detailLabel = ViewBindings.findChildViewById(rootView, id);
-      if (detailLabel == null) {
+      id = R.id.task_details_deadline_label;
+      TextView taskDetailsDeadlineLabel = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsDeadlineLabel == null) {
         break missingId;
       }
 
-      id = R.id.detail_text;
-      TextView detailText = ViewBindings.findChildViewById(rootView, id);
-      if (detailText == null) {
+      id = R.id.task_details_detail_label;
+      TextView taskDetailsDetailLabel = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsDetailLabel == null) {
         break missingId;
       }
 
-      id = R.id.edit_button;
-      Button editButton = ViewBindings.findChildViewById(rootView, id);
-      if (editButton == null) {
+      id = R.id.task_details_detail_text;
+      TextView taskDetailsDetailText = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsDetailText == null) {
         break missingId;
       }
 
-      id = R.id.header;
-      TextView header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
+      id = R.id.task_details_edit_button;
+      Button taskDetailsEditButton = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsEditButton == null) {
         break missingId;
       }
 
-      return new FragmentTaskDetailsBinding((ScrollView) rootView, deadlineTextView, detailLabel,
-          detailText, editButton, header);
+      id = R.id.task_details_header;
+      TextView taskDetailsHeader = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsHeader == null) {
+        break missingId;
+      }
+
+      return new FragmentTaskDetailsBinding((ScrollView) rootView, taskDetailsDeadline,
+          taskDetailsDeadlineLabel, taskDetailsDetailLabel, taskDetailsDetailText,
+          taskDetailsEditButton, taskDetailsHeader);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

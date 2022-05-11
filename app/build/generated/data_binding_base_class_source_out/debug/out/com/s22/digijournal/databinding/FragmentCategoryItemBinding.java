@@ -20,16 +20,16 @@ public final class FragmentCategoryItemBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final TextView listNameTextView;
+  public final TextView categoryItemListCount;
 
   @NonNull
-  public final TextView taskCountTextView;
+  public final TextView categoryItemListName;
 
   private FragmentCategoryItemBinding(@NonNull ScrollView rootView,
-      @NonNull TextView listNameTextView, @NonNull TextView taskCountTextView) {
+      @NonNull TextView categoryItemListCount, @NonNull TextView categoryItemListName) {
     this.rootView = rootView;
-    this.listNameTextView = listNameTextView;
-    this.taskCountTextView = taskCountTextView;
+    this.categoryItemListCount = categoryItemListCount;
+    this.categoryItemListName = categoryItemListName;
   }
 
   @Override
@@ -59,20 +59,20 @@ public final class FragmentCategoryItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.list_name_textView;
-      TextView listNameTextView = ViewBindings.findChildViewById(rootView, id);
-      if (listNameTextView == null) {
+      id = R.id.category_item_list_count;
+      TextView categoryItemListCount = ViewBindings.findChildViewById(rootView, id);
+      if (categoryItemListCount == null) {
         break missingId;
       }
 
-      id = R.id.task_count_textView;
-      TextView taskCountTextView = ViewBindings.findChildViewById(rootView, id);
-      if (taskCountTextView == null) {
+      id = R.id.category_item_listName;
+      TextView categoryItemListName = ViewBindings.findChildViewById(rootView, id);
+      if (categoryItemListName == null) {
         break missingId;
       }
 
-      return new FragmentCategoryItemBinding((ScrollView) rootView, listNameTextView,
-          taskCountTextView);
+      return new FragmentCategoryItemBinding((ScrollView) rootView, categoryItemListCount,
+          categoryItemListName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

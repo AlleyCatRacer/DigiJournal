@@ -49,8 +49,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         ViewHolder(View itemView)
         {
             super(itemView);
-            name = itemView.findViewById(R.id.category_title);
-            listCount = itemView.findViewById(R.id.task_count_textView);
+            name = itemView.findViewById(R.id.category_add_header);
+            listCount = itemView.findViewById(R.id.category_item_list_count);
             itemView.setOnClickListener(v ->
             {
                 listener.onClick(categories.get((getBindingAdapterPosition())));

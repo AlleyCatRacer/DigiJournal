@@ -7,8 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.s22.digijournal.R;
-
 public class CategoryActivity extends AppCompatActivity
 {
     RecyclerView categories;
@@ -17,9 +15,9 @@ public class CategoryActivity extends AppCompatActivity
     @Override protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categories);
+        //setContentView(R.layout.activity_categories);
         
-        categories = findViewById(R.id.task_recycler);
+        //categories = findViewById(R.id.task_recycler);
         categories.hasFixedSize();
         categories.setLayoutManager(new LinearLayoutManager(this));
         

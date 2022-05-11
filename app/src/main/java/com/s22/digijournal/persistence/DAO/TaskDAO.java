@@ -20,7 +20,7 @@ public interface TaskDAO
 	
 	@Delete void delete(ModelTask task);
 	
-	@Query("SELECT * FROM task_table ORDER BY taskID")
+	@Query("SELECT * FROM task_table ORDER BY ID")
 	LiveData<List<ModelTask>> getAllTasks();
 	
 	@Query("DELETE FROM task_table")

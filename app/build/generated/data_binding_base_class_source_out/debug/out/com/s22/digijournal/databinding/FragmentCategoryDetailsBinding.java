@@ -22,21 +22,21 @@ public final class FragmentCategoryDetailsBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final TextView categoryTitle;
+  public final Button categoryDetailsEditButton;
 
   @NonNull
-  public final Button editButton;
+  public final RecyclerView categoryDetailsListRecycler;
 
   @NonNull
-  public final RecyclerView taskListRecycler;
+  public final TextView categoryDetailsTitle;
 
   private FragmentCategoryDetailsBinding(@NonNull ScrollView rootView,
-      @NonNull TextView categoryTitle, @NonNull Button editButton,
-      @NonNull RecyclerView taskListRecycler) {
+      @NonNull Button categoryDetailsEditButton, @NonNull RecyclerView categoryDetailsListRecycler,
+      @NonNull TextView categoryDetailsTitle) {
     this.rootView = rootView;
-    this.categoryTitle = categoryTitle;
-    this.editButton = editButton;
-    this.taskListRecycler = taskListRecycler;
+    this.categoryDetailsEditButton = categoryDetailsEditButton;
+    this.categoryDetailsListRecycler = categoryDetailsListRecycler;
+    this.categoryDetailsTitle = categoryDetailsTitle;
   }
 
   @Override
@@ -66,26 +66,26 @@ public final class FragmentCategoryDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.category_title;
-      TextView categoryTitle = ViewBindings.findChildViewById(rootView, id);
-      if (categoryTitle == null) {
+      id = R.id.category_details_edit_button;
+      Button categoryDetailsEditButton = ViewBindings.findChildViewById(rootView, id);
+      if (categoryDetailsEditButton == null) {
         break missingId;
       }
 
-      id = R.id.edit_button;
-      Button editButton = ViewBindings.findChildViewById(rootView, id);
-      if (editButton == null) {
+      id = R.id.category_details_list_recycler;
+      RecyclerView categoryDetailsListRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (categoryDetailsListRecycler == null) {
         break missingId;
       }
 
-      id = R.id.taskList_recycler;
-      RecyclerView taskListRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (taskListRecycler == null) {
+      id = R.id.category_details_title;
+      TextView categoryDetailsTitle = ViewBindings.findChildViewById(rootView, id);
+      if (categoryDetailsTitle == null) {
         break missingId;
       }
 
-      return new FragmentCategoryDetailsBinding((ScrollView) rootView, categoryTitle, editButton,
-          taskListRecycler);
+      return new FragmentCategoryDetailsBinding((ScrollView) rootView, categoryDetailsEditButton,
+          categoryDetailsListRecycler, categoryDetailsTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

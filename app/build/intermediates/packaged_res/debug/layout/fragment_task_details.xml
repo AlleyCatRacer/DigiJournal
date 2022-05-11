@@ -15,7 +15,7 @@
         >
 
         <TextView
-            android:id="@+id/header"
+            android:id="@+id/task_details_header"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -23,14 +23,14 @@
             android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="40sp"
-            app:layout_constraintBottom_toTopOf="@+id/detail_label"
+            app:layout_constraintBottom_toTopOf="@+id/task_details_detail_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/detail_label"
+            android:id="@+id/task_details_detail_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -38,14 +38,14 @@
             android:textColor="@color/black"
             android:text="@string/task_add_desc"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintTop_toBottomOf="@id/task_details_header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/detail_text"
+            app:layout_constraintBottom_toTopOf="@id/task_details_detail_text"
             />
 
         <TextView
-            android:id="@+id/detail_text"
+            android:id="@+id/task_details_detail_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/task_add_desc_hint"
@@ -55,13 +55,13 @@
             android:textSize="16sp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:layout_constraintBottom_toTopOf="@id/deadline_textView"
+            app:layout_constraintBottom_toTopOf="@id/task_details_deadline_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detail_label" />
+            app:layout_constraintTop_toBottomOf="@+id/task_details_detail_label" />
 
         <TextView
-            android:id="@+id/deadline_textView"
+            android:id="@+id/task_details_deadline_label"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginTop="30dp"
@@ -69,13 +69,13 @@
             android:text="@string/task_add_deadline"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/edit_button"
-            app:layout_constraintEnd_toStartOf="@+id/deadline_textView"
+            app:layout_constraintBottom_toTopOf="@+id/task_details_edit_button"
+            app:layout_constraintEnd_toStartOf="@+id/task_details_deadline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBaseline_toBaselineOf="@+id/deadline_textView" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/task_details_deadline" />
 
         <TextView
-            android:id="@+id/deadline_textView"
+            android:id="@+id/task_details_deadline"
             android:layout_width="0dp"
             android:layout_height="60sp"
             android:layout_marginLeft="10dp"
@@ -86,19 +86,19 @@
             android:inputType="date"
             android:hint="@string/task_add_date_format_hint"
             android:text="[01/01/3001]"
-            app:layout_constraintBottom_toTopOf="@+id/edit_button"
+            app:layout_constraintBottom_toTopOf="@+id/task_details_edit_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/deadline_textView"
-            app:layout_constraintTop_toBottomOf="@+id/detail_text" />
+            app:layout_constraintStart_toEndOf="@id/task_details_deadline_label"
+            app:layout_constraintTop_toBottomOf="@+id/task_details_detail_text" />
 
         <Button
-            android:id="@+id/edit_button"
+            android:id="@+id/task_details_edit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit_button"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@id/deadline_textView"
+            app:layout_constraintTop_toBottomOf="@id/task_details_deadline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -24,17 +24,17 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final FloatingActionButton fab;
 
   @NonNull
-  public final TextView headerTextView;
+  public final TextView homeHeaderTextView;
 
   @NonNull
-  public final TextView subHeader;
+  public final TextView homeSubHeader;
 
   private FragmentHomeBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull TextView headerTextView, @NonNull TextView subHeader) {
+      @NonNull TextView homeHeaderTextView, @NonNull TextView homeSubHeader) {
     this.rootView = rootView;
     this.fab = fab;
-    this.headerTextView = headerTextView;
-    this.subHeader = subHeader;
+    this.homeHeaderTextView = homeHeaderTextView;
+    this.homeSubHeader = homeSubHeader;
   }
 
   @Override
@@ -70,19 +70,20 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.header_textView;
-      TextView headerTextView = ViewBindings.findChildViewById(rootView, id);
-      if (headerTextView == null) {
+      id = R.id.home_header_textView;
+      TextView homeHeaderTextView = ViewBindings.findChildViewById(rootView, id);
+      if (homeHeaderTextView == null) {
         break missingId;
       }
 
-      id = R.id.sub_header;
-      TextView subHeader = ViewBindings.findChildViewById(rootView, id);
-      if (subHeader == null) {
+      id = R.id.home_sub_header;
+      TextView homeSubHeader = ViewBindings.findChildViewById(rootView, id);
+      if (homeSubHeader == null) {
         break missingId;
       }
 
-      return new FragmentHomeBinding((FrameLayout) rootView, fab, headerTextView, subHeader);
+      return new FragmentHomeBinding((FrameLayout) rootView, fab, homeHeaderTextView,
+          homeSubHeader);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

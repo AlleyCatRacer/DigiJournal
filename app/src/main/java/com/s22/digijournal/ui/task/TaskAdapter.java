@@ -1,17 +1,17 @@
 package com.s22.digijournal.ui.task;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import com.s22.digijournal.ModelCategory;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
+
 import java.util.ArrayList;
 
 
@@ -62,9 +62,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
         ViewHolder(View itemView)
         {
             super(itemView);
-            done = itemView.findViewById(R.id.task_checkBox);
+            done = itemView.findViewById(R.id.task_item_checkBox);
             name = itemView.findViewById(R.id.task_item_header);
-            deadline = itemView.findViewById(R.id.task_deadline);
+            deadline = itemView.findViewById(R.id.task_item_deadline);
             itemView.setOnClickListener(v ->
             {
                 listener.onClick(tasks.get(getBindingAdapterPosition()));

@@ -24,47 +24,47 @@ public final class FragmentTaskAddBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final Button cancelButton;
+  public final Button taskAddCancelButton;
 
   @NonNull
-  public final Button createButton;
+  public final Button taskAddCreateButton;
 
   @NonNull
-  public final EditText deadlineTextInput;
+  public final EditText taskAddDeadlineTextInput;
 
   @NonNull
-  public final TextView deadlineTextView;
+  public final TextView taskAddDeadlineTextView;
 
   @NonNull
-  public final TextView detailLabel;
+  public final TextView taskAddDetailLabel;
 
   @NonNull
-  public final TextInputEditText detailText;
+  public final TextInputEditText taskAddDetailText;
 
   @NonNull
-  public final TextView header;
+  public final TextView taskAddHeader;
 
   @NonNull
-  public final Spinner listSpinner;
+  public final Spinner taskAddListSpinner;
 
   @NonNull
-  public final TextInputEditText title;
+  public final TextInputEditText taskAddTitle;
 
-  private FragmentTaskAddBinding(@NonNull FrameLayout rootView, @NonNull Button cancelButton,
-      @NonNull Button createButton, @NonNull EditText deadlineTextInput,
-      @NonNull TextView deadlineTextView, @NonNull TextView detailLabel,
-      @NonNull TextInputEditText detailText, @NonNull TextView header, @NonNull Spinner listSpinner,
-      @NonNull TextInputEditText title) {
+  private FragmentTaskAddBinding(@NonNull FrameLayout rootView, @NonNull Button taskAddCancelButton,
+      @NonNull Button taskAddCreateButton, @NonNull EditText taskAddDeadlineTextInput,
+      @NonNull TextView taskAddDeadlineTextView, @NonNull TextView taskAddDetailLabel,
+      @NonNull TextInputEditText taskAddDetailText, @NonNull TextView taskAddHeader,
+      @NonNull Spinner taskAddListSpinner, @NonNull TextInputEditText taskAddTitle) {
     this.rootView = rootView;
-    this.cancelButton = cancelButton;
-    this.createButton = createButton;
-    this.deadlineTextInput = deadlineTextInput;
-    this.deadlineTextView = deadlineTextView;
-    this.detailLabel = detailLabel;
-    this.detailText = detailText;
-    this.header = header;
-    this.listSpinner = listSpinner;
-    this.title = title;
+    this.taskAddCancelButton = taskAddCancelButton;
+    this.taskAddCreateButton = taskAddCreateButton;
+    this.taskAddDeadlineTextInput = taskAddDeadlineTextInput;
+    this.taskAddDeadlineTextView = taskAddDeadlineTextView;
+    this.taskAddDetailLabel = taskAddDetailLabel;
+    this.taskAddDetailText = taskAddDetailText;
+    this.taskAddHeader = taskAddHeader;
+    this.taskAddListSpinner = taskAddListSpinner;
+    this.taskAddTitle = taskAddTitle;
   }
 
   @Override
@@ -94,62 +94,63 @@ public final class FragmentTaskAddBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.cancel_button;
-      Button cancelButton = ViewBindings.findChildViewById(rootView, id);
-      if (cancelButton == null) {
+      id = R.id.task_add_cancel_button;
+      Button taskAddCancelButton = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddCancelButton == null) {
         break missingId;
       }
 
-      id = R.id.create_button;
-      Button createButton = ViewBindings.findChildViewById(rootView, id);
-      if (createButton == null) {
+      id = R.id.task_add_create_button;
+      Button taskAddCreateButton = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddCreateButton == null) {
         break missingId;
       }
 
-      id = R.id.deadline_textInput;
-      EditText deadlineTextInput = ViewBindings.findChildViewById(rootView, id);
-      if (deadlineTextInput == null) {
+      id = R.id.task_add_deadline_textInput;
+      EditText taskAddDeadlineTextInput = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddDeadlineTextInput == null) {
         break missingId;
       }
 
-      id = R.id.deadline_textView;
-      TextView deadlineTextView = ViewBindings.findChildViewById(rootView, id);
-      if (deadlineTextView == null) {
+      id = R.id.task_add_deadline_textView;
+      TextView taskAddDeadlineTextView = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddDeadlineTextView == null) {
         break missingId;
       }
 
-      id = R.id.detail_label;
-      TextView detailLabel = ViewBindings.findChildViewById(rootView, id);
-      if (detailLabel == null) {
+      id = R.id.task_add_detail_label;
+      TextView taskAddDetailLabel = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddDetailLabel == null) {
         break missingId;
       }
 
-      id = R.id.detail_text;
-      TextInputEditText detailText = ViewBindings.findChildViewById(rootView, id);
-      if (detailText == null) {
+      id = R.id.task_add_detail_text;
+      TextInputEditText taskAddDetailText = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddDetailText == null) {
         break missingId;
       }
 
-      id = R.id.header;
-      TextView header = ViewBindings.findChildViewById(rootView, id);
-      if (header == null) {
+      id = R.id.task_add_header;
+      TextView taskAddHeader = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddHeader == null) {
         break missingId;
       }
 
-      id = R.id.list_spinner;
-      Spinner listSpinner = ViewBindings.findChildViewById(rootView, id);
-      if (listSpinner == null) {
+      id = R.id.task_add_list_spinner;
+      Spinner taskAddListSpinner = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddListSpinner == null) {
         break missingId;
       }
 
-      id = R.id.title;
-      TextInputEditText title = ViewBindings.findChildViewById(rootView, id);
-      if (title == null) {
+      id = R.id.task_add_title;
+      TextInputEditText taskAddTitle = ViewBindings.findChildViewById(rootView, id);
+      if (taskAddTitle == null) {
         break missingId;
       }
 
-      return new FragmentTaskAddBinding((FrameLayout) rootView, cancelButton, createButton,
-          deadlineTextInput, deadlineTextView, detailLabel, detailText, header, listSpinner, title);
+      return new FragmentTaskAddBinding((FrameLayout) rootView, taskAddCancelButton,
+          taskAddCreateButton, taskAddDeadlineTextInput, taskAddDeadlineTextView,
+          taskAddDetailLabel, taskAddDetailText, taskAddHeader, taskAddListSpinner, taskAddTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

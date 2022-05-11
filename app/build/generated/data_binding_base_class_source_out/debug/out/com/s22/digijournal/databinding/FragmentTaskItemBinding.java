@@ -21,19 +21,19 @@ public final class FragmentTaskItemBinding implements ViewBinding {
   private final ScrollView rootView;
 
   @NonNull
-  public final CheckBox taskCheckBox;
+  public final CheckBox taskItemCheckBox;
 
   @NonNull
-  public final TextView taskDeadline;
+  public final TextView taskItemDeadline;
 
   @NonNull
   public final TextView taskItemHeader;
 
-  private FragmentTaskItemBinding(@NonNull ScrollView rootView, @NonNull CheckBox taskCheckBox,
-      @NonNull TextView taskDeadline, @NonNull TextView taskItemHeader) {
+  private FragmentTaskItemBinding(@NonNull ScrollView rootView, @NonNull CheckBox taskItemCheckBox,
+      @NonNull TextView taskItemDeadline, @NonNull TextView taskItemHeader) {
     this.rootView = rootView;
-    this.taskCheckBox = taskCheckBox;
-    this.taskDeadline = taskDeadline;
+    this.taskItemCheckBox = taskItemCheckBox;
+    this.taskItemDeadline = taskItemDeadline;
     this.taskItemHeader = taskItemHeader;
   }
 
@@ -64,15 +64,15 @@ public final class FragmentTaskItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.task_checkBox;
-      CheckBox taskCheckBox = ViewBindings.findChildViewById(rootView, id);
-      if (taskCheckBox == null) {
+      id = R.id.task_item_checkBox;
+      CheckBox taskItemCheckBox = ViewBindings.findChildViewById(rootView, id);
+      if (taskItemCheckBox == null) {
         break missingId;
       }
 
-      id = R.id.task_deadline;
-      TextView taskDeadline = ViewBindings.findChildViewById(rootView, id);
-      if (taskDeadline == null) {
+      id = R.id.task_item_deadline;
+      TextView taskItemDeadline = ViewBindings.findChildViewById(rootView, id);
+      if (taskItemDeadline == null) {
         break missingId;
       }
 
@@ -82,7 +82,7 @@ public final class FragmentTaskItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentTaskItemBinding((ScrollView) rootView, taskCheckBox, taskDeadline,
+      return new FragmentTaskItemBinding((ScrollView) rootView, taskItemCheckBox, taskItemDeadline,
           taskItemHeader);
     }
     String missingId = rootView.getResources().getResourceName(id);

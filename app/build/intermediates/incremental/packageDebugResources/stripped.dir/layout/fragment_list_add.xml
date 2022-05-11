@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/header"
+                android:id="@+id/list_add_header"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -27,13 +27,13 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="40sp"
-                app:layout_constraintBottom_toTopOf="@+id/title"
+                app:layout_constraintBottom_toTopOf="@+id/list_add_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/title"
+                android:id="@+id/list_add_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
@@ -43,21 +43,21 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@id/category_spinner"
+                app:layout_constraintBottom_toTopOf="@id/list_add_category_spinner"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintTop_toBottomOf="@id/list_add_header"
                 tools:ignore="TextContrastCheck" />
 
             <Spinner
-                android:id="@+id/category_spinner"
+                android:id="@+id/list_add_category_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/list_add_title"
                 tools:listitem="@layout/fragment_category_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

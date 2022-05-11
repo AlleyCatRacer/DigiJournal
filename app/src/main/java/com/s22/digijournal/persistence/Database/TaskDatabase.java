@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.persistence.DAO.TaskDAO;
 
-@Database(entities = {ModelTask.class}, version = 1)
+@Database(entities = {ModelTask.class}, version = 2)
 public abstract class TaskDatabase extends RoomDatabase
 {
 	private static TaskDatabase instance;
