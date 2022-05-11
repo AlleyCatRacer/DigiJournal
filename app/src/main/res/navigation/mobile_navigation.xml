@@ -51,6 +51,9 @@
         <action
             android:id="@+id/action_nav_tasks_to_nav_task_details"
             app:destination="@id/nav_task_details" />
+        <action
+            android:id="@+id/action_nav_tasks_to_nav_add_task"
+            app:destination="@id/nav_add_task" />
     </fragment>
 
 
