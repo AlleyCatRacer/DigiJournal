@@ -67,5 +67,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     @Override public void onClick(ModelTask task)
     {
         viewModel.setCurrentTask(task);
+        NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_task_details);
     }
 }

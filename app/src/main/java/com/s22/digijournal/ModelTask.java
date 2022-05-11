@@ -96,7 +96,7 @@ public class ModelTask
         if (deadline != 0)
         {
             java.sql.Date date = new java.sql.Date(Long.parseLong(String.valueOf(deadline)));
-            DateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+            DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
             String formatted = format.format(date);
             return formatted;
         }
@@ -109,11 +109,10 @@ public class ModelTask
         {
             return 0;
         }
-        
-        DateFormat format = new SimpleDateFormat("yyyy-mm-dd");
-        String formatted = format.format(deadline);
-        
-        java.sql.Date date = new Date(Long.parseLong(String.valueOf(formatted)));
+    
+        String trim = deadline.replaceAll("/","");
+    
+        java.sql.Date date = new Date(Long.parseLong(trim));
         
         return date.getTime();
     }

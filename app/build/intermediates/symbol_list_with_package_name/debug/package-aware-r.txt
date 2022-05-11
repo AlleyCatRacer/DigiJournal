@@ -2647,7 +2647,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_nav_add_task_fragment_to_nav_home
 id action_nav_add_task_fragment_to_nav_task_details
-id action_nav_home_to_add_task
+id action_nav_home_to_nav_add_task
 id action_nav_home_to_nav_tasks
 id action_nav_task_details_to_nav_add_task
 id action_nav_task_details_to_nav_task_edit
@@ -2678,7 +2678,6 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back_button
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2775,7 +2774,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id edit_button
 id edit_query
 id elastic
 id end
@@ -3067,10 +3065,12 @@ id task_details_detail_label
 id task_details_detail_text
 id task_details_edit_button
 id task_details_taskName
+id task_edit_cancel_button
 id task_edit_deadline
 id task_edit_deadline_label
 id task_edit_detail_text
 id task_edit_header
+id task_edit_save_button
 id task_edit_title
 id task_item_checkBox
 id task_item_deadline

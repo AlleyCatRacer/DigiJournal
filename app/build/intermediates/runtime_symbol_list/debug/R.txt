@@ -2646,7 +2646,7 @@ int id action_mode_bar_stub 0x7f080042
 int id action_mode_close_button 0x7f080043
 int id action_nav_add_task_fragment_to_nav_home 0x7f080044
 int id action_nav_add_task_fragment_to_nav_task_details 0x7f080045
-int id action_nav_home_to_add_task 0x7f080046
+int id action_nav_home_to_nav_add_task 0x7f080230
 int id action_nav_home_to_nav_tasks 0x7f080047
 int id action_nav_task_details_to_nav_add_task 0x7f080048
 int id action_nav_task_details_to_nav_task_edit 0x7f080049
@@ -2677,7 +2677,6 @@ int id auto 0x7f080061
 int id autoComplete 0x7f080062
 int id autoCompleteToEnd 0x7f080063
 int id autoCompleteToStart 0x7f080064
-int id back_button 0x7f080065
 int id barrier 0x7f080066
 int id baseline 0x7f080067
 int id beginOnFirstDraw 0x7f080068
@@ -2774,7 +2773,6 @@ int id easeIn 0x7f0800c2
 int id easeInOut 0x7f0800c3
 int id easeOut 0x7f0800c4
 int id east 0x7f0800c5
-int id edit_button 0x7f0800c6
 int id edit_query 0x7f0800c7
 int id elastic 0x7f0800c8
 int id end 0x7f0800c9
@@ -3066,10 +3064,12 @@ int id task_details_detail_label 0x7f0801e6
 int id task_details_detail_text 0x7f0801e7
 int id task_details_edit_button 0x7f0801e8
 int id task_details_taskName 0x7f0801e9
+int id task_edit_cancel_button 0x7f080231
 int id task_edit_deadline 0x7f0801ea
 int id task_edit_deadline_label 0x7f0801eb
 int id task_edit_detail_text 0x7f0801ec
 int id task_edit_header 0x7f0801ed
+int id task_edit_save_button 0x7f080232
 int id task_edit_title 0x7f0801ee
 int id task_item_checkBox 0x7f0801ef
 int id task_item_deadline 0x7f0801f0

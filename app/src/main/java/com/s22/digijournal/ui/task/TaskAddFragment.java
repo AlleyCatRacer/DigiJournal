@@ -50,7 +50,7 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
         binding.taskAddCreateButton.setOnClickListener(v ->
         {
             String name = Objects.requireNonNull(taskName.getText()).toString();
-            String desc = description.getText().toString();
+            String desc = Objects.requireNonNull(description.getText()).toString();
             String dline = deadline.getText().toString();
             viewModel.addTask(new ModelTask(name, desc, dline));
             

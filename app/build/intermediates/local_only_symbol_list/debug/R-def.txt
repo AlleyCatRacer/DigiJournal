@@ -31,7 +31,7 @@ drawable tasks
 drawable vertical_rainbow_gradient
 id action_nav_add_task_fragment_to_nav_home
 id action_nav_add_task_fragment_to_nav_task_details
-id action_nav_home_to_add_task
+id action_nav_home_to_nav_add_task
 id action_nav_home_to_nav_tasks
 id action_nav_task_details_to_nav_add_task
 id action_nav_task_details_to_nav_task_edit
@@ -41,7 +41,6 @@ id action_nav_tasks_to_nav_task_details
 id action_settings
 id app_bar_main
 id app_bar_navigation_drawer
-id back_button
 id cancel_button
 id category_add_header
 id category_add_title
@@ -53,7 +52,6 @@ id category_item_list_count
 id create_button
 id detail_label
 id drawer_layout
-id edit_button
 id fab
 id home_header_textView
 id home_sub_header
@@ -89,10 +87,12 @@ id task_details_detail_label
 id task_details_detail_text
 id task_details_edit_button
 id task_details_taskName
+id task_edit_cancel_button
 id task_edit_deadline
 id task_edit_deadline_label
 id task_edit_detail_text
 id task_edit_header
+id task_edit_save_button
 id task_edit_title
 id task_item_checkBox
 id task_item_deadline
