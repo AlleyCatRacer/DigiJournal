@@ -2645,14 +2645,15 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_nav_home_to_nav_task_details
+id action_nav_home_to_nav_tasks
 id action_nav_home_to_taskAddFragment
+id action_nav_tasks_to_nav_task_details
 id action_settings
-id action_taskAddFragment_to_nav_home
 id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_task_fragment
 id alertTitle
 id aligned
 id all
@@ -3045,7 +3046,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id taskAddFragment
 id task_add_cancel_button
 id task_add_create_button
 id task_add_deadline_textInput

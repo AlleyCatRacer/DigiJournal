@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="add_task_fragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-473" />
+                            <option name="y" value="-22" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="nav_home">
                     <value>
                       <LayoutPositions>
@@ -19,7 +31,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_nav_home_to_nav_task_details">
+                            <entry key="action_nav_home_to_nav_tasks">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -39,25 +51,25 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-471" />
-                            <option name="y" value="-527" />
+                            <option name="x" value="-271" />
+                            <option name="y" value="-508" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="taskAddFragment">
+                  <entry key="nav_tasks">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-470" />
-                            <option name="y" value="-42" />
+                            <option name="x" value="-496" />
+                            <option name="y" value="-510" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_taskAddFragment_to_nav_home">
+                            <entry key="action_nav_tasks_to_nav_task_details">
                               <value>
                                 <LayoutPositions />
                               </value>

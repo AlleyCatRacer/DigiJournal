@@ -5,17 +5,18 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
+
     <fragment
         android:id="@+id/nav_home"
         android:name="com.s22.digijournal.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_task_details"
-            app:destination="@id/nav_task_details" />
-        <action
             android:id="@+id/action_nav_home_to_taskAddFragment"
-            app:destination="@id/taskAddFragment" />
+            app:destination="@id/add_task_fragment" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tasks"
+            app:destination="@id/nav_tasks" />
     </fragment>
 
 
@@ -25,13 +26,19 @@
         android:label="Task Details"
         tools:layout="@layout/fragment_task_details" />
     <fragment
-        android:id="@+id/taskAddFragment"
+        android:id="@+id/add_task_fragment"
         android:name="com.s22.digijournal.ui.task.TaskAddFragment"
         android:label="fragment_task_add"
-        tools:layout="@layout/fragment_task_add" >
+        tools:layout="@layout/fragment_task_add" />
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="com.s22.digijournal.ui.overview.TasksFragment"
+        android:label="activity_tasks"
+        tools:layout="@layout/activity_tasks" >
         <action
-            android:id="@+id/action_taskAddFragment_to_nav_home"
-            app:destination="@id/nav_home" />
+            android:id="@+id/action_nav_tasks_to_nav_task_details"
+            app:destination="@id/nav_task_details" />
     </fragment>
+
 
 </navigation>
