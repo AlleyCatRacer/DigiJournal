@@ -1,32 +1,23 @@
 package com.s22.digijournal;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ModelTaskList
 {
     private String listName;
-    private ArrayList<ModelTask> tasks;
-    boolean isDefault;
+    private List<ModelTask> tasks;
 
     public ModelTaskList(String name)
     {
         listName = name;
         tasks = new ArrayList<>();
-        isDefault = false;
     }
 
-    public ModelTaskList(String name, boolean isDefault)
-    {
-        listName = name;
-        tasks = new ArrayList<>();
-        this.isDefault = isDefault;
-    }
-
-    public ModelTaskList(String name, ArrayList<ModelTask> tasks)
+    public ModelTaskList(String name, List<ModelTask> tasks)
     {
         listName = name;
         this.tasks = tasks;
-        isDefault = false;
     }
 
     public String getListName()
@@ -39,12 +30,12 @@ public class ModelTaskList
         this.listName = listName;
     }
 
-    public ArrayList<ModelTask> getTasks()
+    public List<ModelTask> getTasks()
     {
         return tasks;
     }
 
-    public void setTasks(ArrayList<ModelTask> tasks)
+    public void setTasks(List<ModelTask> tasks)
     {
         this.tasks = tasks;
     }
@@ -70,15 +61,5 @@ public class ModelTaskList
     public void clearTasks()
     {
         tasks.clear();
-    }
-
-    public boolean isDefaultList()
-    {
-        return isDefault;
-    }
-
-    public void setDefault(boolean aDefault)
-    {
-        isDefault = aDefault;
     }
 }
