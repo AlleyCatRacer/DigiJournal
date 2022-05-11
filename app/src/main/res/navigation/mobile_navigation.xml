@@ -12,7 +12,7 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_add_task"
+            android:id="@+id/action_nav_home_to_nav_add_task"
             app:destination="@id/nav_add_task" />
         <action
             android:id="@+id/action_nav_home_to_nav_tasks"

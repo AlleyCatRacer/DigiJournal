@@ -7,31 +7,38 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentHomeBinding;
 
-public class HomeFragment extends Fragment {
-
-    private FragmentHomeBinding binding;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
-
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.homeHeaderTextView;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
+public class HomeFragment extends Fragment
+{
+	private FragmentHomeBinding binding;
+	
+	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	{
+		HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+		
+		binding = FragmentHomeBinding.inflate(inflater, container, false);
+		
+		final TextView textView = binding.homeHeaderTextView;
+		homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+		return binding.getRoot();
+	}
+	
+	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
+	{
+		super.onViewCreated(view, savedInstanceState);
+		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_add_task));
+	}
+	
+	@Override public void onDestroyView()
+	{
+		super.onDestroyView();
+		binding = null;
+	}
 }
