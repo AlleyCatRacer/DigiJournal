@@ -12,8 +12,8 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_taskAddFragment"
-            app:destination="@id/add_task_fragment" />
+            android:id="@+id/action_nav_home_to_add_task"
+            app:destination="@id/nav_add_task" />
         <action
             android:id="@+id/action_nav_home_to_nav_tasks"
             app:destination="@id/nav_tasks" />
@@ -25,11 +25,24 @@
         android:name="com.s22.digijournal.ui.task.TaskDetailsFragment"
         android:label="Task Details"
         tools:layout="@layout/fragment_task_details" />
+
+
+
     <fragment
-        android:id="@+id/add_task_fragment"
+        android:id="@+id/nav_add_task"
         android:name="com.s22.digijournal.ui.task.TaskAddFragment"
-        android:label="fragment_task_add"
-        tools:layout="@layout/fragment_task_add" />
+        android:label="Add Task"
+        tools:layout="@layout/fragment_task_add" >
+        <action
+            android:id="@+id/action_nav_add_task_fragment_to_nav_task_details"
+            app:destination="@id/nav_task_details" />
+        <action
+            android:id="@+id/action_nav_add_task_fragment_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+
+
+
     <fragment
         android:id="@+id/nav_tasks"
         android:name="com.s22.digijournal.ui.overview.TasksFragment"

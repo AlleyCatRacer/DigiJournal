@@ -19,13 +19,6 @@ import com.s22.digijournal.databinding.FragmentTaskAddBinding;
 
 import java.util.Objects;
 
-import kotlinx.coroutines.scheduling.Task;
-
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TaskAddFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class TaskAddFragment extends Fragment {
     
     private FragmentTaskAddBinding binding;
@@ -60,10 +53,10 @@ public class TaskAddFragment extends Fragment {
             temp.setName(Objects.requireNonNull(taskName.getText()).toString());
             temp.setDescription(description.getText().toString());
             viewModel.addTask(temp);
-            NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_task_add_to_task_details);
+            NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
         });
         
-        binding.taskAddCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_task_add_to_home));
+        binding.taskAddCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_home));
     }
     
     @Override public void onDestroyView()

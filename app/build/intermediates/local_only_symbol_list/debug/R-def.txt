@@ -29,11 +29,12 @@ drawable post_its
 drawable side_nav_bar
 drawable tasks
 drawable vertical_rainbow_gradient
+id action_nav_add_task_fragment_to_nav_home
+id action_nav_add_task_fragment_to_nav_task_details
+id action_nav_home_to_add_task
 id action_nav_home_to_nav_tasks
-id action_nav_home_to_taskAddFragment
 id action_nav_tasks_to_nav_task_details
 id action_settings
-id add_task_fragment
 id app_bar_main
 id app_bar_navigation_drawer
 id back_button
