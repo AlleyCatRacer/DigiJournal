@@ -15,7 +15,7 @@
         >
 
         <CheckBox
-            android:id="@+id/task_checkBox"
+            android:id="@+id/task_item_checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[taskID]"
@@ -35,11 +35,11 @@
             android:textAlignment="center"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/task_checkBox"
+            app:layout_constraintLeft_toRightOf="@id/task_item_checkBox"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/task_deadline"
+            android:id="@+id/task_item_deadline"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

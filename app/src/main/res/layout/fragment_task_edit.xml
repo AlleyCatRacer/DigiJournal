@@ -18,7 +18,7 @@
             >
 
             <TextView
-                android:id="@+id/header"
+                android:id="@+id/task_edit_header"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -26,13 +26,13 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="40sp"
-                app:layout_constraintBottom_toTopOf="@+id/title"
+                app:layout_constraintBottom_toTopOf="@+id/task_edit_title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/title"
+                android:id="@+id/task_edit_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/task_add_title_hint"
@@ -45,7 +45,7 @@
                 app:layout_constraintBottom_toTopOf="@id/detail_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/header"
+                app:layout_constraintTop_toBottomOf="@id/task_edit_header"
                 tools:ignore="TextContrastCheck" />
 
             <TextView
@@ -57,14 +57,14 @@
                 android:textColor="@color/black"
                 android:text="@string/task_add_desc"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/title"
+                app:layout_constraintTop_toBottomOf="@id/task_edit_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/detail_text"
+                app:layout_constraintBottom_toTopOf="@id/task_edit_detail_text"
                 />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/detail_text"
+                android:id="@+id/task_edit_detail_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/task_add_desc_hint"
@@ -74,13 +74,13 @@
                 android:textSize="16sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                app:layout_constraintBottom_toTopOf="@id/deadline_textView"
+                app:layout_constraintBottom_toTopOf="@id/task_edit_deadline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/detail_label" />
 
             <TextView
-                android:id="@+id/deadline_textView"
+                android:id="@+id/task_edit_deadline_label"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginTop="30dp"
@@ -89,12 +89,12 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/back_button"
-                app:layout_constraintEnd_toStartOf="@+id/deadline_textView"
+                app:layout_constraintEnd_toStartOf="@+id/task_edit_deadline"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@+id/deadline_textView" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/task_edit_deadline" />
 
             <EditText
-                android:id="@+id/deadline_textView"
+                android:id="@+id/task_edit_deadline"
                 android:layout_width="0dp"
                 android:layout_height="60sp"
                 android:layout_marginLeft="10dp"
@@ -107,8 +107,8 @@
                 android:text="[01/01/3001]"
                 app:layout_constraintBottom_toTopOf="@+id/back_button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/deadline_textView"
-                app:layout_constraintTop_toBottomOf="@+id/detail_text" />
+                app:layout_constraintStart_toEndOf="@id/task_edit_deadline_label"
+                app:layout_constraintTop_toBottomOf="@+id/task_edit_detail_text" />
 
             <Button
                 android:id="@+id/edit_button"
@@ -117,7 +117,7 @@
                 android:text="@string/save_button"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="40dp"
-                app:layout_constraintTop_toBottomOf="@id/deadline_textView"
+                app:layout_constraintTop_toBottomOf="@id/task_edit_deadline"
                 app:layout_constraintLeft_toRightOf="@+id/back_button"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

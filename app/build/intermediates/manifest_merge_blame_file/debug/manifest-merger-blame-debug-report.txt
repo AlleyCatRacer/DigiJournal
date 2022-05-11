@@ -1,0 +1,121 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.s22.digijournal"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:5:5-35:19
+12        android:allowBackup="true"
+12-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\Bruger\.gradle\caches\transforms-3\d79cd730aff89e16bbe6bbee05f6ceb1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:extractNativeLibs="false"
+16        android:icon="@mipmap/ic_launcher"
+16-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:7:9-43
+17        android:label="@string/app_name"
+17-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:8:9-41
+18        android:roundIcon="@mipmap/ic_launcher_round"
+18-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:9:9-54
+19        android:supportsRtl="true"
+19-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:10:9-35
+20        android:theme="@style/Theme.DigiJournal" >
+20-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:11:9-49
+21        <activity
+21-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:12:9-14:40
+22            android:name="com.s22.digijournal.ui.list.ListActivity"
+22-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:13:13-49
+23            android:exported="false" />
+23-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:14:13-37
+24        <activity
+24-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:15:9-25:20
+25            android:name="com.s22.digijournal.NavigationDrawer"
+25-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:16:13-45
+26            android:exported="true"
+26-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:17:13-36
+27            android:label="@string/title_activity_navigation_drawer"
+27-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:18:13-69
+28            android:theme="@style/Theme.DigiJournal.NoActionBar" >
+28-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:19:13-65
+29            <intent-filter>
+29-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:17-77
+32-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity
+35-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:26:9-34:20
+36            android:name="com.s22.digijournal.MainActivity"
+36-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:27:13-41
+37            android:exported="true" >
+37-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:28:13-36
+38            <intent-filter>
+38-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:20:13-24:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:17-69
+39-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:21:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:17-77
+41-->C:\Users\Bruger\OneDrive\College\4.SemesterS22\AND\CourseProject\DigiJournal\app\src\main\AndroidManifest.xml:23:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <service
+45-->[androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+46            android:name="androidx.room.MultiInstanceInvalidationService"
+46-->[androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+47            android:directBootAware="true"
+47-->[androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+48            android:exported="false" />
+48-->[androidx.room:room-runtime:2.4.2] C:\Users\Bruger\.gradle\caches\transforms-3\26b176ff6d62980a943f9fd1e6506304\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+49
+50        <provider
+50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+51            android:name="androidx.startup.InitializationProvider"
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+52            android:authorities="com.s22.digijournal.androidx-startup"
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+53            android:exported="false" >
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+54            <meta-data
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+56                android:value="androidx.startup" />
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\7a8fe7a0d27e6111d8f26a88e3f3f946\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+57            <meta-data
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Bruger\.gradle\caches\transforms-3\7c2b991ffee7d4db452bfe70f5605b71\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Bruger\.gradle\caches\transforms-3\7c2b991ffee7d4db452bfe70f5605b71\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+59                android:value="androidx.startup" />
+59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\Bruger\.gradle\caches\transforms-3\7c2b991ffee7d4db452bfe70f5605b71\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+60        </provider>
+61
+62        <uses-library
+62-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+63            android:name="androidx.window.extensions"
+63-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+64            android:required="false" />
+64-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+65        <uses-library
+65-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+66            android:name="androidx.window.sidecar"
+66-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+67            android:required="false" />
+67-->[androidx.window:window:1.0.0] C:\Users\Bruger\.gradle\caches\transforms-3\53e21ad2960a4084891685d4212cd06a\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+68    </application>
+69
+70</manifest>
