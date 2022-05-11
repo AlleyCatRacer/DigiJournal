@@ -49,11 +49,10 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
         super.onViewCreated(view, savedInstanceState);
         binding.taskAddCreateButton.setOnClickListener(v ->
         {
-            ModelTask temp = new ModelTask();
-            temp.setName(Objects.requireNonNull(taskName.getText()).toString());
-            temp.setDescription(description.getText().toString());
-            temp.setDeadline(temp.formatDeadline(deadline.getText().toString()));
-            viewModel.addTask(temp);
+            String name = Objects.requireNonNull(taskName.getText()).toString();
+            String desc = description.getText().toString();
+            String dline = deadline.getText().toString();
+            viewModel.addTask(new ModelTask(name, desc, dline));
             
             NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
         });
@@ -65,6 +64,14 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
     {
         super.onDestroyView();
         binding = null;
+    }
+    
+    @Override public void onResume()
+    {
+        super.onResume();
+        taskName.setText("");
+        description.setText("");
+        deadline.setText("");
     }
     
     @Override public void onClick(ModelTask task)
