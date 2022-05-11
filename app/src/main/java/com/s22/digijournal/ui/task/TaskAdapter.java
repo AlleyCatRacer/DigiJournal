@@ -12,42 +12,36 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
-	private final ArrayList<ModelTask> tasks;
+	private final List<ModelTask> tasks;
 	private TaskOnClickListener listener;
 	
-	public TaskAdapter(ArrayList<ModelTask> tasks, TaskOnClickListener listener)
+	public TaskAdapter(List<ModelTask> tasks, TaskOnClickListener listener)
 	{
 		this.tasks = tasks;
 		this.listener = listener;
 	}
 	
-	@Override
-	public void onBindViewHolder(@NonNull ViewHolder holder, int position)
-	{
-		ModelTask temp = tasks.get(position);
-		holder.name.setText(temp.getName());
-		holder.done.setText(temp.getID());
-		holder.done.setChecked(temp.isCompleted());
-		holder.deadline.setText(temp.getDeadlineFormatted());
-	}
-	
-	@Override
-	public int getItemCount()
-	{
-		return tasks.size();
-	}
-	
-	@NonNull
-	@Override
-	public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+	@NonNull @Override public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
 	{
 		LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 		View view = inflater.inflate(R.layout.fragment_task_item, parent, false);
 		return new ViewHolder(view);
+	}
+	
+	@Override public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+	{
+		holder.name.setText(tasks.get(position).getName());
+		holder.done.setChecked(tasks.get(position).isCompleted());
+		holder.deadline.setText(tasks.get(position).getDeadlineFormatted());
+	}
+	
+	@Override public int getItemCount()
+	{
+		return tasks.size();
 	}
 	
 	public class ViewHolder extends RecyclerView.ViewHolder

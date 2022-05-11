@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.s22.digijournal.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -19,6 +20,9 @@ import java.lang.String;
 public final class FragmentTaskDetailsBinding implements ViewBinding {
   @NonNull
   private final ScrollView rootView;
+
+  @NonNull
+  public final FloatingActionButton fab;
 
   @NonNull
   public final TextView taskDetailsDeadline;
@@ -36,19 +40,21 @@ public final class FragmentTaskDetailsBinding implements ViewBinding {
   public final Button taskDetailsEditButton;
 
   @NonNull
-  public final TextView taskDetailsHeader;
+  public final TextView taskDetailsTaskName;
 
   private FragmentTaskDetailsBinding(@NonNull ScrollView rootView,
-      @NonNull TextView taskDetailsDeadline, @NonNull TextView taskDetailsDeadlineLabel,
-      @NonNull TextView taskDetailsDetailLabel, @NonNull TextView taskDetailsDetailText,
-      @NonNull Button taskDetailsEditButton, @NonNull TextView taskDetailsHeader) {
+      @NonNull FloatingActionButton fab, @NonNull TextView taskDetailsDeadline,
+      @NonNull TextView taskDetailsDeadlineLabel, @NonNull TextView taskDetailsDetailLabel,
+      @NonNull TextView taskDetailsDetailText, @NonNull Button taskDetailsEditButton,
+      @NonNull TextView taskDetailsTaskName) {
     this.rootView = rootView;
+    this.fab = fab;
     this.taskDetailsDeadline = taskDetailsDeadline;
     this.taskDetailsDeadlineLabel = taskDetailsDeadlineLabel;
     this.taskDetailsDetailLabel = taskDetailsDetailLabel;
     this.taskDetailsDetailText = taskDetailsDetailText;
     this.taskDetailsEditButton = taskDetailsEditButton;
-    this.taskDetailsHeader = taskDetailsHeader;
+    this.taskDetailsTaskName = taskDetailsTaskName;
   }
 
   @Override
@@ -78,6 +84,12 @@ public final class FragmentTaskDetailsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.fab;
+      FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
+      if (fab == null) {
+        break missingId;
+      }
+
       id = R.id.task_details_deadline;
       TextView taskDetailsDeadline = ViewBindings.findChildViewById(rootView, id);
       if (taskDetailsDeadline == null) {
@@ -108,15 +120,15 @@ public final class FragmentTaskDetailsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.task_details_header;
-      TextView taskDetailsHeader = ViewBindings.findChildViewById(rootView, id);
-      if (taskDetailsHeader == null) {
+      id = R.id.task_details_taskName;
+      TextView taskDetailsTaskName = ViewBindings.findChildViewById(rootView, id);
+      if (taskDetailsTaskName == null) {
         break missingId;
       }
 
-      return new FragmentTaskDetailsBinding((ScrollView) rootView, taskDetailsDeadline,
+      return new FragmentTaskDetailsBinding((ScrollView) rootView, fab, taskDetailsDeadline,
           taskDetailsDeadlineLabel, taskDetailsDetailLabel, taskDetailsDetailText,
-          taskDetailsEditButton, taskDetailsHeader);
+          taskDetailsEditButton, taskDetailsTaskName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

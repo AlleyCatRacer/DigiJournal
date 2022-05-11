@@ -17,7 +17,7 @@ import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
-public final class ActivityTasksBinding implements ViewBinding {
+public final class FragmentTasksBinding implements ViewBinding {
   @NonNull
   private final FrameLayout rootView;
 
@@ -30,7 +30,7 @@ public final class ActivityTasksBinding implements ViewBinding {
   @NonNull
   public final TextView tasksActivityTitle;
 
-  private ActivityTasksBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
+  private FragmentTasksBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
       @NonNull RecyclerView tasksActivityTaskRecycler, @NonNull TextView tasksActivityTitle) {
     this.rootView = rootView;
     this.fab = fab;
@@ -45,14 +45,14 @@ public final class ActivityTasksBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityTasksBinding inflate(@NonNull LayoutInflater inflater) {
+  public static FragmentTasksBinding inflate(@NonNull LayoutInflater inflater) {
     return inflate(inflater, null, false);
   }
 
   @NonNull
-  public static ActivityTasksBinding inflate(@NonNull LayoutInflater inflater,
+  public static FragmentTasksBinding inflate(@NonNull LayoutInflater inflater,
       @Nullable ViewGroup parent, boolean attachToParent) {
-    View root = inflater.inflate(R.layout.activity_tasks, parent, false);
+    View root = inflater.inflate(R.layout.fragment_tasks, parent, false);
     if (attachToParent) {
       parent.addView(root);
     }
@@ -60,7 +60,7 @@ public final class ActivityTasksBinding implements ViewBinding {
   }
 
   @NonNull
-  public static ActivityTasksBinding bind(@NonNull View rootView) {
+  public static FragmentTasksBinding bind(@NonNull View rootView) {
     // The body of this method is generated in a way you would not otherwise write.
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
@@ -83,7 +83,7 @@ public final class ActivityTasksBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityTasksBinding((FrameLayout) rootView, fab, tasksActivityTaskRecycler,
+      return new FragmentTasksBinding((FrameLayout) rootView, fab, tasksActivityTaskRecycler,
           tasksActivityTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);

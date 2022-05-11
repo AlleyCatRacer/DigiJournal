@@ -33,6 +33,10 @@ id action_nav_add_task_fragment_to_nav_home
 id action_nav_add_task_fragment_to_nav_task_details
 id action_nav_home_to_add_task
 id action_nav_home_to_nav_tasks
+id action_nav_task_details_to_nav_add_task
+id action_nav_task_details_to_nav_task_edit
+id action_nav_task_edit_to_nav_task_details
+id action_nav_tasks_to_nav_add_task
 id action_nav_tasks_to_nav_task_details
 id action_settings
 id app_bar_main
@@ -67,6 +71,7 @@ id nav_home
 id nav_host_fragment_content_main
 id nav_host_fragment_content_navigation_drawer
 id nav_task_details
+id nav_task_edit
 id nav_tasks
 id nav_view
 id task_add_cancel_button
@@ -83,7 +88,7 @@ id task_details_deadline_label
 id task_details_detail_label
 id task_details_detail_text
 id task_details_edit_button
-id task_details_header
+id task_details_taskName
 id task_edit_deadline
 id task_edit_deadline_label
 id task_edit_detail_text
@@ -98,7 +103,6 @@ id textView
 id toolbar
 layout activity_main
 layout activity_navigation_drawer
-layout activity_tasks
 layout app_bar_main
 layout app_bar_navigation_drawer
 layout content_main
@@ -114,6 +118,7 @@ layout fragment_task_add
 layout fragment_task_details
 layout fragment_task_edit
 layout fragment_task_item
+layout fragment_tasks
 layout nav_header_main
 menu activity_main_drawer
 menu main
