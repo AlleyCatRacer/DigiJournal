@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.s22.digijournal.ModelTask;
@@ -17,6 +19,8 @@ import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
 import com.s22.digijournal.ui.task.TaskAdapter;
 import com.s22.digijournal.ui.task.TaskViewModel;
+
+import java.util.List;
 
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
@@ -36,6 +40,8 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         binding = FragmentTasksBinding.inflate(inflater, container, false);
         listener = this;
         taskRecycler = binding.tasksActivityTaskRecycler;
+        taskRecycler.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
+        taskRecycler.hasFixedSize();
         
         return binding.getRoot();
     }
@@ -44,7 +50,13 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     {
         super.onViewCreated(view, savedInstanceState);
     
-        viewModel.getTasks().observe(getViewLifecycleOwner(), tasks -> taskRecycler.setAdapter(new TaskAdapter(tasks, listener)));
+        viewModel.getTasks().observe(getViewLifecycleOwner(), new Observer<List<ModelTask>>()
+        {
+            @Override public void onChanged(List<ModelTask> modelTasks)
+            {
+                taskRecycler.setAdapter(new TaskAdapter(modelTasks, listener));
+            }
+        });
         
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));
     }
