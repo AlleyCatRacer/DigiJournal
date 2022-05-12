@@ -5,69 +5,73 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 
-/**
- * A fragment representing a list of Items.
- */
-public class TaskItemFragment extends Fragment
+import java.util.List;
+
+public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
-    private static final String TASK_COUNT = "column-count";
-    private static String IS_DONE;
+    private CheckBox status;
+    private TextView name;
+    private TextView deadline;
+    private TaskViewModel viewModel;
+    private List<ModelTask> tasks;
+    private int taskCount;
+    private int taskID;
+    private static String TASK_COUNT;
     private static String TASK_ID;
+    private static String TASK_STATUS;
     private static String TASK_NAME;
     private static String TASK_DEADLINE;
-    // TODO: Customize parameters
-    private int taskCount;
-    private boolean isDone;
-    private int taskID;
-    private String taskName;
-    private String taskDeadline;
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
+    
     public TaskItemFragment()
     {
+    
     }
-
-    // TODO: Customize parameter initialization
-    @SuppressWarnings("unused")
-    public static TaskItemFragment newInstance(int taskCount, boolean isDone, int taskID, String name)
+    
+    public static TaskItemFragment newInstance(int taskCount, int taskID, boolean status, String deadline, String name)
     {
         TaskItemFragment fragment = new TaskItemFragment();
         Bundle args = new Bundle();
         args.putInt(TASK_COUNT, taskCount);
-        args.putBoolean(IS_DONE, isDone);
         args.putInt(TASK_ID, taskID);
+        args.putBoolean(TASK_STATUS, status);
+        args.putString(TASK_DEADLINE, deadline);
         args.putString(TASK_NAME, name);
         fragment.setArguments(args);
         return fragment;
     }
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
+        
+        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+        tasks = viewModel.getTasks().getValue();
+        
         if (getArguments() != null)
         {
-            taskCount = getArguments().getInt(TASK_COUNT);
-            isDone = getArguments().getBoolean(IS_DONE);
             taskID = getArguments().getInt(TASK_ID);
-            taskName = getArguments().getString(TASK_NAME);
-            if (getArguments().getString(TASK_DEADLINE) == null)
+            status.setChecked(getArguments().getBoolean(TASK_STATUS));
+            status.setText(taskID);
+            name.setText(getArguments().getString(TASK_NAME));
+            deadline.setText(getArguments().getString(TASK_DEADLINE));
+    
+            for (int i = 0; i < tasks.size(); i++)
             {
-                return;
+                newInstance(i, tasks.get(i).getID(), tasks.get(i).isCompleted(), tasks.get(i).getDeadlineFormatted(), tasks.get(i).getName());
             }
-            taskDeadline = getArguments().getString(TASK_DEADLINE);
         }
     }
 
@@ -77,19 +81,25 @@ public class TaskItemFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_task_item, container, false);
 
         // Set the adapter
-        if (view instanceof RecyclerView) {
+        if (view instanceof RecyclerView)
+        {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (taskCount <= 1)
+            if (taskID <= 1)
             {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             }
             else
             {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, taskCount));
+                recyclerView.setLayoutManager(new GridLayoutManager(context, taskID));
             }
-            //recyclerView.setAdapter(new TaskAdapter());
+            recyclerView.setAdapter(new TaskAdapter(tasks, this));
         }
         return view;
+    }
+    
+    @Override public void onClick(ModelTask task)
+    {
+        viewModel.setCurrentTask(task);
     }
 }

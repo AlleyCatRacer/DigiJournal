@@ -43,6 +43,9 @@ public class TaskDetailsFragment extends Fragment
     @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
+        taskName.setText(viewModel.getCurrentTask().getName());
+        description.setText(viewModel.getCurrentTask().getDescription());
+        deadline.setText(viewModel.getCurrentTask().getDeadlineFormatted());
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_add_task));
         binding.taskDetailsEditButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit));
     }
