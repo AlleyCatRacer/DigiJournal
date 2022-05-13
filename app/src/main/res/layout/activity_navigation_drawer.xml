@@ -10,6 +10,13 @@
     tools:openDrawer="start">
 
     <include
+        android:id="@+id/nav_header_main"
+        layout="@layout/nav_header_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <include
         android:id="@+id/app_bar_navigation_drawer"
         layout="@layout/app_bar_navigation_drawer"
         android:layout_width="match_parent"
