@@ -50,9 +50,10 @@ public class TaskViewModel extends AndroidViewModel
 		currentTask.setValue(task);
 	}
 	
-	public void removeTask(ModelTask task)
+	public void removeTask()
 	{
-		repo.delete(task);
+		repo.delete(getCurrentTask());
+		setCurrentTask(null);
 	}
 	
 	public void deleteAll()
