@@ -11,7 +11,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.overview.TasksFragment">
+            tools:context=".ui.task.TasksFragment">
 
             <TextView
                 android:id="@+id/tasks_activity_title"
@@ -37,7 +37,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tasks_activity_title"
-                tools:context=".ui.overview.TasksFragment"
+                tools:context=".ui.task.TasksFragment"
                 tools:layout_editor_absoluteX="16dp"
                 tools:listitem="@layout/fragment_task_item" />
 
@@ -51,4 +51,5 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:srcCompat="@drawable/add_icon" />
+    
 </FrameLayout>

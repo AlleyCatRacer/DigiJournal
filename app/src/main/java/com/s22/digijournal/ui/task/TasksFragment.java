@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.overview;
+package com.s22.digijournal.ui.task;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,8 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
-import com.s22.digijournal.ui.task.TaskAdapter;
-import com.s22.digijournal.ui.task.TaskViewModel;
 
 import java.util.List;
 
