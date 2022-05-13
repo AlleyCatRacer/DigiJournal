@@ -24,9 +24,9 @@ Therefore, I have decided to create this application to replace my bullet journa
 Written and segregated in order of priority. Please note that I will be using Agile so the product backlog is subject to change during development.
 
 ### Critical
-1. As a user, I want to be able to add a task so that I can plan my time
-2. As a user, I want to be able to edit a task so that I can keep it up to date
-3. As a user, I want to be able to delete a task so that I can remove tasks that are not relevant
+1. ~As a user, I want to be able to add a task so that I can plan my time~
+2. ~As a user, I want to be able to edit a task so that I can keep it up to date~
+3. ~As a user, I want to be able to delete a task so that I can remove tasks that are not relevant~
 4. As a user, I want to have a daily overview of my calendar so that I can see what my schedule will be on a specific day
 5. As a user, I want to have a monthly overview of my calendar so that I can see what my schedule will be on a specific month
 
