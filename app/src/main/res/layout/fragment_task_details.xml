@@ -4,124 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
     tools:context=".ui.task.TaskDetailsFragment">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/task_details_taskName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/task_details_taskName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="@string/task_add_title_hint"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                app:layout_constraintBottom_toTopOf="@+id/task_details_detail_label"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_margin="10dp"
+            android:text="@string/task_add_title_hint"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@+id/task_details_detail_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
-                android:id="@+id/task_details_detail_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/task_add_desc"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/task_details_detail_text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/task_details_taskName" />
+        <TextView
+            android:id="@+id/task_details_detail_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/task_add_desc"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/task_details_detail_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/task_details_taskName" />
 
-            <TextView
-                android:id="@+id/task_details_detail_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:hint="@string/task_add_desc_hint"
-                android:minHeight="48dp"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@id/task_details_deadline_label"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/task_details_detail_label" />
+        <TextView
+            android:id="@+id/task_details_detail_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/task_add_desc_hint"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/task_details_deadline_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_details_detail_label" />
 
-            <TextView
-                android:id="@+id/task_details_deadline_label"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_margin="10dp"
-                android:layout_marginTop="30dp"
-                android:text="@string/task_add_deadline"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/task_details_deadline"
-                app:layout_constraintBottom_toTopOf="@+id/task_details_edit_button"
-                app:layout_constraintEnd_toStartOf="@+id/task_details_deadline"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/task_details_deadline_label"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/task_add_deadline"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/task_details_deadline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/task_details_deadline"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/task_details_deadline"
-                android:layout_width="0dp"
-                android:layout_height="60sp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="20dp"
-                android:ems="12"
-                android:hint="@string/task_add_date_format_hint"
-                app:layout_constraintBottom_toTopOf="@+id/task_details_edit_button"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/task_details_deadline_label"
-                app:layout_constraintTop_toBottomOf="@+id/task_details_detail_text" />
+        <TextView
+            android:id="@+id/task_details_deadline"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:ems="12"
+            android:hint="@string/task_add_date_format_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/task_details_deadline_label"
+            app:layout_constraintTop_toBottomOf="@+id/task_details_detail_text" />
 
-            <Button
-                android:id="@+id/task_details_edit_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/edit_button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/task_details_delete_button"
-                app:layout_constraintTop_toBottomOf="@id/task_details_deadline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-                android:id="@+id/task_details_delete_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginStart="20dp"
-                android:text="@string/delete_button"
-                app:layout_constraintTop_toBottomOf="@id/task_details_deadline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/task_details_edit_button"
-                app:layout_constraintBaseline_toBaselineOf="@id/task_details_edit_button"
-                />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <Button
+        android:id="@+id/task_details_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/add_icon" />
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/edit_button"
+        android:layout_gravity="bottom|end" />
+
+    <Button
+        android:id="@+id/task_details_delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/delete_button"
+        android:layout_gravity="bottom|start" />
+
 </FrameLayout>
+
