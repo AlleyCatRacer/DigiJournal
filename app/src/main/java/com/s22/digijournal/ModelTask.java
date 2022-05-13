@@ -95,8 +95,7 @@ public class ModelTask
         {
             java.sql.Date date = new java.sql.Date(Long.parseLong(String.valueOf(deadline)));
             DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-            String formatted = format.format(date);
-            return formatted;
+            return format.format(date);
         }
         return "N/A";
     }
@@ -109,7 +108,6 @@ public class ModelTask
         }
     
         String trim = deadline.replaceAll("/","");
-    
         java.sql.Date date = new Date(Long.parseLong(trim));
         
         return date.getTime();

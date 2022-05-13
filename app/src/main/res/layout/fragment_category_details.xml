@@ -19,7 +19,7 @@
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textAlignment="center"
-            android:text="[categoryName]"
+            android:text="@string/add_name_hint"
             android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
