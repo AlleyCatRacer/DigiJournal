@@ -21,10 +21,10 @@ public class TaskRepo
 	
 	private TaskRepo(Application application)
 	{
-		executorService = Executors.newFixedThreadPool(2);
 		TaskDatabase db = TaskDatabase.getInstance(application);
-		dao = db.getTaskDAO();
+		dao = db.taskDAO();
 		tasks = dao.getAllTasks();
+		executorService = Executors.newFixedThreadPool(2);
 	}
 	
 	public static synchronized TaskRepo getInstance(Application application)

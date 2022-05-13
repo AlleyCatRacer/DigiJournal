@@ -155,7 +155,7 @@ public final class TaskDatabase_Impl extends TaskDatabase {
   }
 
   @Override
-  public TaskDAO getTaskDAO() {
+  public TaskDAO taskDAO() {
     if (_taskDAO != null) {
       return _taskDAO;
     } else {

@@ -2,7 +2,6 @@ package com.s22.digijournal;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.sql.Date;
@@ -20,13 +19,12 @@ public class ModelTask
     private long deadline;
     @ColumnInfo(name = "status")
     private boolean completed;
-
+    
     public ModelTask()
     {
     
     }
-
-    @Ignore
+    
     public ModelTask(String name, String description, String deadline)
     {
         this.name = name;
@@ -105,7 +103,7 @@ public class ModelTask
     
     public long formatDeadline(String deadline)
     {
-        if (deadline.isEmpty())
+        if (deadline.isEmpty() || deadline.equals("N/A"))
         {
             return 0;
         }

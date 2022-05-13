@@ -26,22 +26,41 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
 {
     private FragmentTasksBinding binding;
     private TaskViewModel viewModel;
-    private RecyclerView taskRecycler;
-    private TaskAdapter.TaskOnClickListener listener;
+    private RecyclerView tasksRecycler;
+    private TaskAdapter adapter;
     
     public TasksFragment()
     {
     
     }
     
+    @Override public void onCreate(@Nullable Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        
+        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+        
+        viewModel.getTasks().observe(this, tasks ->
+        {
+            if (tasks.isEmpty())
+            {
+                tasks.add(new ModelTask("N/A", "N/A", "N/A"));
+            }
+            
+            adapter = new TaskAdapter(tasks);
+            adapter.setTaskListener(this);
+        });
+    }
+    
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
         binding = FragmentTasksBinding.inflate(inflater, container, false);
-        listener = this;
-        taskRecycler = binding.tasksActivityTaskRecycler;
-        taskRecycler.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
-        taskRecycler.hasFixedSize();
+        
+        tasksRecycler = binding.tasksRecycler;
+        tasksRecycler.hasFixedSize();
+        tasksRecycler.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
+
+        tasksRecycler.setAdapter(adapter);
         
         return binding.getRoot();
     }
@@ -54,7 +73,10 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         {
             @Override public void onChanged(List<ModelTask> modelTasks)
             {
-                taskRecycler.setAdapter(new TaskAdapter(modelTasks, listener));
+                adapter = new TaskAdapter(modelTasks);
+                adapter.setTaskListener(TasksFragment.this);
+                tasksRecycler.setAdapter(adapter);
+                
             }
         });
         
@@ -69,6 +91,7 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     
     @Override public void onClick(ModelTask task)
     {
+        viewModel.setCurrentTask(task);
         NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_task_details);
     }
 }

@@ -19,10 +19,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 	private final List<ModelTask> tasks;
 	private TaskOnClickListener listener;
 	
-	public TaskAdapter(List<ModelTask> tasks, TaskOnClickListener listener)
+	public TaskAdapter(List<ModelTask> tasks)
 	{
 		this.tasks = tasks;
-		this.listener = listener;
 	}
 	
 	@NonNull @Override public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -44,6 +43,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 		return tasks.size();
 	}
 	
+	public void setTaskListener(TaskOnClickListener listener)
+	{
+		this.listener = listener;
+	}
+	
 	public class ViewHolder extends RecyclerView.ViewHolder
 	{
 		CheckBox done;
@@ -53,6 +57,10 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 		ViewHolder(View itemView)
 		{
 			super(itemView);
+			
+			done = itemView.findViewById(R.id.task_item_checkBox);
+			name = itemView.findViewById(R.id.task_item_header);
+			deadline = itemView.findViewById(R.id.task_item_deadline);
 			itemView.setOnClickListener(new View.OnClickListener()
 			{
 				@Override public void onClick(View view)
@@ -61,10 +69,6 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 					//getBindingAdapterPosition gets the position of the item clicked, identifying it
 				}
 			});
-			
-			done = itemView.findViewById(R.id.task_item_checkBox);
-			name = itemView.findViewById(R.id.task_item_header);
-			deadline = itemView.findViewById(R.id.task_item_deadline);
 		}
 	}
 	

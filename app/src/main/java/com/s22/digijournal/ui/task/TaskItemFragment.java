@@ -93,7 +93,9 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
             {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, taskID));
             }
-            recyclerView.setAdapter(new TaskAdapter(tasks, this));
+            TaskAdapter adapter = new TaskAdapter(tasks);
+            recyclerView.setAdapter(adapter);
+            adapter.setTaskListener(this);
         }
         return view;
     }

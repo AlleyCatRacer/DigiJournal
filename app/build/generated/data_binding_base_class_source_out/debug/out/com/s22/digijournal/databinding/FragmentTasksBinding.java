@@ -25,17 +25,17 @@ public final class FragmentTasksBinding implements ViewBinding {
   public final FloatingActionButton fab;
 
   @NonNull
-  public final RecyclerView tasksActivityTaskRecycler;
-
-  @NonNull
   public final TextView tasksActivityTitle;
 
+  @NonNull
+  public final RecyclerView tasksRecycler;
+
   private FragmentTasksBinding(@NonNull FrameLayout rootView, @NonNull FloatingActionButton fab,
-      @NonNull RecyclerView tasksActivityTaskRecycler, @NonNull TextView tasksActivityTitle) {
+      @NonNull TextView tasksActivityTitle, @NonNull RecyclerView tasksRecycler) {
     this.rootView = rootView;
     this.fab = fab;
-    this.tasksActivityTaskRecycler = tasksActivityTaskRecycler;
     this.tasksActivityTitle = tasksActivityTitle;
+    this.tasksRecycler = tasksRecycler;
   }
 
   @Override
@@ -71,20 +71,20 @@ public final class FragmentTasksBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tasks_activity_task_recycler;
-      RecyclerView tasksActivityTaskRecycler = ViewBindings.findChildViewById(rootView, id);
-      if (tasksActivityTaskRecycler == null) {
-        break missingId;
-      }
-
       id = R.id.tasks_activity_title;
       TextView tasksActivityTitle = ViewBindings.findChildViewById(rootView, id);
       if (tasksActivityTitle == null) {
         break missingId;
       }
 
-      return new FragmentTasksBinding((FrameLayout) rootView, fab, tasksActivityTaskRecycler,
-          tasksActivityTitle);
+      id = R.id.tasks_recycler;
+      RecyclerView tasksRecycler = ViewBindings.findChildViewById(rootView, id);
+      if (tasksRecycler == null) {
+        break missingId;
+      }
+
+      return new FragmentTasksBinding((FrameLayout) rootView, fab, tasksActivityTitle,
+          tasksRecycler);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -3075,8 +3075,8 @@ id task_edit_title
 id task_item_checkBox
 id task_item_deadline
 id task_item_header
-id tasks_activity_task_recycler
 id tasks_activity_title
+id tasks_recycler
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint

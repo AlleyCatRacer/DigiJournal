@@ -8,12 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,13 +20,13 @@
                 android:text="@string/menu_tasks"
                 android:textAlignment="center"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/tasks_activity_task_recycler"
+                app:layout_constraintBottom_toTopOf="@+id/tasks_recycler"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/tasks_activity_task_recycler"
+                android:id="@+id/tasks_recycler"
                 android:name="com.s22.digijournal.fragment_tasks"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -48,7 +42,6 @@
                 tools:listitem="@layout/fragment_task_item" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"

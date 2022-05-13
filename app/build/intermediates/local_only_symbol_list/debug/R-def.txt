@@ -97,8 +97,8 @@ id task_edit_title
 id task_item_checkBox
 id task_item_deadline
 id task_item_header
-id tasks_activity_task_recycler
 id tasks_activity_title
+id tasks_recycler
 id textView
 id toolbar
 layout activity_main

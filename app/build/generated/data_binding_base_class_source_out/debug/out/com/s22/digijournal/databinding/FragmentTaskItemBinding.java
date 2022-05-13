@@ -5,10 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.s22.digijournal.R;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentTaskItemBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final CheckBox taskItemCheckBox;
@@ -29,8 +29,9 @@ public final class FragmentTaskItemBinding implements ViewBinding {
   @NonNull
   public final TextView taskItemHeader;
 
-  private FragmentTaskItemBinding(@NonNull ScrollView rootView, @NonNull CheckBox taskItemCheckBox,
-      @NonNull TextView taskItemDeadline, @NonNull TextView taskItemHeader) {
+  private FragmentTaskItemBinding(@NonNull ConstraintLayout rootView,
+      @NonNull CheckBox taskItemCheckBox, @NonNull TextView taskItemDeadline,
+      @NonNull TextView taskItemHeader) {
     this.rootView = rootView;
     this.taskItemCheckBox = taskItemCheckBox;
     this.taskItemDeadline = taskItemDeadline;
@@ -39,7 +40,7 @@ public final class FragmentTaskItemBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -82,8 +83,8 @@ public final class FragmentTaskItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentTaskItemBinding((ScrollView) rootView, taskItemCheckBox, taskItemDeadline,
-          taskItemHeader);
+      return new FragmentTaskItemBinding((ConstraintLayout) rootView, taskItemCheckBox,
+          taskItemDeadline, taskItemHeader);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

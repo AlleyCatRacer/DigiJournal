@@ -156,7 +156,7 @@ public final class TaskDAO_Impl implements TaskDAO {
 
   @Override
   public LiveData<List<ModelTask>> getAllTasks() {
-    final String _sql = "SELECT * FROM task_table ORDER BY ID";
+    final String _sql = "SELECT * FROM task_table ORDER BY ID DESC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     return __db.getInvalidationTracker().createLiveData(new String[]{"task_table"}, false, new Callable<List<ModelTask>>() {
       @Override

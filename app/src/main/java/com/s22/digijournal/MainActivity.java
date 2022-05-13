@@ -16,6 +16,7 @@ import com.s22.digijournal.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity
 {
 	private AppBarConfiguration mAppBarConfiguration;
+	private NavController navController;
 	
 	@Override protected void onCreate(Bundle savedInstanceState)
 	{
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity
 				R.id.nav_home, R.id.nav_tasks, R.id.nav_add_task)
 				.setOpenableLayout(drawer)
 				.build();
-		NavController navController = Navigation
+		navController = Navigation
 				.findNavController(this, R.id.nav_host_fragment_content_main);
 		NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);

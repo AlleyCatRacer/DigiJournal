@@ -13,6 +13,7 @@ import com.s22.digijournal.persistence.DAO.TaskDAO;
 public abstract class TaskDatabase extends RoomDatabase
 {
 	private static TaskDatabase instance;
+	public abstract TaskDAO taskDAO();
 	
 	public static synchronized TaskDatabase getInstance(Context context)
 	{
@@ -23,6 +24,4 @@ public abstract class TaskDatabase extends RoomDatabase
 		}
 		return instance;
 	}
-	
-	public abstract TaskDAO getTaskDAO();
 }
