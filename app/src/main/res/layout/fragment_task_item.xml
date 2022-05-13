@@ -12,7 +12,6 @@
         android:id="@+id/task_item_checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/task_taskId"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toLeftOf="@id/task_item_header"
         app:layout_constraintStart_toStartOf="parent"
