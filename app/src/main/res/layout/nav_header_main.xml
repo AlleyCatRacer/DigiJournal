@@ -24,7 +24,6 @@
         android:id="@+id/nav_header_main_headline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="5dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="@string/add_name_hint"
