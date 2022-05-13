@@ -52,7 +52,8 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
             String name = Objects.requireNonNull(taskName.getText()).toString();
             String desc = Objects.requireNonNull(description.getText()).toString();
             String dline = deadline.getText().toString();
-            viewModel.addTask(new ModelTask(name, desc, dline));
+            ModelTask temp = new ModelTask(name, desc, dline);
+            viewModel.addTask(temp);
             
             NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
         });

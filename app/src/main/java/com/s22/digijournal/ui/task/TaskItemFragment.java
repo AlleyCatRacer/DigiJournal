@@ -62,6 +62,7 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
         
         if (getArguments() != null)
         {
+            taskCount = tasks.size();
             taskID = getArguments().getInt(TASK_ID);
             status.setChecked(getArguments().getBoolean(TASK_STATUS));
             status.setText(taskID);
@@ -85,13 +86,13 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
         {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
-            if (taskID <= 1)
+            if (taskCount <= 1)
             {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             }
             else
             {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, taskID));
+                recyclerView.setLayoutManager(new GridLayoutManager(context, taskCount));
             }
             TaskAdapter adapter = new TaskAdapter(tasks);
             recyclerView.setAdapter(adapter);
