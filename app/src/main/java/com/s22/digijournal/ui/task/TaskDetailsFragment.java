@@ -48,6 +48,11 @@ public class TaskDetailsFragment extends Fragment
         deadline.setText(viewModel.getCurrentTask().getDeadlineFormatted());
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_add_task));
         binding.taskDetailsEditButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit));
+        binding.taskDetailsDeleteButton.setOnClickListener(v ->
+        {
+            NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_tasks);
+            viewModel.removeTask();
+        });
     }
     
     @Override public void onDestroyView()

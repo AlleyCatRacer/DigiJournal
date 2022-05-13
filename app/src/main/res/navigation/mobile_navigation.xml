@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_nav_task_details_to_nav_task_edit"
             app:destination="@id/nav_task_edit" />
+        <action
+            android:id="@+id/action_nav_task_details_to_nav_tasks"
+            app:destination="@id/nav_tasks" />
     </fragment>
 
 
