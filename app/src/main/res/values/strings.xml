@@ -28,6 +28,7 @@
     <string name="task_add_toList">Add to list:</string>
     <string name="task_add_date_format_hint">dd/mm/yyyy</string>
     <string name="task_edit_heading">Editing Task</string>
+    <string name="task_edit_status">Status</string>
     <string name="task_taskId">TaskID</string>
 
     <string name="edit_button">Edit</string>

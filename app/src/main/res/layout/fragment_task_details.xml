@@ -21,10 +21,22 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="40sp"
-            app:layout_constraintBottom_toTopOf="@+id/task_details_detail_label"
+            app:layout_constraintBottom_toTopOf="@+id/task_details_status_checkbox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/task_details_status_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/task_edit_status"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/task_details_taskName"
+            app:layout_constraintBottom_toTopOf="@id/task_details_detail_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
 
         <TextView
@@ -39,7 +51,7 @@
             app:layout_constraintBottom_toTopOf="@id/task_details_detail_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/task_details_taskName" />
+            app:layout_constraintTop_toBottomOf="@id/task_details_status_checkbox" />
 
         <TextView
             android:id="@+id/task_details_detail_text"

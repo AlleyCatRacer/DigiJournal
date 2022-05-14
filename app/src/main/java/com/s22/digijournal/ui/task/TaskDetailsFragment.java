@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ public class TaskDetailsFragment extends Fragment
 	private FragmentTaskDetailsBinding binding;
     private TaskViewModel viewModel;
     private TextView taskName;
+    private CheckBox status;
     private TextView description;
     private TextView deadline;
     
@@ -34,6 +36,7 @@ public class TaskDetailsFragment extends Fragment
         binding = FragmentTaskDetailsBinding.inflate(inflater, container, false);
         
         taskName = binding.taskDetailsTaskName;
+        status = binding.taskDetailsStatusCheckbox;
         description = binding.taskDetailsDetailText;
         deadline = binding.taskDetailsDeadline;
         
@@ -44,6 +47,7 @@ public class TaskDetailsFragment extends Fragment
     {
         super.onViewCreated(view, savedInstanceState);
         taskName.setText(viewModel.getCurrentTask().getName());
+        status.setChecked(viewModel.getCurrentTask().isCompleted());
         description.setText(viewModel.getCurrentTask().getDescription());
         deadline.setText(viewModel.getCurrentTask().getDeadlineFormatted());
         binding.taskDetailsEditButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit));
@@ -52,6 +56,8 @@ public class TaskDetailsFragment extends Fragment
             NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_tasks);
             viewModel.removeTask();
         });
+        binding.taskDetailsStatusCheckbox.setOnCheckedChangeListener((buttonView, isChecked) ->
+                viewModel.setStatus(status.isChecked()));
     }
     
     @Override public void onDestroyView()

@@ -60,4 +60,10 @@ public class TaskViewModel extends AndroidViewModel
 	{
 		repo.deleteAll();
 	}
+	
+	public void setStatus(boolean complete)
+	{
+		getCurrentTask().setCompleted(complete);
+		editTask();
+	}
 }

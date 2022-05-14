@@ -121,9 +121,3 @@ public class ModelTask
 		return date.after(tempNow);
 	}
 }
-/*
-        ZonedDateTime ldate = LocalDateTime.parse(str, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS"))
-                                   .atZone(ZoneId.of("Europe/Paris"));
-long time = ldate.toInstant().toEpochMilli();
-System.out.println(time);
-*/

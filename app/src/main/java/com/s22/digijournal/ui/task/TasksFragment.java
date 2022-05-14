@@ -40,11 +40,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         
         viewModel.getTasks().observe(this, tasks ->
         {
-            if (tasks.isEmpty())
-            {
-                tasks.add(new ModelTask("N/A", "N/A", "N/A"));
-            }
-            
             adapter = new TaskAdapter(tasks);
             adapter.setTaskListener(this);
         });
@@ -74,7 +69,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
                 adapter = new TaskAdapter(modelTasks);
                 adapter.setTaskListener(TasksFragment.this);
                 tasksRecycler.setAdapter(adapter);
-                
             }
         });
         

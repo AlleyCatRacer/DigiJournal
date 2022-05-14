@@ -65,7 +65,6 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
             taskCount = tasks.size();
             taskID = getArguments().getInt(TASK_ID);
             status.setChecked(getArguments().getBoolean(TASK_STATUS));
-            status.setText(taskID);
             name.setText(getArguments().getString(TASK_NAME));
             deadline.setText(getArguments().getString(TASK_DEADLINE));
     
@@ -98,6 +97,9 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
             recyclerView.setAdapter(adapter);
             adapter.setTaskListener(this);
         }
+    
+        status.setOnCheckedChangeListener((buttonView, isChecked) -> viewModel.setStatus(status.isChecked()));
+        
         return view;
     }
     
