@@ -76,7 +76,7 @@ public class ModelTaskUnitTest
 	
 	@Test public void gettingNotEmptyDescription()
 	{
-		assertEquals("Short description ay", t1.getDescription());
+		assertEquals("Desky-desk", t7.getDescription());
 	}
 	
 	@Test public void gettingDeadlineLongFromString()
