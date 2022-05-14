@@ -10,7 +10,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleUnitTest
+public class ModelTaskUnitTest
 {
 	private ModelTask t1;
 	private ModelTask t2;
