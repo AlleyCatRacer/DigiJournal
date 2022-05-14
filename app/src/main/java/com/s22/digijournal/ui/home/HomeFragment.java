@@ -42,9 +42,11 @@ public class HomeFragment extends Fragment implements TaskAdapter.TaskOnClickLis
 	@Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
+		
 		upcomingTasks = binding.homeUpcomingDeadlines;
-		upcomingTasks.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
 		upcomingTasks.hasFixedSize();
+		upcomingTasks.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
+		
 		upcomingTasks.setAdapter(adapter);
 		
 		return binding.getRoot();
@@ -53,6 +55,13 @@ public class HomeFragment extends Fragment implements TaskAdapter.TaskOnClickLis
 	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
 	{
 		super.onViewCreated(view, savedInstanceState);
+		
+		viewModel.getUpcomingTasksWeek().observe(getViewLifecycleOwner(), tasks ->
+		{
+			adapter = new TaskAdapter(tasks);
+			adapter.setTaskListener(HomeFragment.this);
+			upcomingTasks.setAdapter(adapter);
+		});
 		
 		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_add_task));
 	}
