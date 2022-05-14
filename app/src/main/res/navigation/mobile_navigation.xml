@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_tasks"
             app:destination="@id/nav_tasks" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_task_details"
+            app:destination="@id/nav_task_details" />
     </fragment>
 
 
@@ -35,6 +38,9 @@
         <action
             android:id="@+id/action_nav_task_details_to_nav_tasks"
             app:destination="@id/nav_tasks" />
+        <action
+            android:id="@+id/action_nav_task_details_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 

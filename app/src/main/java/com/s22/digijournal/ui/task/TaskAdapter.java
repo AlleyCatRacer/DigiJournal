@@ -16,7 +16,7 @@ import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
-	private final List<ModelTask> tasks;
+	private List<ModelTask> tasks;
 	private TaskOnClickListener listener;
 	
 	public TaskAdapter(List<ModelTask> tasks)
@@ -41,6 +41,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 	@Override public int getItemCount()
 	{
 		return tasks.size();
+	}
+	
+	public void setTasks(List<ModelTask> tasks)
+	{
+		this.tasks = tasks;
 	}
 	
 	public void setTaskListener(TaskOnClickListener listener)

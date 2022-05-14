@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,11 +15,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:context=".ui.home.HomeFragment">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/home_header_textView"
+                android:id="@+id/home_header_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -27,24 +26,36 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/home_sub_header"
+                app:layout_constraintBottom_toTopOf="@+id/home_upcoming_deadlines_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/home_sub_header"
+                android:id="@+id/home_upcoming_deadlines_label"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/home_hint"
+                android:text="@string/home_overview"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/home_upcoming_deadlines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/home_header_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_upcoming_deadlines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:listitem="@layout/fragment_task_item"
+                app:layout_constraintTop_toBottomOf="@id/home_upcoming_deadlines_label"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/home_header_textView" />
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

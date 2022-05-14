@@ -4,29 +4,47 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentHomeBinding;
+import com.s22.digijournal.ui.task.TaskAdapter;
+import com.s22.digijournal.ui.task.TaskViewModel;
 
-public class HomeFragment extends Fragment
+public class HomeFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
 	private FragmentHomeBinding binding;
+	private TaskViewModel viewModel;
+	private TaskAdapter adapter;
+	private RecyclerView upcomingTasks;
 	
-	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	@Override public void onCreate(@Nullable Bundle savedInstanceState)
 	{
-		HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+		super.onCreate(savedInstanceState);
+		
+		viewModel.getTasks().observe(this, tasks ->
+		{
+			adapter = new TaskAdapter(viewModel.getUpcomingTasksWeek());
+			adapter.setTaskListener(this);
+		});
+	}
+	
+	@Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	{
+		viewModel = new ViewModelProvider(this).get(TaskViewModel.class);
+		adapter = new TaskAdapter(viewModel.getUpcomingTasksWeek());
 		
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
 		
-		final TextView textView = binding.homeHeaderTextView;
-		homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+		upcomingTasks = binding.homeUpcomingDeadlines;
+
 		return binding.getRoot();
 	}
 	
@@ -40,5 +58,11 @@ public class HomeFragment extends Fragment
 	{
 		super.onDestroyView();
 		binding = null;
+	}
+	
+	@Override public void onClick(ModelTask task)
+	{
+		viewModel.setCurrentTask(task);
+		NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_task_details);
 	}
 }

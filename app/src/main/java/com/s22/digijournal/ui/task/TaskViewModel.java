@@ -10,7 +10,18 @@ import androidx.lifecycle.MutableLiveData;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.persistence.Repo.TaskRepo;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
 
 public class TaskViewModel extends AndroidViewModel
 {
@@ -42,6 +53,7 @@ public class TaskViewModel extends AndroidViewModel
 	
 	public void editTask()
 	{
+		if (isAfter(getCurrentTask().getDeadline()))
 		repo.update(getCurrentTask());
 	}
 	
@@ -65,5 +77,59 @@ public class TaskViewModel extends AndroidViewModel
 	{
 		getCurrentTask().setCompleted(complete);
 		editTask();
+	}
+	
+	public String getDeadlineFormatted()
+	{
+		if (getCurrentTask().getDeadline() == 0)
+		{
+			return "N/A";
+		}
+		long deadline = getCurrentTask().getDeadline();
+		return new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date(deadline * 1000));
+	}
+	
+	public long formatDeadline(String stringDeadline)
+	{
+		if (stringDeadline.isEmpty() || stringDeadline.equals("N/A"))
+		{
+			return 0;
+		}
+		String withSecs = stringDeadline + " 23:59:59";
+		LocalDate date = LocalDate.parse(withSecs, DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+		Instant temp = date.atTime(LocalTime.MAX).atZone(ZoneId.systemDefault()).toInstant();
+		
+		return new java.util.Date(temp.getEpochSecond()).getTime();
+	}
+	
+	public List<ModelTask> getUpcomingTasksWeek()
+	{
+		ArrayList<ModelTask> temp = new ArrayList<>(Objects.requireNonNull(getTasks().getValue()));
+		
+		Instant now = Instant.now();
+		long tempNow = new Date(now.toEpochMilli()).getTime();
+		long weekLater = 604800 + tempNow;
+		
+		for (ModelTask t : getTasks().getValue())
+		{
+			if (!isBetween(t.getDeadline(), tempNow, weekLater))
+				temp.remove(t);
+		}
+		
+		return temp;
+	}
+	
+	public boolean isAfter(long epoch)
+	{
+		if (getCurrentTask().getDeadline() == 0) return false;
+		Date date = new Date(epoch * 1000);
+		Instant now = Instant.now();
+		Date tempNow = new Date(now.toEpochMilli());
+		return date.after(tempNow);
+	}
+	
+	public boolean isBetween(long target, long start, long end)
+	{
+		return start <= target && target <= end;
 	}
 }
