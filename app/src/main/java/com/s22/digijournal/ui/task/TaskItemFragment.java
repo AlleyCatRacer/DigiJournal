@@ -22,6 +22,8 @@ import java.util.List;
 public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
     private TextView name;
+    //Editing not allowed in this view so this checkbox is immutable
+    //Changing task status is only allowed from the task details view
     private CheckBox status;
     private TextView deadline;
     private TaskViewModel viewModel;
