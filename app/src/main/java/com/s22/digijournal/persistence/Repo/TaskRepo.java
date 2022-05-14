@@ -17,6 +17,7 @@ public class TaskRepo
 	private static TaskRepo instance;
 	private final TaskDAO dao;
 	private final LiveData<List<ModelTask>> tasks;
+	private LiveData<List<ModelTask>> upcomingTasks;
 	private final ExecutorService executorService;
 	
 	private TaskRepo(Application application)
@@ -59,5 +60,11 @@ public class TaskRepo
 	public void deleteAll()
 	{
 		executorService.execute(dao::removeAllTasks);
+	}
+	
+	public LiveData<List<ModelTask>> getUpcomingTasks(long start, long end)
+	{
+		upcomingTasks = dao.getUpcomingTasksWeek(start, end);
+		return upcomingTasks;
 	}
 }

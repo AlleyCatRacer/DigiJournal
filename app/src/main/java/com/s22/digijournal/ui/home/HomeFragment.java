@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.s22.digijournal.ModelTask;
@@ -29,35 +30,30 @@ public class HomeFragment extends Fragment implements TaskAdapter.TaskOnClickLis
 	{
 		super.onCreate(savedInstanceState);
 		
-		viewModel.getTasks().observe(this, tasks ->
+		viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+		
+		viewModel.getUpcomingTasksWeek().observe(this, tasks ->
 		{
-			adapter = new TaskAdapter(viewModel.getUpcomingTasksWeek());
+			adapter = new TaskAdapter(tasks);
 			adapter.setTaskListener(this);
 		});
 	}
 	
 	@Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		viewModel = new ViewModelProvider(this).get(TaskViewModel.class);
-		adapter = new TaskAdapter(viewModel.getUpcomingTasksWeek());
-		
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
-		
 		upcomingTasks = binding.homeUpcomingDeadlines;
-
+		upcomingTasks.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
+		upcomingTasks.hasFixedSize();
+		upcomingTasks.setAdapter(adapter);
+		
 		return binding.getRoot();
 	}
 	
 	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
 	{
 		super.onViewCreated(view, savedInstanceState);
-		viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks ->
-		{
-			adapter = new TaskAdapter(modelTasks);
-			adapter.setTaskListener(HomeFragment.this);
-			upcomingTasks.setAdapter(adapter);
-			adapter.setTasks(viewModel.getUpcomingTasksWeek());
-		});
+		
 		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_add_task));
 	}
 	

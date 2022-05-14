@@ -25,4 +25,7 @@ public interface TaskDAO
 	
 	@Query("DELETE FROM task_table")
 	void removeAllTasks();
+	
+	@Query("SELECT * FROM task_table WHERE deadline < :start AND deadline > :end")
+	LiveData<List<ModelTask>> getUpcomingTasksWeek(long start, long end);
 }

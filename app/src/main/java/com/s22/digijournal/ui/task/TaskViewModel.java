@@ -14,14 +14,11 @@ import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 public class TaskViewModel extends AndroidViewModel
 {
@@ -102,21 +99,14 @@ public class TaskViewModel extends AndroidViewModel
 		return new java.util.Date(temp.getEpochSecond()).getTime();
 	}
 	
-	public List<ModelTask> getUpcomingTasksWeek()
+	public LiveData<List<ModelTask>> getUpcomingTasksWeek()
 	{
-		ArrayList<ModelTask> temp = new ArrayList<>(Objects.requireNonNull(getTasks().getValue()));
-		
 		Instant now = Instant.now();
 		long tempNow = new Date(now.toEpochMilli()).getTime();
 		long weekLater = 604800 + tempNow;
 		
-		for (ModelTask t : getTasks().getValue())
-		{
-			if (!isBetween(t.getDeadline(), tempNow, weekLater))
-				temp.remove(t);
-		}
 		
-		return temp;
+		return repo.getUpcomingTasks(tempNow, weekLater);
 	}
 	
 	public boolean isAfter(long epoch)
