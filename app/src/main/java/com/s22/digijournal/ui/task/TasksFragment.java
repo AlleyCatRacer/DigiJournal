@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
-
-import java.util.List;
 
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
@@ -62,14 +59,11 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     {
         super.onViewCreated(view, savedInstanceState);
     
-        viewModel.getTasks().observe(getViewLifecycleOwner(), new Observer<List<ModelTask>>()
+        viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks ->
         {
-            @Override public void onChanged(List<ModelTask> modelTasks)
-            {
-                adapter = new TaskAdapter(modelTasks);
-                adapter.setTaskListener(TasksFragment.this);
-                tasksRecycler.setAdapter(adapter);
-            }
+            adapter = new TaskAdapter(modelTasks);
+            adapter.setTaskListener(TasksFragment.this);
+            tasksRecycler.setAdapter(adapter);
         });
         
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));

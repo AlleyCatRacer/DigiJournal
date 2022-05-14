@@ -51,6 +51,13 @@ public class HomeFragment extends Fragment implements TaskAdapter.TaskOnClickLis
 	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
 	{
 		super.onViewCreated(view, savedInstanceState);
+		viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks ->
+		{
+			adapter = new TaskAdapter(modelTasks);
+			adapter.setTaskListener(HomeFragment.this);
+			upcomingTasks.setAdapter(adapter);
+			adapter.setTasks(viewModel.getUpcomingTasksWeek());
+		});
 		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_add_task));
 	}
 	

@@ -2,6 +2,7 @@ package com.s22.digijournal;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.After;
 import org.junit.Before;
@@ -15,6 +16,10 @@ public class ModelTaskUnitTest
 	private ModelTask t1;
 	private ModelTask t2;
 	private ModelTask t3;
+	private ModelTask t4;
+	private ModelTask t5;
+	private ModelTask t6;
+	private ModelTask t7;
 	private List<ModelTask> tasks;
 	
 	@Before public void setUp()
@@ -22,20 +27,30 @@ public class ModelTaskUnitTest
 		t1 = new ModelTask("Task 1", "Short description ay", "01/01/2023");
 		t2 = new ModelTask("Task 2", "", "N/A");
 		t3 = new ModelTask("Task 3", "V.short desc.", "");
+		t4 = new ModelTask("Task 4", "Descriptive", "21/05/2022");
+		t5 = new ModelTask("Task 5", "Descriptive af", "15/05/2022");
+		t6 = new ModelTask("Task 6", "Desky", "14/05/2022");
+		t7 = new ModelTask("Task 7", "Desky-desk", "15/06/2022");
 		t1.setID(1);
 		t2.setID(2);
-		t3.setID(2);
+		t3.setID(3);
+		t4.setID(4);
+		t5.setID(5);
+		t6.setID(6);
+		t7.setID(7);
 		tasks = new ArrayList<>();
 		tasks.add(t1);
 		tasks.add(t2);
 		tasks.add(t3);
+		tasks.add(t4);
+		tasks.add(t5);
+		tasks.add(t6);
+		tasks.add(t7);
 	}
 	
 	@After public void tearDown()
 	{
-		t1 = null;
-		t2 = null;
-		t3 = null;
+	
 	}
 	
 	@Test public void taskListIsNotEmptyWhenNotEmpty()
@@ -100,5 +115,15 @@ public class ModelTaskUnitTest
 	{
 		t3.setDeadline(t3.formatDeadline("01/01/3000"));
 		assertEquals(32503762799L, t3.getDeadline());
+	}
+	
+	@Test public void date1505IsBetween1405And1506()
+	{
+		assertTrue(ModelTask.isBetween(t5.getDeadline(), t6.getDeadline(), t4.getDeadline()));
+	}
+	
+	@Test public void getTasksInUpcomingWeekFrom1405()
+	{
+		assertEquals(2, ModelTask.getUpcomingTasksWeek(tasks).size());
 	}
 }

@@ -11,6 +11,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 @Entity(tableName = "task_table")
@@ -113,11 +115,34 @@ public class ModelTask
 		return new java.util.Date(temp.getEpochSecond()).getTime();
 	}
 	
-	public boolean isAfter(long epoch)
+	public static List<ModelTask> getUpcomingTasksWeek(List<ModelTask> tasks)
+	{
+		ArrayList<ModelTask> temp = new ArrayList<>(tasks);
+		
+		Instant now = Instant.now();
+		long tempNow = new Date(now.toEpochMilli()).getTime();
+		long weekLater = (604800000 + tempNow);
+		//604.800.000 is the number of milliseconds in a week
+		
+		for (ModelTask t : tasks)
+		{
+			if (!isBetween(t.getDeadline() * 1000, tempNow, weekLater))
+				temp.remove(t);
+		}
+		
+		return temp;
+	}
+	
+	private boolean isAfter(long epoch)
 	{
 		Date date = new Date(epoch * 1000);
 		Instant now = Instant.now();
 		Date tempNow = new Date(now.toEpochMilli());
 		return date.after(tempNow);
+	}
+	
+	public static boolean isBetween(long target, long start, long end)
+	{
+		return target > start && target < end;
 	}
 }
