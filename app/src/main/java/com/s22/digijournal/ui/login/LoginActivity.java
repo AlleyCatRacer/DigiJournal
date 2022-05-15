@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity
 	
 	private void isSignedIn()
 	{
-		viewModel.getCurrentUser().observe(this, user ->
+		viewModel.getCurrentUserLive().observe(this, user ->
 		{
 			if (user!= null)
 			{

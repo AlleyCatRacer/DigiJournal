@@ -29,12 +29,16 @@ public class UserRepo
 		return repo;
 	}
 	
-	public LiveData<FirebaseUser> getCurrentUser()
+	public LiveData<FirebaseUser> getCurrentUserLive()
 	{
 		return currentUser;
 	}
 	
-	public void signOut()
+	public FirebaseUser getCurrentUser()
+	{
+		return currentUser.getValue();
+	}
+	public void logout()
 	{
 		AuthUI.getInstance().signOut(app.getApplicationContext());
 	}

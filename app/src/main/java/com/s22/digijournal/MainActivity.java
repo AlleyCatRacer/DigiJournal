@@ -1,10 +1,12 @@
 package com.s22.digijournal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -12,6 +14,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.s22.digijournal.databinding.ActivityMainBinding;
+import com.s22.digijournal.ui.login.LoginActivity;
+import com.s22.digijournal.ui.login.LoginViewModel;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -39,6 +43,13 @@ public class MainActivity extends AppCompatActivity
 				.findNavController(this, R.id.nav_host_fragment_content_main);
 		NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);
+		
+		binding.appBarMain.getRoot().findViewById(R.id.toolbar).findViewById(R.id.action_logout).setOnClickListener(v ->
+		{
+			LoginViewModel viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+			viewModel.logout();
+			goToLoginActivity();
+		});
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
@@ -53,5 +64,11 @@ public class MainActivity extends AppCompatActivity
 		NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 		return NavigationUI.navigateUp(navController, mAppBarConfiguration)
 				|| super.onSupportNavigateUp();
+	}
+	
+	private void goToLoginActivity()
+	{
+		startActivity(new Intent(this, LoginActivity.class));
+		finish();
 	}
 }
