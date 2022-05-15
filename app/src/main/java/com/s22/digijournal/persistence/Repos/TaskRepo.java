@@ -1,4 +1,4 @@
-package com.s22.digijournal.persistence.Repo;
+package com.s22.digijournal.persistence.Repos;
 
 import android.app.Application;
 

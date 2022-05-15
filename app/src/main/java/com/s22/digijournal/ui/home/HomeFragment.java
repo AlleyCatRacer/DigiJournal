@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,19 +13,20 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentHomeBinding;
+import com.s22.digijournal.ui.login.LoginViewModel;
 
 public class HomeFragment extends Fragment
 {
 	private FragmentHomeBinding binding;
+	private LoginViewModel loginViewModel;
 	
 	public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
 		HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 		
 		binding = FragmentHomeBinding.inflate(inflater, container, false);
+		binding.homeSubHeader.setText(homeViewModel.getText().getValue());
 		
-		final TextView textView = binding.homeHeaderTextView;
-		homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 		return binding.getRoot();
 	}
 	
