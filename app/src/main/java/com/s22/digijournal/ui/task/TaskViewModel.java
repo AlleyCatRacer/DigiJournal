@@ -83,8 +83,8 @@ public class TaskViewModel extends AndroidViewModel
 		currentUser.setValue(user);
 	}
 	
-	public void updateUser()
+	public void changePassword(String oldPassword, String newPassword)
 	{
-		userRepo.
+		userRepo.changePassword(getCurrentUser(), oldPassword, newPassword);
 	}
 }
