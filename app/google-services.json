@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536020179416",
+    "project_id": "digijournal-a6f7b",
+    "storage_bucket": "digijournal-a6f7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536020179416:android:0fb33578b88df3dc443aad",
+        "android_client_info": {
+          "package_name": "com.s22.digijournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536020179416-crai4kdca965fto7rvoktc8lirv7ag1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2fqIyBQTQNb3Xk3XX1wr3sdGDCav7NZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536020179416-crai4kdca965fto7rvoktc8lirv7ag1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
