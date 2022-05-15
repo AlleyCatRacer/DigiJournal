@@ -27,8 +27,8 @@ Written and segregated in order of priority. Please note that I will be using Ag
 1. ~As a user, I want to be able to add a task so that I can plan my time~
 2. ~As a user, I want to be able to edit a task so that I can keep it up to date~
 3. ~As a user, I want to be able to delete a task so that I can remove tasks that are not relevant~
-4. As a user, I want to have a daily overview of my calendar so that I can see what my schedule will be on a specific day
-5. As a user, I want to have a monthly overview of my calendar so that I can see what my schedule will be on a specific month
+4. ~As a user, I want to be able to see all of my tasks so that I can get an overview of my tasks~
+5. As a user, I want to be able to filter my tasks by their status so that I can easily see which tasks are not completed
 
 ### High
 6. As a user, I want to have a weekly overview of my calendar so that I can see what my schedule will be on a specific week
