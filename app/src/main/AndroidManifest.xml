@@ -10,12 +10,6 @@
         android:theme="@style/Theme.DigiJournal">
         <activity
             android:name=".ui.login.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.list.ListActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NavigationDrawer"
             android:exported="true"
             android:theme="@style/Theme.DigiJournal.NoActionBar">
             <intent-filter>
@@ -24,15 +18,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".NavigationDrawer"
+            android:exported="false"
+            android:theme="@style/Theme.DigiJournal.NoActionBar"/>
+
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/Theme.DigiJournal.AppBarOverlay"/>
     </application>
 
 </manifest>

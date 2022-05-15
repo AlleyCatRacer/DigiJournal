@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import com.firebase.ui.auth.AuthUI;
 import com.s22.digijournal.MainActivity;
 import com.s22.digijournal.R;
+
 import java.util.Collections;
 import java.util.List;
 
