@@ -9,15 +9,17 @@
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_categories.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_list.xml" value="0.1" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_navigation_drawer.xml" value="0.264" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/activity_tasks.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/add_task.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/app_bar_main.xml" value="0.264" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/app_bar_navigation_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/content_main.xml" value="0.16" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/content_navigation_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/content_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/edit_task.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_calendar.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_categories.xml" value="0.4" />
@@ -26,6 +28,7 @@
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_category_details.xml" value="0.2111111111111111" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_category_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_category_lists.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_first.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_gallery.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_list.xml" value="0.2" />
@@ -34,19 +37,24 @@
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_list_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_list_tasks.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_lists.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_second.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_slideshow.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task.xml" value="0.25" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task_add.xml" value="0.264" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task_details.xml" value="0.2111111111111111" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task_edit.xml" value="0.1" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task_edit.xml" value="0.264" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_task_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_tasks.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_tasks.xml" value="0.2" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_tasks_list.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_user_details.xml" value="0.22962962962962963" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_user_edit.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_user_edit_email.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/fragment_user_edit_username.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/home_screen.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/layout.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/nav_header_main.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/activity_main_drawer.xml" value="0.2" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Bruger/OneDrive/College/4.SemesterS22/AND/CourseProject/DigiJournal/app/src/main/res/menu/navigation_drawer.xml" value="0.25416666666666665" />
       </map>

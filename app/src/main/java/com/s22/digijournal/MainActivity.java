@@ -20,7 +20,6 @@ import com.s22.digijournal.ui.login.LoginViewModel;
 public class MainActivity extends AppCompatActivity
 {
 	private AppBarConfiguration mAppBarConfiguration;
-	private NavController navController;
 	
 	@Override protected void onCreate(Bundle savedInstanceState)
 	{
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity
 		ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 		
-		setSupportActionBar(binding.appBarMain.toolbar);
+		setSupportActionBar(findViewById(R.id.toolbar));
 		
 		DrawerLayout drawer = binding.drawerLayout;
 		NavigationView navigationView = binding.navView;
@@ -39,23 +38,18 @@ public class MainActivity extends AppCompatActivity
 				R.id.nav_home, R.id.nav_tasks, R.id.nav_add_task)
 				.setOpenableLayout(drawer)
 				.build();
-		navController = Navigation
-				.findNavController(this, R.id.nav_host_fragment_content_main);
-		NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+		NavController navController = Navigation
+				.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);
+		NavigationUI.setupActionBarWithNavController(MainActivity.this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);
 		
-		binding.appBarMain.getRoot().findViewById(R.id.toolbar).findViewById(R.id.action_logout).setOnClickListener(v ->
-		{
-			LoginViewModel viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
-			viewModel.logout();
-			goToLoginActivity();
-		});
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
 	{
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		menu.findItem(R.id.action_logout).setOnMenuItemClickListener(v -> goToLoginActivity());
 		return true;
 	}
 	
@@ -66,9 +60,12 @@ public class MainActivity extends AppCompatActivity
 				|| super.onSupportNavigateUp();
 	}
 	
-	private void goToLoginActivity()
+	private boolean goToLoginActivity()
 	{
+		LoginViewModel viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
+		viewModel.logout();
 		startActivity(new Intent(this, LoginActivity.class));
 		finish();
+		return true;
 	}
 }
