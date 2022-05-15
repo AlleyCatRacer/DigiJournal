@@ -56,13 +56,12 @@ public class TaskDetailsFragment extends Fragment
         
         binding.taskDetailsDeleteButton.setOnClickListener(v ->
         {
-            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_INDEFINITE);
+            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_SHORT);
             snackbar.setAction("YES", v1 ->
             {
                 viewModel.removeTask();
                 toTasks();
             });
-            snackbar.setAction("NO", v2 -> snackbar.dismiss());
             snackbar.show();
         });
         
