@@ -1,5 +1,7 @@
 package com.s22.digijournal.ui.task;
 
+import static com.s22.digijournal.R.color.red;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,12 +58,12 @@ public class TaskDetailsFragment extends Fragment
         
         binding.taskDetailsDeleteButton.setOnClickListener(v ->
         {
-            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_SHORT);
+            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_LONG);
             snackbar.setAction("YES", v1 ->
             {
                 viewModel.removeTask();
                 toTasks();
-            });
+            }).setActionTextColor((int) red);
             snackbar.show();
         });
         
