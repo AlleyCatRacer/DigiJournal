@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTaskDetailsBinding;
 
@@ -50,12 +51,21 @@ public class TaskDetailsFragment extends Fragment
         status.setChecked(viewModel.getCurrentTask().isCompleted());
         description.setText(viewModel.getCurrentTask().getDescription());
         deadline.setText(viewModel.getCurrentTask().getDeadlineFormatted());
-        binding.taskDetailsEditButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit));
+        
+        binding.taskDetailsEditButton.setOnClickListener(v -> toEdit());
+        
         binding.taskDetailsDeleteButton.setOnClickListener(v ->
         {
-            NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_tasks);
-            viewModel.removeTask();
+            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_INDEFINITE);
+            snackbar.setAction("YES", v1 ->
+            {
+                viewModel.removeTask();
+                toTasks();
+            });
+            snackbar.setAction("NO", v2 -> snackbar.dismiss());
+            snackbar.show();
         });
+        
         binding.taskDetailsStatusCheckbox.setOnCheckedChangeListener((buttonView, isChecked) ->
                 viewModel.setStatus(status.isChecked()));
     }
@@ -64,5 +74,15 @@ public class TaskDetailsFragment extends Fragment
     {
         super.onDestroyView();
         binding = null;
+    }
+    
+    private void toEdit()
+    {
+        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit);
+    }
+    
+    private void toTasks()
+    {
+        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_tasks);
     }
 }
