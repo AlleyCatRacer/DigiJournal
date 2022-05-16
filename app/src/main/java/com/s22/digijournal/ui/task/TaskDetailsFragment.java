@@ -79,11 +79,11 @@ public class TaskDetailsFragment extends Fragment
     
     private void toEdit()
     {
-        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_task_edit);
+        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.nav_task_edit);
     }
     
     private void toTasks()
     {
-        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.action_nav_task_details_to_nav_tasks);
+        NavHostFragment.findNavController(TaskDetailsFragment.this).navigate(R.id.nav_tasks);
     }
 }

@@ -66,52 +66,8 @@ public class LoginActivity extends AppCompatActivity
 		
 		Intent loginIntent = AuthUI.getInstance().createSignInIntentBuilder()
 				.setAvailableProviders(providers)
-				.setLogo(R.drawable.launcher_diary).build();
+				.setLogo(R.mipmap.launcher_diary).build();
 		
 		activityResultLauncher.launch(loginIntent);
 	}
 }
-
-/*
-    private MainActivityViewModel viewModel;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
-        viewModel.init();
-        checkIfSignedIn();
-        setContentView(R.layout.activity_main);
-        messageEditText = findViewById(R.id.message_editText);
-        messageTextView = findViewById(R.id.message_textView);
-        welcomeMessage = findViewById(R.id.welcome_message);
-
-        viewModel.getMessage().observe(this, message -> {
-            if (message != null)
-                messageTextView.setText(message.getBody());
-        });
-    }
-
-    private void checkIfSignedIn() {
-        viewModel.getCurrentUser().observe(this, user -> {
-            if (user != null) {
-                String message = "Welcome " + user.getDisplayName();
-                welcomeMessage.setText(message);
-            } else
-                startLoginActivity();
-        });
-    }
-
-    private void startLoginActivity() {
-        startActivity(new Intent(this, SignInActivity.class));
-        finish();
-    }
-
-    public void saveData(View v) {
-        viewModel.saveMessage(messageEditText.getText().toString());
-    }
-
-    public void signOut(View v) {
-        viewModel.signOut();
-    }
-*/

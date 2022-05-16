@@ -33,4 +33,14 @@ public class LoginViewModel extends AndroidViewModel
 	{
 		repo.logout();
 	}
+	
+	public void updateDisplayName(String displayName)
+	{
+		repo.updateDisplayName(getCurrentUser(), displayName);
+	}
+	
+	public void updateEmail(String email)
+	{
+		repo.updateEmail(getCurrentUser(), email);
+	}
 }

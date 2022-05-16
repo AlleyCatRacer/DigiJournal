@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ui.task.TaskItemFragment">
+    tools:context=".ui.task.TaskItemFragment"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="10dp">
 
     <CheckBox
         android:id="@+id/task_item_checkBox"
@@ -22,9 +25,7 @@
         android:id="@+id/task_item_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:text="@string/task_add_title_hint"
-        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,12 +36,9 @@
         android:id="@+id/task_item_deadline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
         android:text="@string/task_add_date_format_hint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

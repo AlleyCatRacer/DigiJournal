@@ -12,11 +12,8 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_add_task"
-            app:destination="@id/nav_add_task" />
-        <action
-            android:id="@+id/action_nav_home_to_nav_tasks"
-            app:destination="@id/nav_tasks" />
+            android:id="@+id/action_nav_home_to_nav_edit_profile"
+            app:destination="@id/nav_edit_profile" />
     </fragment>
 
 
@@ -26,12 +23,6 @@
         android:name="com.s22.digijournal.ui.task.TaskDetailsFragment"
         android:label="Task Details"
         tools:layout="@layout/fragment_task_details" >
-        <action
-            android:id="@+id/action_nav_task_details_to_nav_add_task"
-            app:destination="@id/nav_add_task" />
-        <action
-            android:id="@+id/action_nav_task_details_to_nav_task_edit"
-            app:destination="@id/nav_task_edit" />
         <action
             android:id="@+id/action_nav_task_details_to_nav_tasks"
             app:destination="@id/nav_tasks" />
@@ -43,14 +34,7 @@
         android:id="@+id/nav_add_task"
         android:name="com.s22.digijournal.ui.task.TaskAddFragment"
         android:label="Add Task"
-        tools:layout="@layout/fragment_task_add" >
-        <action
-            android:id="@+id/action_nav_add_task_fragment_to_nav_task_details"
-            app:destination="@id/nav_task_details" />
-        <action
-            android:id="@+id/action_nav_add_task_to_nav_home"
-            app:destination="@id/nav_home" />
-    </fragment>
+        tools:layout="@layout/fragment_task_add" />
 
 
 
@@ -62,9 +46,6 @@
         <action
             android:id="@+id/action_nav_tasks_to_nav_task_details"
             app:destination="@id/nav_task_details" />
-        <action
-            android:id="@+id/action_nav_tasks_to_nav_add_task"
-            app:destination="@id/nav_add_task" />
     </fragment>
 
 
@@ -77,6 +58,18 @@
         <action
             android:id="@+id/action_nav_task_edit_to_nav_task_details"
             app:destination="@id/nav_task_details" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_edit_profile"
+        android:name="com.s22.digijournal.ui.profile.EditProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_nav_edit_profile_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 

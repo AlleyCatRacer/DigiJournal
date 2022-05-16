@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -35,21 +34,17 @@ public class MainActivity extends AppCompatActivity
 		checkIfSignedIn();
 		
 		setContentView(binding.getRoot());
-		
 		setSupportActionBar(findViewById(R.id.toolbar));
-		
 		DrawerLayout drawer = binding.drawerLayout;
 		NavigationView navigationView = binding.navView;
-		// Passing each menu ID as a set of Ids because each
-		// menu should be considered as top level destinations.
 		mAppBarConfiguration = new AppBarConfiguration.Builder(
-				R.id.nav_home, R.id.nav_tasks, R.id.nav_add_task)
-				.setOpenableLayout(drawer)
-				.build();
+				R.id.nav_home, R.id.nav_tasks, R.id.nav_add_task, R.id.nav_profile)
+				.setOpenableLayout(drawer).build();
 		NavController navController = Navigation
 				.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);
 		NavigationUI.setupActionBarWithNavController(MainActivity.this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);
+		
 		TextView username = navigationView.getHeaderView(0).findViewById(R.id.nav_header_username);
 		username.setText(loginViewModel.getCurrentUser().getDisplayName());
 		TextView email = navigationView.getHeaderView(0).findViewById(R.id.nav_header_main_email);
@@ -76,22 +71,13 @@ public class MainActivity extends AppCompatActivity
 	
 	private void checkIfSignedIn()
 	{
-		final String[] message = new String[1];
-		
 		loginViewModel.getCurrentUserLive().observe(this, user ->
 		{
 			if (user == null)
 			{
 				goToLogin();
 			}
-			else
-				message[0] = "Welcome " + user.getDisplayName();
 		});
-		
-		if (message[0] != null)
-		{
-			Toast.makeText(this, message[0], Toast.LENGTH_SHORT).show();
-		}
 	}
 	
 	private void goToLogin()

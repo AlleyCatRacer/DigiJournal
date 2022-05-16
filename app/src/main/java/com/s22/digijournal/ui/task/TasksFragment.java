@@ -70,7 +70,7 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
                 });
                 
         
-        binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));
+        binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.nav_add_task));
     }
     
     @Override public void onDestroyView()

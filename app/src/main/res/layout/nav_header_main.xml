@@ -14,7 +14,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:contentDescription="@string/home_hint"
-        app:srcCompat="@drawable/home_icon"
+        app:srcCompat="@mipmap/home_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nav_header_username"

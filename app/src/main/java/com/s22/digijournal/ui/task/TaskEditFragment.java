@@ -57,10 +57,8 @@ public class TaskEditFragment extends Fragment
 			viewModel.setCurrentTask(temp);
 			viewModel.editTask();
 			
-			NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.action_nav_task_edit_to_nav_task_details);
+			NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.nav_task_details);
 		});
-		
-		binding.taskEditCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskEditFragment.this).navigate(R.id.action_nav_task_edit_to_nav_task_details));
 	}
 	
 	private void seedView()

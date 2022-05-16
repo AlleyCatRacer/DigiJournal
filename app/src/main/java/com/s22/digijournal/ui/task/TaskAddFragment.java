@@ -55,10 +55,8 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
             ModelTask temp = new ModelTask(name, desc, dline);
             viewModel.addTask(temp);
             
-            NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_fragment_to_nav_task_details);
+            NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.nav_task_details);
         });
-        
-        binding.taskAddCancelButton.setOnClickListener(v -> NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.action_nav_add_task_to_nav_home));
     }
     
     @Override public void onDestroyView()

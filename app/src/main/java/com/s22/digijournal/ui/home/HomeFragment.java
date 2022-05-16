@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment
 	@Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
 	{
 		super.onViewCreated(view, savedInstanceState);
-		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_add_task));
+		binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.nav_add_task));
 	}
 	
 	@Override public void onDestroyView()

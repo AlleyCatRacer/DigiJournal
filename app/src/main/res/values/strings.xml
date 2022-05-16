@@ -2,7 +2,6 @@
     <string name="app_name">DigiJournal</string>
     <string name="nav_header_subtitle">androidstudio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
 
     <string name="login_header_label">Please login</string>
     <string name="login_email_label">Email:</string>
@@ -17,6 +16,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_tasks">Tasks</string>
     <string name="menu_add_task">Add a task</string>
+    <string name="menu_edit_profile">Edit Profile</string>
 
     <string name="home_category">Categories</string>
     <string name="home_welcome">Welcome to DigiJournal!</string>
@@ -35,6 +35,8 @@
     <string name="task_edit_status">Status</string>
     <string name="task_taskId">TaskID</string>
     <string name="tasks_filter_status">Show only completed tasks</string>
+
+    <string name="profile_name_hint">Display name</string>
 
     <string name="edit_button">Edit</string>
     <string name="save_button">Save</string>

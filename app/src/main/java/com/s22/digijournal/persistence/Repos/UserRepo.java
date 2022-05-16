@@ -8,6 +8,7 @@ import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import java.util.Objects;
 
@@ -44,6 +45,17 @@ public class UserRepo
 		AuthUI.getInstance().signOut(app.getApplicationContext());
 	}
 
+	public void updateDisplayName(FirebaseUser user, String displayName)
+	{
+		UserProfileChangeRequest request = new UserProfileChangeRequest.Builder().setDisplayName(displayName).build();
+		user.updateProfile(request);
+	}
+	
+	public void updateEmail(FirebaseUser user, String email)
+	{
+		user.updateEmail(email);
+	}
+	
 	public String changePassword(FirebaseUser user, String oldPassword, String newPassword)
 	{
 		final String[] result = new String[1];
