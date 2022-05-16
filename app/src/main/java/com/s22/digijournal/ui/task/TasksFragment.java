@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +18,8 @@ import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
 
+import java.util.List;
+
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
     private FragmentTasksBinding binding;
@@ -24,6 +27,7 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     private RecyclerView tasksRecycler;
     private TaskAdapter adapter;
     private TaskAdapter.TaskOnClickListener listener;
+    private MutableLiveData<List<ModelTask>> tasks;
     
     public TasksFragment()
     {
@@ -54,7 +58,17 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks -> adapter.setTasks(modelTasks));
         
         binding.tasksStatusFilter.setOnClickListener(v ->
-                adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked(), adapter.getTasks())));
+                {
+                    if (!binding.tasksStatusFilter.isChecked())
+                    {
+                        viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks -> adapter.setTasks(modelTasks));
+                    }
+                    else
+                    {
+                        adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked(), adapter.getTasks()));
+                    }
+                });
+                
         
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));
     }

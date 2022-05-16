@@ -76,14 +76,19 @@ public class TaskViewModel extends AndroidViewModel
 	
 	public List<ModelTask> filterByStatus(boolean status, List<ModelTask> tasks)
 	{
-		ArrayList<ModelTask> all = new ArrayList<>(tasks);
-		ArrayList<ModelTask> filtered = new ArrayList<>(all);
-		
-		for (ModelTask t : tasks)
+		if (status)
 		{
-			if (!t.isCompleted()) filtered.remove(t);
+			ArrayList<ModelTask> all = new ArrayList<>(tasks);
+			ArrayList<ModelTask> filtered = new ArrayList<>(all);
+			
+			for (ModelTask t : tasks)
+			{
+				if (!t.isCompleted()) filtered.remove(t);
+			}
+			return status ? filtered : all;
 		}
-		return status ? filtered : all;
+		
+		return tasks;
 	}
 	
 	public FirebaseUser getCurrentUser()
