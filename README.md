@@ -27,25 +27,26 @@ Written and segregated in order of priority. Please note that I will be using Ag
 1. ~As a user, I want to be able to add a task so that I can plan my time~
 2. ~As a user, I want to be able to edit a task so that I can keep it up to date~
 3. ~As a user, I want to be able to delete a task so that I can remove tasks that are not relevant~
-4. ~As a user, I want to be able to see all of my tasks so that I can get an overview of my tasks~
-5. As a user, I want to be able to filter my tasks by their status so that I can easily see which tasks are not completed
+4. ~As a user, I want to be able to see all of my tasks so that I can get an overview~
+5. ~As a user, I want to be able to filter my tasks by their status so that I can easily see which tasks are not completed~
+6. ~As a user, I want to be able to add deadlines to tasks so that I can keep track of when they need to be finished~
 
 ### High
-6. As a user, I want to have a weekly overview of my calendar so that I can see what my schedule will be on a specific week
-7. As a user, I want to be able to enable dark mode so that I can more comfortably use the app in low lighting
-8. As a user, I want to be able to color code my tasks so that I can categorize and easily tell them apart
-9. As a user, I want to have a list that is not dependant upon a time schedule so that I can add tasks that I don’t know when I will do
-10. As a user, I want to be able to add deadlines to tasks so that I can keep track of when they need to be finished
+7. ~As a user, I want to be able to secure my data with a password so that I can rest assured that it's protected~
+8. As a user, I want to be able to change my username so that I can customize my profile
+9. As a user, I want to be able to change my email so that I can keep my account up to date
+10. As a user, I want to be able to color code my tasks so that I can categorize and easily tell them apart
 11. As a user, I want to be able to create tags for my tasks so that I can easily search through them
 
 ### Low
-12. As a user, I want to be able to create custom task sections so that I can tailor the application to fit my needs
-13. As a user, I want to be able to add my personal daily habits so that I can track when I do certain things
-14. As a user, I want to be acknowledged for maintaining good habits so that I can stay motivated to keep doing them
-15. As a user, I want to be able to set reminders so that I will be reminded to perform a task 
-16. As a user, I want to be able to create a custom value tracker so that I can monitor various metrics about myself
-17. As a user, I want to be able to choose a theme so that I can make the application more appealing to myself
-18. As a user, I want to be able to create invitations for tasks so that I can invite others to join me
-19. As a user, I want to be able to see who has responded to my invites so that I can plan accordingly
+11. As a user, I want to be able to create custom task sections so that I can tailor the application to fit my needs
+12. As a user, I want to be able to add my personal daily habits so that I can track when I do certain things
+13. As a user, I want to be acknowledged for maintaining good habits so that I can stay motivated to keep doing them
+14. As a user, I want to be able to set reminders so that I will be reminded to perform a task 
+15. As a user, I want to be able to create a custom value tracker so that I can monitor various metrics about myself
+16. As a user, I want to be able to choose a theme so that I can make the application more appealing to myself
+17. As a user, I want to be able to create invitations for tasks so that I can invite others to join me
+18. As a user, I want to be able to see who has responded to my invites so that I can plan accordingly
 
-[^1]:  Aldís Eir Hansen, 304124
+Author:
+[Aldís Eir Hansen, 304124](https://github.com/AlleyCatRacer)
