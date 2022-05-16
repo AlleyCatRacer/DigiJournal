@@ -9,9 +9,5 @@
             android:id="@+id/nav_tasks"
             android:icon="@mipmap/tasks"
             android:title="@string/menu_tasks" />
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@mipmap/profile"
-            android:title="@string/menu_edit_profile"/>
     </group>
 </menu>
