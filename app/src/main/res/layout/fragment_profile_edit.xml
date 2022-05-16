@@ -7,7 +7,7 @@
     android:background="@drawable/pattern"
     android:backgroundTint="@color/pastel_blue"
     android:orientation="vertical"
-    tools:context=".ui.profile.EditProfileFragment">
+    tools:context=".ui.login.LoginActivity">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
