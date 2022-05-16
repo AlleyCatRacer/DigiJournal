@@ -38,6 +38,7 @@ public class UserRepo
 	{
 		return currentUser.getValue();
 	}
+	
 	public void logout()
 	{
 		AuthUI.getInstance().signOut(app.getApplicationContext());

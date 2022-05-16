@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity
 				.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);
 		NavigationUI.setupActionBarWithNavController(MainActivity.this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);
-		
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
