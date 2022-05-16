@@ -17,11 +17,11 @@
         app:srcCompat="@drawable/home_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/nav_header_main_headline"
+        app:layout_constraintBottom_toTopOf="@id/nav_header_username"
         />
 
     <TextView
-        android:id="@+id/nav_header_main_headline"
+        android:id="@+id/nav_header_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -29,12 +29,12 @@
         android:text="@string/add_name_hint"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/nav_header_main_user_label"
+        app:layout_constraintBottom_toTopOf="@id/nav_header_main_email"
         app:layout_constraintStart_toStartOf="parent"
         />
 
     <TextView
-        android:id="@+id/nav_header_main_user_label"
+        android:id="@+id/nav_header_main_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"

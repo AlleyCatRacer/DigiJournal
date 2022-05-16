@@ -3,6 +3,7 @@ package com.s22.digijournal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +50,10 @@ public class MainActivity extends AppCompatActivity
 				.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);
 		NavigationUI.setupActionBarWithNavController(MainActivity.this, navController, mAppBarConfiguration);
 		NavigationUI.setupWithNavController(navigationView, navController);
+		TextView username = navigationView.getHeaderView(0).findViewById(R.id.nav_header_username);
+		username.setText(loginViewModel.getCurrentUser().getDisplayName());
+		TextView email = navigationView.getHeaderView(0).findViewById(R.id.nav_header_main_email);
+		email.setText(loginViewModel.getCurrentUser().getEmail());
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
