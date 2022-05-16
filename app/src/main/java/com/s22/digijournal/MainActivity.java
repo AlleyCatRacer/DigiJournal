@@ -3,6 +3,7 @@ package com.s22.digijournal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -19,13 +20,19 @@ import com.s22.digijournal.ui.login.LoginViewModel;
 
 public class MainActivity extends AppCompatActivity
 {
+	private ActivityMainBinding binding;
+	private LoginViewModel loginViewModel;
 	private AppBarConfiguration mAppBarConfiguration;
 	
 	@Override protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+		loginViewModel = new ViewModelProvider(this).get(LoginViewModel.class);
 		
-		ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+		binding = ActivityMainBinding.inflate(getLayoutInflater());
+		
+		checkIfSignedIn();
+		
 		setContentView(binding.getRoot());
 		
 		setSupportActionBar(findViewById(R.id.toolbar));
@@ -46,9 +53,12 @@ public class MainActivity extends AppCompatActivity
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
 	{
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
-		menu.findItem(R.id.action_logout).setOnMenuItemClickListener(v -> goToLoginActivity());
+		menu.findItem(R.id.action_logout).setOnMenuItemClickListener(v1 ->
+		{
+			onLogoutClicked();
+			return true;
+		});
 		return true;
 	}
 	
@@ -59,12 +69,35 @@ public class MainActivity extends AppCompatActivity
 				|| super.onSupportNavigateUp();
 	}
 	
-	private boolean goToLoginActivity()
+	private void checkIfSignedIn()
 	{
-		LoginViewModel viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
-		viewModel.logout();
+		final String[] message = new String[1];
+		
+		loginViewModel.getCurrentUserLive().observe(this, user ->
+		{
+			if (user == null)
+			{
+				goToLogin();
+			}
+			else
+				message[0] = "Welcome " + user.getDisplayName();
+		});
+		
+		if (message[0] != null)
+		{
+			Toast.makeText(this, message[0], Toast.LENGTH_SHORT).show();
+		}
+	}
+	
+	private void goToLogin()
+	{
 		startActivity(new Intent(this, LoginActivity.class));
 		finish();
-		return true;
+	}
+	
+	public void onLogoutClicked()
+	{
+		loginViewModel.logout();
+		goToLogin();
 	}
 }

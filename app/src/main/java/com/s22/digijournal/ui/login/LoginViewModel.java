@@ -18,7 +18,7 @@ public class LoginViewModel extends AndroidViewModel
 		super(application);
 		repo = UserRepo.getInstance(application);
 	}
-	
+
 	public LiveData<FirebaseUser> getCurrentUserLive()
 	{
 		return repo.getCurrentUserLive();
