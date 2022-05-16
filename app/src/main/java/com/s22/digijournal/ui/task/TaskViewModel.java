@@ -14,7 +14,6 @@ import com.s22.digijournal.persistence.Repos.UserRepo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class TaskViewModel extends AndroidViewModel
 {
@@ -75,12 +74,12 @@ public class TaskViewModel extends AndroidViewModel
 		editTask();
 	}
 	
-	public List<ModelTask> filterByStatus(boolean status)
+	public List<ModelTask> filterByStatus(boolean status, List<ModelTask> tasks)
 	{
-		List<ModelTask> all = new ArrayList<>(Objects.requireNonNull(getTasks().getValue()));
-		List<ModelTask> filtered = new ArrayList<>(all);
+		ArrayList<ModelTask> all = new ArrayList<>(tasks);
+		ArrayList<ModelTask> filtered = new ArrayList<>(all);
 		
-		for (ModelTask t : all)
+		for (ModelTask t : tasks)
 		{
 			if (!t.isCompleted()) filtered.remove(t);
 		}

@@ -45,6 +45,11 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 		return tasks.size();
 	}
 	
+	public List<ModelTask> getTasks()
+	{
+		return tasks;
+	}
+	
 	public void setTasks(List<ModelTask> tasks)
 	{
 		this.tasks = tasks;

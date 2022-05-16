@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
-
-import java.util.List;
 
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
@@ -54,16 +51,10 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         adapter = new TaskAdapter(listener);
         tasksRecycler.setAdapter(adapter);
         
-        viewModel.getTasks().observe(getViewLifecycleOwner(), new Observer<List<ModelTask>>()
-        {
-            @Override public void onChanged(List<ModelTask> modelTasks)
-            {
-                adapter.setTasks(modelTasks);
-            }
-        });
+        viewModel.getTasks().observe(getViewLifecycleOwner(), modelTasks -> adapter.setTasks(modelTasks));
         
         binding.tasksStatusFilter.setOnClickListener(v ->
-                adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked())));
+                adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked(), adapter.getTasks())));
         
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));
     }
