@@ -27,11 +27,10 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
     private CheckBox status;
     private TextView deadline;
     private TaskViewModel viewModel;
+    private TaskAdapter.TaskOnClickListener listener;
     private List<ModelTask> tasks;
     private int taskCount;
-    private int taskID;
     private static String TASK_COUNT;
-    private static String TASK_ID;
     private static String TASK_STATUS;
     private static String TASK_NAME;
     private static String TASK_DEADLINE;
@@ -41,12 +40,11 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
     
     }
     
-    public static TaskItemFragment newInstance(int taskCount, int taskID, boolean status, String deadline, String name)
+    public static TaskItemFragment newInstance(int taskCount, boolean status, String deadline, String name)
     {
         TaskItemFragment fragment = new TaskItemFragment();
         Bundle args = new Bundle();
         args.putInt(TASK_COUNT, taskCount);
-        args.putInt(TASK_ID, taskID);
         args.putBoolean(TASK_STATUS, status);
         args.putString(TASK_DEADLINE, deadline);
         args.putString(TASK_NAME, name);
@@ -61,18 +59,17 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
         
         viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
         tasks = viewModel.getTasks().getValue();
+        listener = this;
         
         if (getArguments() != null)
         {
             taskCount = tasks.size();
-            taskID = getArguments().getInt(TASK_ID);
             name.setText(getArguments().getString(TASK_NAME));
             status.setChecked(getArguments().getBoolean(TASK_STATUS));
-            deadline.setText(getArguments().getString(TASK_DEADLINE));
     
             for (int i = 0; i < tasks.size(); i++)
             {
-                newInstance(i, tasks.get(i).getID(), tasks.get(i).isCompleted(), tasks.get(i).getDeadlineFormatted(), tasks.get(i).getName());
+                newInstance(i, tasks.get(i).isCompleted(), tasks.get(i).getDeadlineFormatted(), tasks.get(i).getName());
             }
         }
     }
@@ -95,9 +92,9 @@ public class TaskItemFragment extends Fragment implements TaskAdapter.TaskOnClic
             {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, taskCount));
             }
-            TaskAdapter adapter = new TaskAdapter(tasks);
+            TaskAdapter adapter = new TaskAdapter(listener);
+            adapter.setTasks(tasks);
             recyclerView.setAdapter(adapter);
-            adapter.setTaskListener(this);
         }
         
         return view;

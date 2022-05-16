@@ -12,16 +12,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 {
-	private final List<ModelTask> tasks;
+	private List<ModelTask> tasks;
 	private TaskOnClickListener listener;
 	
-	public TaskAdapter(List<ModelTask> tasks)
+	public TaskAdapter(TaskOnClickListener listener)
 	{
-		this.tasks = tasks;
+		this.tasks = new ArrayList<>();
+		this.listener = listener;
 	}
 	
 	@NonNull @Override public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
@@ -43,11 +45,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>
 		return tasks.size();
 	}
 	
-	public void setTaskListener(TaskOnClickListener listener)
+	public void setTasks(List<ModelTask> tasks)
 	{
-		this.listener = listener;
+		this.tasks = tasks;
+		notifyDataSetChanged();
 	}
-	
+
 	public class ViewHolder extends RecyclerView.ViewHolder
 	{
 		CheckBox done;

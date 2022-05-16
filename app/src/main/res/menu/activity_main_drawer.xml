@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="@layout/activity_navigation_drawer">
+>
 
     <group android:checkableBehavior="single">
         <item
@@ -12,9 +12,5 @@
             android:id="@+id/nav_tasks"
             android:icon="@drawable/tasks"
             android:title="@string/menu_tasks" />
-        <item
-            android:id="@+id/nav_add_task"
-            android:icon="@drawable/add_task"
-            android:title="@string/menu_add_task"/>
     </group>
 </menu>

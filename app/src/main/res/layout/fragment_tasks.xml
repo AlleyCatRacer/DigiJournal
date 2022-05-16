@@ -26,14 +26,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/tasks_status_filter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tasks_filter_status"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/tasks_recycler"
                 android:name="com.s22.digijournal.fragment_tasks"
@@ -49,6 +41,14 @@
                 tools:context=".ui.task.TasksFragment"
                 tools:layout_editor_absoluteX="16dp"
                 tools:listitem="@layout/fragment_task_item" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/tasks_status_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tasks_filter_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

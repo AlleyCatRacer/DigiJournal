@@ -26,34 +26,23 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     private TaskViewModel viewModel;
     private RecyclerView tasksRecycler;
     private TaskAdapter adapter;
+    private TaskAdapter.TaskOnClickListener listener;
     
     public TasksFragment()
     {
     
     }
     
-    @Override public void onCreate(@Nullable Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        
-        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
-        
-        viewModel.getTasks().observe(this, tasks ->
-        {
-            adapter = new TaskAdapter(tasks);
-            adapter.setTaskListener(this);
-        });
-    }
-    
     @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
+        
         binding = FragmentTasksBinding.inflate(inflater, container, false);
         
         tasksRecycler = binding.tasksRecycler;
         tasksRecycler.hasFixedSize();
         tasksRecycler.setLayoutManager(new LinearLayoutManager(binding.getRoot().getContext()));
-
-        tasksRecycler.setAdapter(adapter);
+        listener = this;
         
         return binding.getRoot();
     }
@@ -61,16 +50,20 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
-    
+        
+        adapter = new TaskAdapter(listener);
+        tasksRecycler.setAdapter(adapter);
+        
         viewModel.getTasks().observe(getViewLifecycleOwner(), new Observer<List<ModelTask>>()
         {
             @Override public void onChanged(List<ModelTask> modelTasks)
             {
-                adapter = new TaskAdapter(modelTasks);
-                adapter.setTaskListener(TasksFragment.this);
-                tasksRecycler.setAdapter(adapter);
+                adapter.setTasks(modelTasks);
             }
         });
+        
+        binding.tasksStatusFilter.setOnClickListener(v ->
+                adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked())));
         
         binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_add_task));
     }

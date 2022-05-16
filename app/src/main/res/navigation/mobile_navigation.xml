@@ -48,7 +48,7 @@
             android:id="@+id/action_nav_add_task_fragment_to_nav_task_details"
             app:destination="@id/nav_task_details" />
         <action
-            android:id="@+id/action_nav_add_task_fragment_to_nav_home"
+            android:id="@+id/action_nav_add_task_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
 

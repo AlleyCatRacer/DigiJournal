@@ -16,14 +16,12 @@ public class TaskRepo
 {
 	private static TaskRepo instance;
 	private final TaskDAO dao;
-	private final LiveData<List<ModelTask>> tasks;
 	private final ExecutorService executorService;
 	
 	private TaskRepo(Application application)
 	{
 		TaskDatabase db = TaskDatabase.getInstance(application);
 		dao = db.taskDAO();
-		tasks = dao.getAllTasks();
 		executorService = Executors.newFixedThreadPool(2);
 	}
 	
@@ -38,7 +36,7 @@ public class TaskRepo
 	
 	public LiveData<List<ModelTask>> getAllTasks()
 	{
-		return tasks;
+		return dao.getAllTasks();
 	}
 
 	public void insert(ModelTask task)
