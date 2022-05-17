@@ -18,7 +18,7 @@ I used to struggle with planning, both short term and long term. In order to com
 8. Time consuming process of drawing customized templates for each time period or subject
 9. The information is only accessible in one place, as opposed to being available digitally online
 
-Therefore, I have decided to create this application to replace my bullet journal as my project for Android Development at VIA University College[^1].
+Therefore, I have decided to create this application to replace my bullet journal as my project for Android Development at VIA University College.
 
 ## Product Backlog
 Written and segregated in order of priority. Please note that I will be using Agile so the product backlog is subject to change during development.
