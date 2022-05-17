@@ -25,12 +25,16 @@
         android:id="@+id/task_item_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:forceHasOverlappingRendering="true"
+        android:maxWidth="250dp"
         android:text="@string/task_add_title_hint"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/task_item_checkBox"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_wrapBehaviorInParent="horizontal_only" />
 
     <TextView
         android:id="@+id/task_item_deadline"

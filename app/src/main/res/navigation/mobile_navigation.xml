@@ -10,7 +10,11 @@
         android:id="@+id/nav_home"
         android:name="com.s22.digijournal.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_tasks"
+            app:destination="@id/nav_tasks" />
+    </fragment>
 
 
 

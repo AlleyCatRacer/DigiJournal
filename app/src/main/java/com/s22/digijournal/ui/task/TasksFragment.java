@@ -1,5 +1,7 @@
 package com.s22.digijournal.ui.task;
 
+import static com.s22.digijournal.R.color.red;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,17 +10,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
-
-import java.util.List;
 
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
@@ -27,7 +27,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     private RecyclerView tasksRecycler;
     private TaskAdapter adapter;
     private TaskAdapter.TaskOnClickListener listener;
-    private MutableLiveData<List<ModelTask>> tasks;
     
     public TasksFragment()
     {
@@ -68,9 +67,13 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
                         adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked(), adapter.getTasks()));
                     }
                 });
-                
-        
-        binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.nav_add_task));
+        binding.tasksDeleteAllButton.setOnClickListener(v ->
+        {
+            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete this task?", Snackbar.LENGTH_LONG);
+            snackbar.setAction("YES", v1 -> viewModel.deleteAll());
+            snackbar.setActionTextColor((int) red);
+            snackbar.show();
+        });
     }
     
     @Override public void onDestroyView()
@@ -82,6 +85,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     @Override public void onClick(ModelTask task)
     {
         viewModel.setCurrentTask(task);
-        NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.action_nav_tasks_to_nav_task_details);
+        NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.nav_task_details);
     }
 }
