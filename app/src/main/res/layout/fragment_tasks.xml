@@ -59,19 +59,9 @@
         android:id="@+id/tasks_status_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
+        android:layout_gravity="bottom|end"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="20dp"
         android:text="@string/tasks_filter_status" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@mipmap/add_icon"
-        android:contentDescription="@string/menu_add_task" />
 </FrameLayout>

@@ -34,7 +34,7 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     
     }
     
-    @Override public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    @Override public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         viewModel = new ViewModelProvider(requireActivity()).get(TaskViewModel.class);
         
@@ -68,9 +68,14 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
                         adapter.setTasks(viewModel.filterByStatus(binding.tasksStatusFilter.isChecked(), adapter.getTasks()));
                     }
                 });
-                
         
-        binding.fab.setOnClickListener(v -> NavHostFragment.findNavController(TasksFragment.this).navigate(R.id.nav_add_task));
+        binding.tasksDeleteAllButton.setOnClickListener(v ->
+        {
+            Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete all your tasks?", Snackbar.LENGTH_LONG);
+            snackbar.setActionTextColor((int) red);
+            snackbar.setAction("YES", v1 -> viewModel.deleteAll());
+            snackbar.show();
+        });
     }
     
     @Override public void onDestroyView()
