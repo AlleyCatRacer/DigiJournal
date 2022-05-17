@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="20dp"
-    android:paddingTop="10dp"
-    android:paddingEnd="10dp"
-    android:paddingStart="10dp"
-    tools:context=".ui.task.TaskEditFragment"
     android:background="@drawable/pattern"
-    android:backgroundTint="@color/pastel_blue">
+    android:backgroundTint="@color/pastel_blue"
+    tools:context=".ui.task.TaskEditFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/task_edit_header"
@@ -26,8 +27,8 @@
                 android:layout_margin="10dp"
                 android:layout_marginBottom="20dp"
                 android:text="@string/task_edit_heading"
-                android:textColor="@color/black"
                 android:textAlignment="center"
+                android:textColor="@color/black"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toTopOf="@+id/task_edit_title"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -38,15 +39,16 @@
                 android:id="@+id/task_edit_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
                 android:hint="@string/task_add_title_hint"
-                android:text="@string/add_name_hint"
                 android:inputType="textPersonName"
+                android:text="@string/add_name_hint"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="30sp"
-                android:textAlignment="center"
-                android:layout_marginEnd="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toTopOf="@id/detail_label"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,27 +61,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="5dp"
-                android:textColor="@color/black"
                 android:text="@string/task_add_desc"
-                android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/task_edit_title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/black"
+                android:textSize="22sp"
                 app:layout_constraintBottom_toTopOf="@id/task_edit_detail_text"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/task_edit_title" />
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/task_edit_detail_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/task_add_desc_hint"
-                android:text="@string/task_add_desc"
-                android:inputType="text"
-                android:textColor="@color/black"
-                android:minHeight="48dp"
-                android:textSize="16sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:hint="@string/task_add_desc_hint"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:text="@string/task_add_desc"
+                android:textColor="@color/black"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@id/task_edit_deadline"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,44 +90,43 @@
                 android:id="@+id/task_edit_deadline_label"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_marginTop="30dp"
                 android:layout_margin="10dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/task_add_deadline"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/task_edit_deadline"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/task_edit_deadline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@+id/task_edit_deadline" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/task_edit_deadline"
                 android:layout_width="0dp"
                 android:layout_height="60sp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginTop="50dp"
                 android:ems="12"
-                android:inputType="time"
                 android:hint="@string/task_add_date_format_hint"
-                app:layout_constraintBottom_toTopOf="@+id/task_edit_save_button"
+                android:textSize="18sp"
+                android:inputType="time"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/task_edit_deadline_label"
                 app:layout_constraintTop_toBottomOf="@+id/task_edit_detail_text" />
 
-            <Button
-                android:id="@+id/task_edit_save_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/save_button"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/task_edit_deadline" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-</ScrollView>
+    <Button
+        android:id="@+id/task_edit_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/save_button" />
+
+</FrameLayout>
