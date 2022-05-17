@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.home;
+package com.s22.digijournal.Home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

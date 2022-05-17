@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.task;
+package com.s22.digijournal.Task;
 
 import android.app.Application;
 
@@ -8,9 +8,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.s22.digijournal.ModelTask;
-import com.s22.digijournal.persistence.Repos.TaskRepo;
-import com.s22.digijournal.persistence.Repos.UserRepo;
+import com.s22.digijournal.Persistence.Repos.TaskRepo;
+import com.s22.digijournal.Persistence.Repos.UserRepo;
 
 import java.util.ArrayList;
 import java.util.List;

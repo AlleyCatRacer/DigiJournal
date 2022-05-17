@@ -1,4 +1,4 @@
-package com.s22.digijournal.persistence.Repos;
+package com.s22.digijournal.Persistence.Repos;
 
 import androidx.lifecycle.LiveData;
 

@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.task;
+package com.s22.digijournal.Task;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTaskAddBinding;
 

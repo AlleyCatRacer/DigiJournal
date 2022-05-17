@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.login;
+package com.s22.digijournal.User;
 
 import android.content.Intent;
 import android.os.Bundle;

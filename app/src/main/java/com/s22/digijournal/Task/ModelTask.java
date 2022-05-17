@@ -1,4 +1,4 @@
-package com.s22.digijournal;
+package com.s22.digijournal.Task;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

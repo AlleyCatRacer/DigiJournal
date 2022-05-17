@@ -3,6 +3,8 @@ package com.s22.digijournal;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+import com.s22.digijournal.Task.ModelTask;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

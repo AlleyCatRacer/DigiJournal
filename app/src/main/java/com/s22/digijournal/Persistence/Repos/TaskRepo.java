@@ -1,12 +1,12 @@
-package com.s22.digijournal.persistence.Repos;
+package com.s22.digijournal.Persistence.Repos;
 
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.s22.digijournal.ModelTask;
-import com.s22.digijournal.persistence.DAO.TaskDAO;
-import com.s22.digijournal.persistence.Database.TaskDatabase;
+import com.s22.digijournal.Task.ModelTask;
+import com.s22.digijournal.Persistence.DAO.TaskDAO;
+import com.s22.digijournal.Persistence.Database.TaskDatabase;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.home;
+package com.s22.digijournal.Home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentHomeBinding;
-import com.s22.digijournal.ui.login.LoginViewModel;
+import com.s22.digijournal.User.LoginViewModel;
 
 public class HomeFragment extends Fragment
 {

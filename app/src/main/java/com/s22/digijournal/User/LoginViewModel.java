@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.login;
+package com.s22.digijournal.User;
 
 import android.app.Application;
 
@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.google.firebase.auth.FirebaseUser;
-import com.s22.digijournal.persistence.Repos.UserRepo;
+import com.s22.digijournal.Persistence.Repos.UserRepo;
 
 public class LoginViewModel extends AndroidViewModel
 {

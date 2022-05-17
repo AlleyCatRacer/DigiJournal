@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.task;
+package com.s22.digijournal.Task;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
 

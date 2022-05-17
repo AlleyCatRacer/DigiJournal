@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.task;
+package com.s22.digijournal.Task;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 
 import java.util.ArrayList;

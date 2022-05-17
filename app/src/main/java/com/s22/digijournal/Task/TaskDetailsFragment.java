@@ -1,4 +1,4 @@
-package com.s22.digijournal.ui.task;
+package com.s22.digijournal.Task;
 
 import static com.s22.digijournal.R.color.red;
 

@@ -1,4 +1,4 @@
-package com.s22.digijournal.persistence.DAO;
+package com.s22.digijournal.Persistence.DAO;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.s22.digijournal.ModelTask;
+import com.s22.digijournal.Task.ModelTask;
 
 import java.util.List;
 
