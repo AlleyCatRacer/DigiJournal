@@ -15,6 +15,7 @@
         android:layout_height="70dp"
         android:contentDescription="@string/home_hint"
         app:srcCompat="@mipmap/home_icon"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/nav_header_username"
@@ -43,4 +44,5 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
