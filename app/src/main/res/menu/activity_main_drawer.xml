@@ -9,5 +9,9 @@
             android:id="@+id/nav_tasks"
             android:icon="@mipmap/tasks"
             android:title="@string/menu_tasks" />
+        <item
+            android:id="@+id/nav_add_task"
+            android:icon="@mipmap/add_task"
+            android:title="@string/menu_add_task"/>
     </group>
 </menu>
