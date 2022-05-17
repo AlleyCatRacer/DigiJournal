@@ -57,6 +57,8 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
             
             NavHostFragment.findNavController(TaskAddFragment.this).navigate(R.id.nav_task_details);
         });
+        
+        binding.taskAddTitle.requestFocus();
     }
     
     @Override public void onDestroyView()
@@ -65,9 +67,9 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
         binding = null;
     }
     
-    @Override public void onResume()
+    @Override public void onStop()
     {
-        super.onResume();
+        super.onStop();
         taskName.setText("");
         description.setText("");
         deadline.setText("");
