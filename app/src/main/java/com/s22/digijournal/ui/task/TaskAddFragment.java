@@ -47,6 +47,9 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
     @Override public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState)
     {
         super.onViewCreated(view, savedInstanceState);
+        
+        binding.taskAddTitle.requestFocus();
+        
         binding.taskAddCreateButton.setOnClickListener(v ->
         {
             String name = Objects.requireNonNull(taskName.getText()).toString();
@@ -65,9 +68,9 @@ public class TaskAddFragment extends Fragment implements TaskAdapter.TaskOnClick
         binding = null;
     }
     
-    @Override public void onResume()
+    @Override public void onStop()
     {
-        super.onResume();
+        super.onStop();
         taskName.setText("");
         description.setText("");
         deadline.setText("");
