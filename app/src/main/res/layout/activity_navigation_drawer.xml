@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:paddingTop="@dimen/nav_header_vertical_spacing"
     tools:openDrawer="start"
     tools:showIn="@layout/activity_main">
 

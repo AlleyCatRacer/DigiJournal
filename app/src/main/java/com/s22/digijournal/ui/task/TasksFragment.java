@@ -8,17 +8,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.s22.digijournal.ModelTask;
 import com.s22.digijournal.R;
 import com.s22.digijournal.databinding.FragmentTasksBinding;
-
-import java.util.List;
 
 public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickListener
 {
@@ -27,7 +25,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
     private RecyclerView tasksRecycler;
     private TaskAdapter adapter;
     private TaskAdapter.TaskOnClickListener listener;
-    private MutableLiveData<List<ModelTask>> tasks;
     
     public TasksFragment()
     {
@@ -72,7 +69,6 @@ public class TasksFragment extends Fragment implements TaskAdapter.TaskOnClickLi
         binding.tasksDeleteAllButton.setOnClickListener(v ->
         {
             Snackbar snackbar = Snackbar.make(view, "Are you sure you want to delete all your tasks?", Snackbar.LENGTH_LONG);
-            snackbar.setActionTextColor((int) red);
             snackbar.setAction("YES", v1 -> viewModel.deleteAll());
             snackbar.show();
         });
