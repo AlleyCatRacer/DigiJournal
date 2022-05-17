@@ -48,5 +48,7 @@ Written and segregated in order of priority. Please note that I will be using Ag
 17. As a user, I want to be able to create invitations for tasks so that I can invite others to join me
 18. As a user, I want to be able to see who has responded to my invites so that I can plan accordingly
 
+[Video demo](https://youtu.be/UIf3Vdp4ZV8)
+
 Author:
 [Aldís Eir Hansen, 304124](https://github.com/AlleyCatRacer)
