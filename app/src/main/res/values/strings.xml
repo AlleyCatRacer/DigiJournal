@@ -34,7 +34,7 @@
     <string name="task_edit_heading">Editing Task</string>
     <string name="task_edit_status">Status</string>
     <string name="task_taskId">TaskID</string>
-    <string name="tasks_filter_status">Show only completed</string>
+    <string name="tasks_filter_status">Complete tasks</string>
 
     <string name="profile_name_hint">Display name</string>
 
