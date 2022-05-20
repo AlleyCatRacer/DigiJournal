@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
 		
 		binding = ActivityMainBinding.inflate(getLayoutInflater());
 		
-		checkIfSignedIn();
+		//checkIfSignedIn();
 		
 		setContentView(binding.getRoot());
 		setSupportActionBar(findViewById(R.id.toolbar));
@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity
 		return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
 	}
 	
+/*
 	private void checkIfSignedIn()
 	{
 		loginViewModel.getCurrentUserLive().observe(this, user ->
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity
 			}
 		});
 	}
+*/
 	
 	private void goToLogin()
 	{

@@ -4,11 +4,10 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.s22.digijournal.Task.ModelTask;
 import com.s22.digijournal.Persistence.DAO.TaskDAO;
 import com.s22.digijournal.Persistence.Database.TaskDatabase;
+import com.s22.digijournal.Task.ModelTask;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -24,7 +23,7 @@ public class TaskRepo
 		TaskDatabase db = TaskDatabase.getInstance(application);
 		dao = db.taskDAO();
 		executorService = Executors.newFixedThreadPool(2);
-		seed();
+		//seed();
 	}
 	
 	public static synchronized TaskRepo getInstance(Application application)
@@ -61,6 +60,7 @@ public class TaskRepo
 		executorService.execute(dao::removeAllTasks);
 	}
 	
+/*
 	private void seed()
 	{
 		ModelTask t1 = new ModelTask("AND project", "Semester project for Android Development", "17/05/2022");
@@ -95,4 +95,5 @@ public class TaskRepo
 			insert(t);
 		}
 	}
+*/
 }
