@@ -1,6 +1,5 @@
 package com.s22.digijournal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.TextView;
@@ -14,9 +13,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
-import com.s22.digijournal.databinding.ActivityMainBinding;
-import com.s22.digijournal.User.LoginActivity;
 import com.s22.digijournal.User.LoginViewModel;
+import com.s22.digijournal.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -48,19 +46,19 @@ public class MainActivity extends AppCompatActivity
 		NavigationUI.setupWithNavController(navigationView, navController);
 		
 		TextView username = navigationView.getHeaderView(0).findViewById(R.id.nav_header_username);
-		username.setText(loginViewModel.getCurrentUser().getDisplayName());
+		username.setText(loginViewModel.getUsername());
 		TextView email = navigationView.getHeaderView(0).findViewById(R.id.nav_header_main_email);
-		email.setText(loginViewModel.getCurrentUser().getEmail());
+		email.setText(loginViewModel.getEmail());
 	}
 	
 	@Override public boolean onCreateOptionsMenu(Menu menu)
 	{
 		getMenuInflater().inflate(R.menu.main, menu);
-		menu.findItem(R.id.action_logout).setOnMenuItemClickListener(v1 ->
-		{
-			onLogoutClicked();
-			return true;
-		});
+//		menu.findItem(R.id.action_logout).setOnMenuItemClickListener(v1 ->
+//		{
+//			onLogoutClicked();
+//			return true;
+//		});
 		return true;
 	}
 	
@@ -70,28 +68,28 @@ public class MainActivity extends AppCompatActivity
 		return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
 	}
 	
-/*
-	private void checkIfSignedIn()
-	{
-		loginViewModel.getCurrentUserLive().observe(this, user ->
-		{
-			if (user == null)
-			{
-				goToLogin();
-			}
-		});
-	}
-*/
-	
-	private void goToLogin()
-	{
-		startActivity(new Intent(this, LoginActivity.class));
-		finish();
-	}
-	
-	public void onLogoutClicked()
-	{
-		loginViewModel.logout();
-		goToLogin();
-	}
+
+//	private void checkIfSignedIn()
+//	{
+//		loginViewModel.getCurrentUserLive().observe(this, user ->
+//		{
+//			if (user == null)
+//			{
+//				goToLogin();
+//			}
+//		});
+//	}
+//
+//
+//	private void goToLogin()
+//	{
+//		startActivity(new Intent(this, LoginActivity.class));
+//		finish();
+//	}
+//
+//	public void onLogoutClicked()
+//	{
+//		loginViewModel.logout();
+//		goToLogin();
+//	}
 }

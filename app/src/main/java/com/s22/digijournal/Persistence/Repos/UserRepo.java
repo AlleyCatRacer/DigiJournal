@@ -4,7 +4,6 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,10 +39,10 @@ public class UserRepo
 		return currentUser.getValue();
 	}
 	
-	public void logout()
-	{
-		AuthUI.getInstance().signOut(app.getApplicationContext());
-	}
+//	public void logout()
+//	{
+//		AuthUI.getInstance().signOut(app.getApplicationContext());
+//	}
 
 	public void updateDisplayName(FirebaseUser user, String displayName)
 	{

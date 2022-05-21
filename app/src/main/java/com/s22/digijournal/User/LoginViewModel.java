@@ -29,10 +29,20 @@ public class LoginViewModel extends AndroidViewModel
 		return repo.getCurrentUser();
 	}
 	
-	public void logout()
+	public String getUsername()
 	{
-		repo.logout();
+		return "Aldís Eir Hansen";
 	}
+	
+	public String getEmail()
+	{
+		return "aldis_eir@hotmail.com";
+	}
+	
+//	public void logout()
+//	{
+//		repo.logout();
+//	}
 	
 	public void updateDisplayName(String displayName)
 	{
